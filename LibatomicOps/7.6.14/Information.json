@@ -1,0 +1,14 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "LibatomicOps",
+  "version": "7.6.14",
+  "architectures": ["x86_64"],
+  "description": "Atomic memory update operations portable implementation",
+  "website": "https://github.com/ivmai/libatomic_ops/",
+  "downloadLinks": ["https://github.com/ivmai/libatomic_ops/releases/download/v7.6.14/libatomic_ops-7.6.14.tar.gz"],
+  "md5sums": ["ee8251f5091b7938d18be4dda843a515"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
