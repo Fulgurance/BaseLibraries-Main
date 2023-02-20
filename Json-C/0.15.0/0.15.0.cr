@@ -9,7 +9,8 @@ class Target < ISM::Software
         super
         runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
                             "-DCMAKE_BUILD_TYPE=Release",
-                            "-DBUILD_STATIC_LIBS=OFF"],
+                            "-DBUILD_STATIC_LIBS=OFF",
+                            ".."],
                             buildDirectoryPath)
     end
 
