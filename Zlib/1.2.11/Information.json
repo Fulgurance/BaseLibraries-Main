@@ -1,0 +1,20 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Zlib",
+  "version": "1.2.11",
+  "architectures": ["x86_64"],
+  "description": "Lossless data-compression library portable across platforms",
+  "website": "https://www.zlib.net/",
+  "downloadLinks": ["https://zlib.net/fossils/zlib-1.2.11.tar.gz"],
+  "md5sums": ["1c9f62f0778697a09d36121ead88e08e"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glibc",
+      "version": "2.34.0",
+      "options": []
+    }
+  ],
+  "options": []
+}
