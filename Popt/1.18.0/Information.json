@@ -1,0 +1,14 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Popt",
+  "version": "0.3.112",
+  "architectures": ["x86_64"],
+  "description": "C library for parsing command line parameters",
+  "website": "https://github.com/rpm-software-management/popt",
+  "downloadLinks": ["http://ftp.rpm.org/popt/releases/popt-1.x/popt-1.18.tar.gz"],
+  "md5sums": ["450f2f636e6a3aa527de803d0ae76c5a"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
