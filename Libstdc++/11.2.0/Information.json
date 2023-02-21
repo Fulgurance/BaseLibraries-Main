@@ -21,7 +21,9 @@
           "version": "2.34.0",
           "options": ["Pass1"]
         }
-      ]
+      ],
+      "downloadLinks": [],
+      "md5sums": [],
     },
     {
       "name": "Pass2",
@@ -33,7 +35,9 @@
           "version": "11.2.0",
           "options": ["Pass2"]
         }
-      ]
+      ],
+      "downloadLinks": [],
+      "md5sums": [],
     },
   ]
 }
