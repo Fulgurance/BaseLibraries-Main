@@ -1,0 +1,39 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libstdc++",
+  "version": "11.2.0",
+  "architectures": ["x86_64"],
+  "description": "The Libstdc++ standard C++ library",
+  "website": "https://gcc.gnu.org/",
+  "downloadLinks": ["https://ftp.gnu.org/gnu/gcc/gcc-11.2.0/gcc-11.2.0.tar.xz"],
+  "md5sums": ["31c86f2ced76acac66992eeedce2fce2"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": [
+    {
+      "name": "Pass1",
+      "description": "Enable the phase 1 of the cross toolchain building",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Glibc",
+          "version": "2.34.0",
+          "options": ["Pass1"]
+        }
+      ]
+    },
+    {
+      "name": "Pass2",
+      "description": "Enable the phase 2 of the cross toolchain building",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Gcc",
+          "version": "11.2.0",
+          "options": ["Pass2"]
+        }
+      ]
+    },
+  ]
+}
