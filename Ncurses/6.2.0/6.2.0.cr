@@ -5,7 +5,7 @@ class Target < ISM::Software
             @buildDirectory = true
             super
 
-            configureSource([] of String,buildDirectoryPath)
+            configureSource([],buildDirectoryPath)
             makeSource([Ism.settings.makeOptions,"-C","include"],buildDirectoryPath)
             makeSource([Ism.settings.makeOptions,"-C","progs","tic"],buildDirectoryPath)
         else
@@ -17,10 +17,10 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--prefix=#{Ism.settings.rootPath}usr",
+            configureSource([   "--prefix=/usr",
                                 "--host=#{Ism.settings.target}",
                                 "--build=$(./config.guess)",
-                                "--mandir=#{Ism.settings.rootPath}usr/share/man",
+                                "--mandir=/usr/share/man",
                                 "--with-manpage-format=normal",
                                 "--with-shared",
                                 "--without-debug",
@@ -50,7 +50,7 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
+            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
             fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
         else
             makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
