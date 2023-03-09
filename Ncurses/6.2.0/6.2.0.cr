@@ -5,7 +5,7 @@ class Target < ISM::Software
             @buildDirectory = true
             super
 
-            configureSource([],buildDirectoryPath)
+            configureSource([] of String,buildDirectoryPath)
             makeSource([Ism.settings.makeOptions,"-C","include"],buildDirectoryPath)
             makeSource([Ism.settings.makeOptions,"-C","progs","tic"],buildDirectoryPath)
         else
