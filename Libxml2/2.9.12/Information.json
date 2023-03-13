@@ -1,5 +1,5 @@
 {
-  "port": "BaseLibrairies-Main",
+  "port": "BaseLibraries-Main",
   "name": "Libxml2",
   "version": "2.9.12",
   "architectures": ["x86_64"],
