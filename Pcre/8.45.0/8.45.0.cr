@@ -2,6 +2,7 @@ class Target < ISM::Software
     
     def configure
         super
+
         configureSource([   "--prefix=/usr",
                             "--docdir=/usr/share/doc/pcre-8.45",
                             "--enable-unicode-properties",
@@ -16,12 +17,14 @@ class Target < ISM::Software
 
     def build
         super
+
         makeSource([Ism.settings.makeOptions],buildDirectoryPath)
     end
     
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
     end
 
 end
