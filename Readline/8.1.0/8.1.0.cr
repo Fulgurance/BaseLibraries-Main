@@ -2,12 +2,14 @@ class Target < ISM::Software
 
     def prepare
         super
+
         fileReplaceText("#{buildDirectoryPath(false)}/Makefile.in","-$(MV)","")
         fileReplaceLineContaining("#{buildDirectoryPath(false)}/support/shlib-install","{OLDSUFF}",":")
     end
 
     def configure
         super
+
         configureSource([   "--prefix=/usr",
                             "--disable-static",
                             "--with-curses",
@@ -17,12 +19,14 @@ class Target < ISM::Software
 
     def build
         super
-        makeSource([Ism.settings.makeOptions,"SHLIB_LIBS=\"-lncursesw\""],buildDirectoryPath)
+
+        makeSource(["SHLIB_LIBS=\"-lncursesw\""],buildDirectoryPath)
     end
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"SHLIB_LIBS=\"-lncursesw\"","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        makeSource(["SHLIB_LIBS=\"-lncursesw\"","DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
     end
 
 end

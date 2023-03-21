@@ -5,9 +5,9 @@ class Target < ISM::Software
             @buildDirectory = true
             super
 
-            configureSource([] of String,buildDirectoryPath)
-            makeSource([Ism.settings.makeOptions,"-C","include"],buildDirectoryPath)
-            makeSource([Ism.settings.makeOptions,"-C","progs","tic"],buildDirectoryPath)
+            configureSource(path: buildDirectoryPath)
+            makeSource(["-C","include"],buildDirectoryPath)
+            makeSource(["-C","progs","tic"],buildDirectoryPath)
         else
             super
         end
@@ -43,17 +43,17 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+        makeSource(path: buildDirectoryPath)
     end
     
     def prepareInstallation
         super
 
         if option("Pass1")
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
             fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
         else
-            makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
             fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
             fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
             fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")

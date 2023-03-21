@@ -2,16 +2,19 @@ class Target < ISM::Software
 
     def configure
         super
-        makeSource([Ism.settings.makeOptions, "mrproper"],mainWorkDirectoryPath)
+
+        makeSource(["mrproper"],mainWorkDirectoryPath)
     end
 
     def build
         super
-        makeSource([Ism.settings.makeOptions, "headers"],mainWorkDirectoryPath)
+
+        makeSource(["headers"],mainWorkDirectoryPath)
     end
 
     def prepareInstallation
         super
+
         deleteAllHiddenFilesRecursively("#{mainWorkDirectoryPath}usr/include")
         deleteFile("#{mainWorkDirectoryPath}usr/include/Makefile")
         makeDirectory("#{builtSoftwareDirectoryPath}/usr")

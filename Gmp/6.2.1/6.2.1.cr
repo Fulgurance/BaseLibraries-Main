@@ -11,14 +11,14 @@ class Target < ISM::Software
 
     def build
         super
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
-        makeSource([Ism.settings.makeOptions,"html"],buildDirectoryPath)
+        makeSource(path: buildDirectoryPath)
+        makeSource(["html"],buildDirectoryPath)
     end
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install-html"],buildDirectoryPath)
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install-html"],buildDirectoryPath)
     end
 
 end

@@ -7,6 +7,7 @@ class Target < ISM::Software
 
     def configure
         super
+
         runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
                             "-DCMAKE_BUILD_TYPE=Release",
                             "-DBUILD_STATIC_LIBS=OFF",
@@ -16,12 +17,14 @@ class Target < ISM::Software
 
     def build
         super
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+
+        makeSource(path: buildDirectoryPath)
     end
 
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
     end
 
 end

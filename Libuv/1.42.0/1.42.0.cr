@@ -2,6 +2,7 @@ class Target < ISM::Software
     
     def configure
         super
+
         runScript("autogen.sh",[""],buildDirectoryPath)
         configureSource([   "--prefix=/usr",
                             "--disable-static"],
@@ -10,12 +11,14 @@ class Target < ISM::Software
 
     def build
         super
-        makeSource([Ism.settings.makeOptions],buildDirectoryPath)
+
+        makeSource(path: buildDirectoryPath)
     end
     
     def prepareInstallation
         super
-        makeSource([Ism.settings.makeOptions,"DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
     end
 
 end
