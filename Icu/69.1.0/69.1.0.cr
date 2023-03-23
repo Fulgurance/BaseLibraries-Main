@@ -16,7 +16,8 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/usr"],
-                            buildDirectoryPath)
+                            buildDirectoryPath,
+                            @buildDirectoryName)
     end
 
     def build
