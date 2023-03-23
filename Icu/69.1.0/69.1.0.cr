@@ -1,5 +1,11 @@
 class Target < ISM::Software
 
+    def extract
+        super
+
+        moveFile("#{workDirectoryPath(false)}/icu","#{workDirectoryPath(false)}/icu4c-69_1-src")
+    end
+
     def prepare
         @buildDirectory = true
         @buildDirectoryName = "source"
