@@ -26,12 +26,12 @@ class Target < ISM::Software
 
         runNinjaCommand(["install"],buildDirectoryPath,{"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
 
-        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4")
 
-        copyFile("#{buildDirectoryPath}/docs/reference/NEWS","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/NEWS")
-        copyDirectory("#{buildDirectoryPath}/docs/reference/gio","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gio")
-        copyDirectory("#{buildDirectoryPath}/docs/reference/glib","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/glib")
-        copyDirectory("#{buildDirectoryPath}/docs/reference/gobject","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gobject")
+        copyFile("#{buildDirectoryPath(false)}/docs/reference/NEWS","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/NEWS")
+        copyDirectory("#{buildDirectoryPath(false)}/docs/reference/gio","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gio")
+        copyDirectory("#{buildDirectoryPath(false)}/docs/reference/glib","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/glib")
+        copyDirectory("#{buildDirectoryPath(false)}/docs/reference/gobject","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gobject")
     end
 
 end
