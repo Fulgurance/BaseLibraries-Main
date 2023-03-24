@@ -28,10 +28,10 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4")
 
-        copyFile("#{buildDirectoryPath}docs/reference/NEWS","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/NEWS")
-        copyDirectory("#{buildDirectoryPath}docs/reference/gio","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gio")
-        copyDirectory("#{buildDirectoryPath}docs/reference/glib","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/glib")
-        copyDirectory("#{buildDirectoryPath}docs/reference/gobject","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gobject")
+        copyFile("#{buildDirectoryPath}/docs/reference/NEWS","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/NEWS")
+        copyDirectory("#{buildDirectoryPath}/docs/reference/gio","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gio")
+        copyDirectory("#{buildDirectoryPath}/docs/reference/glib","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/glib")
+        copyDirectory("#{buildDirectoryPath}/docs/reference/gobject","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/doc/glib-2.68.4/gobject")
     end
 
 end
