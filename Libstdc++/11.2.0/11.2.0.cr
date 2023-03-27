@@ -16,7 +16,7 @@ class Target < ISM::Software
 
         if option("Pass1")
             configureSource([   "--host=#{Ism.settings.target}",
-                                "--build=#{Ism.settings.target}",
+                                "--build=#{Ism.settings.chrootTarget}",
                                 "--prefix=#{Ism.settings.rootPath}usr",
                                 "--disable-multilib",
                                 "--disable-nls",
