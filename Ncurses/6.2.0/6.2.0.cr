@@ -19,7 +19,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "--prefix=/usr",
                                 "--host=#{Ism.settings.target}",
-                                "--build=$(./config.guess)",
+                                "--build=#{Ism.settings.target}",
                                 "--mandir=/usr/share/man",
                                 "--with-manpage-format=normal",
                                 "--with-shared",
