@@ -15,13 +15,13 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource([   "--host=#{Ism.settings.target}",
-                                "--build=#{Ism.settings.chrootTarget}",
+            configureSource([   "--host=#{Ism.settings.chrootTarget}",
+                                "--build=#{Ism.settings.target}",
                                 "--prefix=#{Ism.settings.rootPath}usr",
                                 "--disable-multilib",
                                 "--disable-nls",
                                 "--disable-libstdcxx-pch",
-                                "--with-gxx-include-dir=#{Ism.settings.toolsPath}#{Ism.settings.target}/include/c++/11.2.0"],
+                                "--with-gxx-include-dir=#{Ism.settings.toolsPath}#{Ism.settings.chrootTarget}/include/c++/11.2.0"],
                                 buildDirectoryPath,
                                 "libstdc++-v3")
         else
