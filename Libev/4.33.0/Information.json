@@ -1,0 +1,14 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libev",
+  "version": "4.33.0",
+  "architectures": ["x86_64"],
+  "description": "Full-featured and high-performance event loop loosely modelled after libevent",
+  "website": "http://software.schmorp.de/pkg/libev.html",
+  "downloadLinks": ["http://dist.schmorp.de/libev/libev-4.33.tar.gz"],
+  "md5sums": ["a3433f23583167081bf4acdd5b01b34f"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
