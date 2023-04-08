@@ -1,0 +1,14 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Pcre2",
+  "version": "10.37.0",
+  "architectures": ["x86_64"],
+  "description": "Set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5",
+  "website": "https://github.com/PCRE2Project/pcre2",
+  "downloadLinks": ["https://github.com/PCRE2Project/pcre2/releases/download/pcre2-10.37/pcre2-10.37.tar.gz"],
+  "md5sums": ["a0b59d89828f62d2e1caac04f7c51e0b"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [],
+  "options": []
+}
