@@ -3,7 +3,7 @@ class Target < ISM::Software
     def extract
         super
 
-        moveFile("#{workDirectoryPath(false)}/2.1.0","#{workDirectoryPath(false)}/yajl-2.1.0")
+        moveFile("#{workDirectoryPath(false)}/yajl-2.1.0","#{workDirectoryPath(false)}/2.1.0")
     end
 
     def configure
