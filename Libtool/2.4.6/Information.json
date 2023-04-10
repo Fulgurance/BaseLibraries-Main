@@ -11,8 +11,18 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Bash",
-      "version": "5.1.8",
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Autoconf",
+      "version": "2.71.0",
+      "options": []
+    },
+    {
+      "name": "Automake",
+      "version": "1.16.4",
       "options": []
     }
   ],

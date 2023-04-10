@@ -11,8 +11,13 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Kmod",
-      "version": "29.0.0",
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Zlib",
+      "version": "1.2.11",
       "options": []
     }
   ],

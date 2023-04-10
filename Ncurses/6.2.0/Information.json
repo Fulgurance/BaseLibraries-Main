@@ -11,8 +11,8 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Pkg-Config",
-      "version": "0.29.2",
+      "name": "SystemBase",
+      "version": "0.2.0",
       "options": []
     }
   ],

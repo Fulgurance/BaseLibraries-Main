@@ -11,8 +11,8 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Libelf",
-      "version": "0.185.0",
+      "name": "SystemBase",
+      "version": "0.2.0",
       "options": []
     }
   ],

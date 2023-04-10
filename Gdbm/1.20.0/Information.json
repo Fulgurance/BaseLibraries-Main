@@ -11,8 +11,13 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Libtool",
-      "version": "2.4.6",
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    },
+    {
+      "name": "Readline",
+      "version": "8.1.0",
       "options": []
     }
   ],
