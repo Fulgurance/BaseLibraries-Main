@@ -15,10 +15,17 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        deleteAllHiddenFilesRecursively("#{mainWorkDirectoryPath}usr/include")
-        deleteFile("#{mainWorkDirectoryPath}usr/include/Makefile")
-        makeDirectory("#{builtSoftwareDirectoryPath}/usr")
-        copyDirectory("#{mainWorkDirectoryPath}usr/include", "#{Ism.settings.rootPath}/usr")
+        if option("Pass1")
+            deleteAllHiddenFilesRecursively("#{mainWorkDirectoryPath}usr/include")
+            deleteFile("#{mainWorkDirectoryPath}usr/include/Makefile")
+            makeDirectory("#{builtSoftwareDirectoryPath}/usr")
+            copyDirectory("#{mainWorkDirectoryPath}usr/include", "#{Ism.settings.rootPath}/usr")
+        else
+            deleteAllHiddenFilesRecursively("#{mainWorkDirectoryPath(false)}usr/include")
+            deleteFile("#{mainWorkDirectoryPath(false)}usr/include/Makefile")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}/usr")
+            copyDirectory("#{mainWorkDirectoryPath(false)}usr/include", "#{Ism.settings.rootPath}/usr")
+        end
     end
 
 end
