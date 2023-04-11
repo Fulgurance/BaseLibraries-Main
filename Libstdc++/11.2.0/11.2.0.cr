@@ -46,7 +46,11 @@ class Target < ISM::Software
     end
 
     def prepareInstallation
-        super
+        if option("Pass1") || option("Pass2")
+            super
+        else
+            Ism.addInstalledSoftware(@information)
+        end
 
         if option("Pass1")
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
