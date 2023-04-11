@@ -24,7 +24,8 @@ class Target < ISM::Software
                                 "--with-gxx-include-dir=#{Ism.settings.toolsPath}#{Ism.settings.chrootTarget}/include/c++/11.2.0"],
                                 buildDirectoryPath,
                                 "libstdc++-v3")
-        else
+        end
+        if option("Pass2")
             configureSource([   "CXXFLAGS=\"-g -O2 -D_GNU_SOURCE\"",
                                 "--prefix=/usr",
                                 "--disable-multilib",
@@ -39,7 +40,9 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath)
+        if option("Pass2")
+            makeSource(path: buildDirectoryPath)
+        end
     end
 
     def prepareInstallation
@@ -47,7 +50,9 @@ class Target < ISM::Software
 
         if option("Pass1")
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
-        else
+        end
+
+        if option("Pass2")
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
         end
     end
