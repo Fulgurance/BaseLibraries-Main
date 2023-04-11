@@ -9,6 +9,12 @@
   "md5sums": ["4452288e6a0eefb2ab11d36010a1eebb"],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
   "options": []
 }
