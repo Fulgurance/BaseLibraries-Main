@@ -1,0 +1,20 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libicla",
+  "version": "3.0.10",
+  "architectures": ["x86_64"],
+  "description": "Open Source implementation of the iCalendar protocols and protocol data units",
+  "website": "https://github.com/libical/libical",
+  "downloadLinks": ["https://github.com/libical/libical/releases/download/v3.0.10/libical-3.0.10.tar.gz"],
+  "md5sums": ["0992e55d8408783a3c63d6000ed802d2"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Cmake",
+      "version": "3.21.2",
+      "options": []
+    }
+  ],
+  "options": []
+}
