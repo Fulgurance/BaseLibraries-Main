@@ -1,0 +1,53 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Qt",
+  "version": "5.15.2",
+  "architectures": ["x86_64"],
+  "description": "The Qt framework with highly intuitive and modularized C++ library to simplify application development",
+  "website": "https://www.qt.io/",
+  "downloadLinks": ["https://download.qt.io/archive/qt/5.15/5.15.2/single/qt-everywhere-src-5.15.2.tar.xz"],
+  "md5sums": ["e1447db4f06c841d8947f0a6ce83a7b5"],
+  "patchesLinks": ["https://www.linuxfromscratch.org/patches/blfs/11.0/qt-everywhere-src-5.15.2-CVE-2021-3481-1.patch"],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Xorg-Libraries",
+      "version": "1.20.13",
+      "options": []
+    }
+  ],
+  "options": [
+    {
+      "name": "Assistant",
+      "description": "Enable assistant support",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Designer",
+      "description": "Enable designer support",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Linguist",
+      "description": "Enable linguist support",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Qdbusviewer",
+      "description": "Enable assistant support",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
+    }
+  ]
+}
