@@ -1,0 +1,35 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Shared-Mime-Info",
+  "version": "2.1.0",
+  "architectures": ["x86_64"],
+  "description": "Core database of common types and command used to extend it",
+  "website": "https://www.freedesktop.org/wiki/Software/shared-mime-info/",
+  "downloadLinks": ["https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.1/shared-mime-info-2.1.tar.gz"],
+  "md5sums": ["8d059fb2d34062a67fd9ca63fab1fb91"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glib",
+      "version": "2.68.4",
+      "options": []
+    },
+    {
+      "name": "Istool",
+      "version": "2.0.6",
+      "options": []
+    },
+    {
+      "name": "Libxml2",
+      "version": "2.9.12",
+      "options": []
+    },
+    {
+      "name": "Xmlto",
+      "version": "0.0.28",
+      "options": []
+    }
+  ],
+  "options": []
+}
