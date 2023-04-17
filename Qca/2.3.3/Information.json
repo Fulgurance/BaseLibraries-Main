@@ -1,0 +1,35 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Qca",
+  "version": "2.3.3",
+  "architectures": ["x86_64"],
+  "description": "Provide a straightforward and cross-platform cryptographic API using Qt datatypes and conventions",
+  "website": "https://api.kde.org/qca/html/",
+  "downloadLinks": ["https://download.kde.org/stable/qca/2.3.3/qca-2.3.3.tar.xz"],
+  "md5sums": ["22d9aad50442168911d442792c047266"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Make-Ca",
+      "version": "1.7.0",
+      "options": []
+    },
+    {
+      "name": "Cmake",
+      "version": "3.21.2",
+      "options": []
+    },
+    {
+      "name": "Qt",
+      "version": "5.15.2",
+      "options": []
+    },
+    {
+      "name": "Which",
+      "version": "2.21.0",
+      "options": []
+    }
+  ],
+  "options": []
+}
