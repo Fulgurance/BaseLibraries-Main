@@ -9,7 +9,13 @@
   "md5sums": ["e812da327b1c2214ac1aed440ea3ae8d"],
   "patchesLinks": [],
   "installedFiles": [],
-  "dependencies": [],
+  "dependencies": [
+    {
+      "name": "Libstdc++",
+      "version": "11.2.0",
+      "options": []
+    }
+  ],
   "options": [
     {
       "name": "Pass1",
