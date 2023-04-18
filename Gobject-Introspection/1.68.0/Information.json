@@ -1,0 +1,20 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Gobject-Introspection",
+  "version": "1.68.0",
+  "architectures": ["x86_64"],
+  "description": "Describe the APIs and collect them in a uniform, machine readable format",
+  "website": "https://gitlab.gnome.org/GNOME/gobject-introspection",
+  "downloadLinks": ["https://download.gnome.org/sources/gobject-introspection/1.68/gobject-introspection-1.68.0.tar.xz"],
+  "md5sums": ["b106680b153bebb67c8987e64bbafcc6"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glib",
+      "version": "2.68.4",
+      "options": []
+    }
+  ],
+  "options": []
+}
