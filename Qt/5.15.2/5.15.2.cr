@@ -182,7 +182,7 @@ class Target < ISM::Software
         makeLink("#{Ism.settings.rootPath}opt/qt5/bin/lrelease","/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
         makeLink("#{Ism.settings.rootPath}opt/qt5/bin/lupdate","/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
 
-        runLdConfigCommand
+        runLdconfigCommand
     end
 
 end
