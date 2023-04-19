@@ -1,6 +1,7 @@
 class Target < ISM::Software
 
     def prepare
+        @buildDirectory = true
         @buildDirectoryName = "libraries/liblmdb"
         super
     end
