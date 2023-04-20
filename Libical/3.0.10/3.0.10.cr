@@ -12,8 +12,8 @@ class Target < ISM::Software
                             "-DCMAKE_BUILD_TYPE=Release",
                             "-DSHARED_ONLY=yes",
                             "-DICAL_BUILD_DOCS=false",
-                            "-DGOBJECT_INTROSPECTION=true",
-                            "-DICAL_GLIB_VAPI=true",
+                            "-DGOBJECT_INTROSPECTION=false",
+                            "-DICAL_GLIB_VAPI=false",
                             "-DENABLE_GTK_DOC=false",
                             ".."],
                             buildDirectoryPath)
