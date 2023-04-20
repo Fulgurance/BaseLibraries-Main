@@ -10,7 +10,7 @@ class Target < ISM::Software
 
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
-                            "-Dupdate-mimedb=true",
+                            softwareIsInstalled("Shared-Mime-Info") ? "-Dupdate-mimedb=true" : "-Dupdate-mimedb=false",
                             ".."],buildDirectoryPath)
     end
 
@@ -25,6 +25,14 @@ class Target < ISM::Software
 
         runNinjaCommand(["install"],buildDirectoryPath,
                                     {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+    end
+
+    def install
+        super
+
+        if softwareIsInstalled("Shared-Mime-Info")
+            runUpdateMimeDatabaseCommand
+        end
     end
 
 end
