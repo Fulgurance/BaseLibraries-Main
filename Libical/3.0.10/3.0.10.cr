@@ -1,7 +1,7 @@
 class Target < ISM::Software
 
     def configure
-        @buildDirectory = false
+        @buildDirectory = true
         super
 
         runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
@@ -10,7 +10,7 @@ class Target < ISM::Software
                             "-DICAL_BUILD_DOCS=false",
                             "-DGOBJECT_INTROSPECTION=true",
                             "-DICAL_GLIB_VAPI=true",
-                            "-DENABLE_GTK_DOC=OFF"
+                            "-DENABLE_GTK_DOC=false"
                             ".."],
                             buildDirectoryPath)
     end
