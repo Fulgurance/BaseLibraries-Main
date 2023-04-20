@@ -13,7 +13,7 @@ class Target < ISM::Software
                             "-DSHARED_ONLY=yes",
                             "-DICAL_BUILD_DOCS=false",
                             "-DGOBJECT_INTROSPECTION=false",
-                            "-DICAL_GLIB_VAPI=true",
+                            "-DICAL_GLIB_VAPI=false",
                             "-DENABLE_GTK_DOC=false",
                             ".."],
                             buildDirectoryPath)
