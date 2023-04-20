@@ -1,8 +1,11 @@
 class Target < ISM::Software
 
-    def configure
+    def prepare
         @buildDirectory = true
         super
+    end
+
+    def configure
 
         runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
                             "-DCMAKE_BUILD_TYPE=Release",
