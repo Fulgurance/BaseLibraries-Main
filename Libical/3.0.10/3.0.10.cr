@@ -6,6 +6,7 @@ class Target < ISM::Software
     end
 
     def configure
+        super
 
         runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
                             "-DCMAKE_BUILD_TYPE=Release",
