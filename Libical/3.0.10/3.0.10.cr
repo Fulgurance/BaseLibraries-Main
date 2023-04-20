@@ -10,7 +10,7 @@ class Target < ISM::Software
                             "-DICAL_BUILD_DOCS=false",
                             "-DGOBJECT_INTROSPECTION=true",
                             "-DICAL_GLIB_VAPI=true",
-                            "-DENABLE_GTK_DOC=false"
+                            "-DENABLE_GTK_DOC=OFF"
                             ".."],
                             buildDirectoryPath)
     end
