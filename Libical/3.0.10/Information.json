@@ -1,6 +1,6 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Libicla",
+  "name": "Libical",
   "version": "3.0.10",
   "architectures": ["x86_64"],
   "description": "Open Source implementation of the iCalendar protocols and protocol data units",
