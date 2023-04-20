@@ -14,7 +14,7 @@ class Target < ISM::Software
 
         runScript(  "b2",
                     [   "stage",
-                        "-j#{Ism.settings.makeOptions}",
+                        "#{Ism.settings.makeOptions}",
                         "threading=multi",
                         "link=shared"],
                             buildDirectoryPath)
