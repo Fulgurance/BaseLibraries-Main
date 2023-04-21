@@ -35,9 +35,7 @@ class Target < ISM::Software
     def install
         super
 
-        if softwareIsInstalled("Shared-Mime-Info")
-            runUpdateMimeDatabaseCommand
-        end
+        runUpdateMimeDatabaseCommand
     end
 
 end
