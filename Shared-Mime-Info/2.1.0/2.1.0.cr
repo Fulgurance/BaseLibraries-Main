@@ -6,7 +6,7 @@ class Target < ISM::Software
 
         runMesonCommand([   "reconfigure",
                             "..",
-                            softwareIsInstalled("Shared-Mime-Info") ? "-Dupdate-mimedb=true" : "-Dupdate-mimedb=false",
+                            softwareIsInstalled("Shared-Mime-Info") ? "-Dupdate-mimedb=true" : "-Dupdate-mimedb=false"],
                             buildDirectoryPath)
     end
 
