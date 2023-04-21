@@ -32,12 +32,4 @@ class Target < ISM::Software
                                     {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
     end
 
-    def install
-        super
-
-        if !softwareIsInstalled("Shared-Mime-Info")
-            runUpdateMimeDatabaseCommand
-        end
-    end
-
 end
