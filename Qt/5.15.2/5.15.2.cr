@@ -20,10 +20,10 @@ class Target < ISM::Software
                             "--openssl-linked",
                             "-system-harfbuzz",
                             "-system-sqlite",
-                            "-nomake=examples",
+                            "--nomake=examples",
                             "--no-rpath",
                             "--syslog",
-                            "-skip=qtwebengine"],
+                            "--skip=qtwebengine"],
                             buildDirectoryPath)
     end
     
