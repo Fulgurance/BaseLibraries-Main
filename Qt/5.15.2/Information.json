@@ -48,6 +48,34 @@
       "dependencies": [],
       "downloadLinks": [],
       "md5sums": []
+    },
+    {
+      "name": "Harfbuzz",
+      "description": "Enable harfbuzz support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Harfbuzz",
+          "version": "2.9.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
+    },
+    {
+      "name": "Sqlite",
+      "description": "Enable sqlite support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Sqlite",
+          "version": "3.36.0",
+          "options": []
+        }
+      ],
+      "downloadLinks": [],
+      "md5sums": []
     }
   ]
 }

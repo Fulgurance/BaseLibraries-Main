@@ -18,8 +18,8 @@ class Target < ISM::Software
                             "--opensource",
                             "--dbus-linked",
                             "--openssl-linked",
-                            "-system-harfbuzz",
-                            "-system-sqlite",
+                            option("Harfbuzz") ? "-system-harfbuzz" : "",
+                            option("Sqlite") ? "-system-sqlite" : "",
                             "--nomake=examples",
                             "--no-rpath",
                             "--syslog",
@@ -36,9 +36,9 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource(["install"],buildDirectoryPath)
 
-        fileReplaceText(Dir["#{buildDirectoryPath(false)}opt/qt5/*.prl"],"QMAKE_PRL_BUILD_DIR","")
+        #fileReplaceText(Dir["#{buildDirectoryPath(false)}opt/qt5/*.prl"],"QMAKE_PRL_BUILD_DIR","")
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
