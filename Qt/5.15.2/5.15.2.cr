@@ -59,7 +59,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/assistant-qt5.desktop",assistantData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/usr/bin/assistant")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/assistant")
         end
 
         if option("Designer")
@@ -80,7 +80,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/designer-qt5.desktop",designerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/usr/bin/designer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/designer")
         end
 
         if option("Linguist")
@@ -100,7 +100,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/linguist-qt5.desktop",linguistData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/usr/bin/linguist")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/linguist")
         end
 
         if option("Qdbusviewer")
@@ -120,7 +120,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt5.desktop",qdbusviewerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/usr/bin/qdbusviewer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/qdbusviewer")
         end
 
         if softwareIsInstalled("Sudo")
