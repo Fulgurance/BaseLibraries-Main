@@ -5,9 +5,9 @@ class Target < ISM::Software
 
         configureSource([   "--prefix=/usr",
                             "--disable-static",
-                            "--enable-fts5"],
-                            buildDirectoryPath,
-                            {"CPPFLAGS" => "-DSQLITE_ENABLE_FTS3=1 -DSQLITE_ENABLE_FTS4=1 -DSQLITE_ENABLE_COLUMN_METADATA=1 -DSQLITE_ENABLE_UNLOCK_NOTIFY=1 -DSQLITE_ENABLE_DBSTAT_VTAB=1 -DSQLITE_SECURE_DELETE=1 -DSQLITE_ENABLE_FTS3_TOKENIZER=1"})
+                            "--enable-fts5",
+                            "CPPFLAGS=\"-DSQLITE_ENABLE_FTS3=1 \\-DSQLITE_ENABLE_FTS4=1 \\-DSQLITE_ENABLE_COLUMN_METADATA=1 \\-DSQLITE_ENABLE_UNLOCK_NOTIFY=1 \\-DSQLITE_ENABLE_DBSTAT_VTAB=1 \\-DSQLITE_SECURE_DELETE=1 \\-DSQLITE_ENABLE_FTS3_TOKENIZER=1\""],
+                            buildDirectoryPath)
     end
     
     def build
