@@ -12,7 +12,7 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/opt/qt5",
+        configureSource([   "--prefix=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5",
                             "--sysconfdir=/etc/xdg",
                             "--confirm-license",
                             "--opensource",
