@@ -42,6 +42,7 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc")
 
         if option("Assistant")
             copyFile("#{buildDirectoryPath(false)}qttools/src/assistant/assistant/images/assistant-128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png")
