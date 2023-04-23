@@ -3,11 +3,6 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-
-        runMesonCommand([   "reconfigure",
-                            "..",
-                            softwareIsInstalled("Shared-Mime-Info") ? "-Dupdate-mimedb=true" : "-Dupdate-mimedb=false"],
-                            buildDirectoryPath)
     end
 
     def configure
@@ -15,7 +10,7 @@ class Target < ISM::Software
 
         runMesonCommand([   "--prefix=/usr",
                             "--buildtype=release",
-                            softwareIsInstalled("Shared-Mime-Info") ? "-Dupdate-mimedb=true" : "-Dupdate-mimedb=false",
+                            "-Dupdate-mimedb=true",
                             ".."],buildDirectoryPath)
     end
 
