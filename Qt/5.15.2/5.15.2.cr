@@ -12,18 +12,18 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "-prefix /opt/qt5",
-                            "-sysconfdir /etc/xdg",
-                            "-confirm-license",
-                            "-opensource",
-                            "-dbus-linked",
-                            "-openssl-linked",
+        configureSource([   "--prefix=/opt/qt5",
+                            "-sysconfdir=/etc/xdg",
+                            "--confirm-license",
+                            "--opensource",
+                            "--dbus-linked",
+                            "--openssl-linked",
                             "-system-harfbuzz",
                             "-system-sqlite",
-                            "-nomake examples",
-                            "-no-rpath",
-                            "-syslog",
-                            "-skip qtwebengine"],
+                            "-nomake=examples",
+                            "--no-rpath",
+                            "--syslog",
+                            "-skip=qtwebengine"],
                             buildDirectoryPath)
     end
     
