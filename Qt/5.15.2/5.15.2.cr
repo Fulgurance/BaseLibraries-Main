@@ -13,7 +13,7 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/opt/qt5",
-                            "-sysconfdir=/etc/xdg",
+                            "--sysconfdir=/etc/xdg",
                             "--confirm-license",
                             "--opensource",
                             "--dbus-linked",
