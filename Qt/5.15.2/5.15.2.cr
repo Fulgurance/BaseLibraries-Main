@@ -39,8 +39,6 @@ class Target < ISM::Software
 
         makeSource(["install"],buildDirectoryPath)
 
-        #fileReplaceText(Dir["#{buildDirectoryPath(false)}opt/qt5/*.prl"],"QMAKE_PRL_BUILD_DIR","")
-
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc")
@@ -135,16 +133,12 @@ class Target < ISM::Software
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/sudoers.d/qt",sudoData)
         end
 
-        if File.exists?("#{Ism.settings.rootPath}etc/ld.so.conf")
-            copyFile("#{Ism.settings.rootPath}etc/ld.so.conf","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf")
-        else
-            generateEmptyFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf")
-        end
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf.d")
 
         ldSoConfData = <<-CODE
         /opt/qt5/lib
         CODE
-        fileUpdateContent("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf",ldSoConfData)
+        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf.d/qt5.conf",ldSoConfData)
 
         qt5ShData = <<-CODE
         QT5DIR=/opt/qt5
