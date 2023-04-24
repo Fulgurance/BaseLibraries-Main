@@ -20,6 +20,7 @@ class Target < ISM::Software
                             "--openssl-linked",
                             option("Harfbuzz") ? "-system-harfbuzz" : "",
                             option("Sqlite") ? "-system-sqlite" : "",
+                            option("Xcb") ? "-xcb" : "",
                             "--nomake=examples",
                             "--no-rpath",
                             "--syslog",

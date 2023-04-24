@@ -76,6 +76,14 @@
       ],
       "downloadLinks": [],
       "md5sums": []
+    },
+    {
+      "name": "Xcb",
+      "description": "Enable xcb support for X11",
+      "active": false,
+      "dependencies": [],
+      "downloadLinks": [],
+      "md5sums": []
     }
   ]
 }
