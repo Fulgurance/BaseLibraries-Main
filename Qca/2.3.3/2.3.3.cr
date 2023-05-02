@@ -11,7 +11,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/opt/qt5",
+        runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
                             "-DCMAKE_BUILD_TYPE=Release",
                             "-DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man",
                             ".."],

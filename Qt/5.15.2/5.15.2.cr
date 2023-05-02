@@ -12,7 +12,16 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5",
+        configureSource([   "--prefix=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr",
+                            "--archdatadir=/usr/lib/qt5",
+                            "--bindir=/usr/bin",
+                            "--plugindir=/usr/lib/qt5/plugins",
+                            "--importdir=/usr/lib/qt5/imports",
+                            "--headerdir=/usr/include/qt5",
+                            "--datadir=/usr/share/qt5",
+                            "--docdir=/usr/share/doc/qt5",
+                            "--translationdir=/usr/share/qt5/translations",
+                            "--examplesdir=/usr/share/doc/qt5/examples",
                             "--sysconfdir=/etc/xdg",
                             "--confirm-license",
                             "--opensource",
@@ -51,7 +60,7 @@ class Target < ISM::Software
             [Desktop Entry]
             Name=Qt5 Assistant
             Comment=Shows Qt5 documentation and examples
-            Exec=/opt/qt5/bin/assistant
+            Exec=/usr/qt5/bin/assistant
             Icon=assistant-qt5.png
             Terminal=false
             Encoding=UTF-8
@@ -60,7 +69,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/assistant-qt5.desktop",assistantData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/assistant")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/assistant")
         end
 
         if option("Designer")
@@ -71,7 +80,7 @@ class Target < ISM::Software
             Name=Qt5 Designer
             GenericName=Interface Designer
             Comment=Design GUIs for Qt5 applications
-            Exec=/opt/qt5/bin/designer
+            Exec=/usr/qt5/bin/designer
             Icon=designer-qt5.png
             MimeType=application/x-designer;
             Terminal=false
@@ -81,7 +90,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/designer-qt5.desktop",designerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/designer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/designer")
         end
 
         if option("Linguist")
@@ -91,7 +100,7 @@ class Target < ISM::Software
             [Desktop Entry]
             Name=Qt5 Linguist
             Comment=Add translations to Qt5 applications
-            Exec=/opt/qt5/bin/linguist
+            Exec=/usr/qt5/bin/linguist
             Icon=linguist-qt5.png
             MimeType=text/vnd.trolltech.linguist;application/x-linguist;
             Terminal=false
@@ -101,7 +110,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/linguist-qt5.desktop",linguistData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/linguist")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/linguist")
         end
 
         if option("Qdbusviewer")
@@ -112,7 +121,7 @@ class Target < ISM::Software
             Name=Qt5 QDbusViewer
             GenericName=D-Bus Debugger
             Comment=Debug D-Bus applications
-            Exec=/opt/qt5/bin/qdbusviewer
+            Exec=/usr/qt5/bin/qdbusviewer
             Icon=qdbusviewer-qt5.png
             Terminal=false
             Encoding=UTF-8
@@ -121,30 +130,17 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt5.desktop",qdbusviewerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}opt/qt5/bin/qdbusviewer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/qdbusviewer")
         end
-
-        if softwareIsInstalled("Sudo")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/sudoers.d")
-
-            sudoData = <<-CODE
-            Defaults env_keep += QT5DIR
-            CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/sudoers.d/qt",sudoData)
-        end
-
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf.d")
-
-        ldSoConfData = <<-CODE
-        /opt/qt5/lib
-        CODE
-        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/ld.so.conf.d/qt5.conf",ldSoConfData)
 
         qt5ShData = <<-CODE
-        QT5DIR=/opt/qt5
-        pathappend $QT5DIR/bin           PATH
-        pathappend $QT5DIR/lib/pkgconfig PKG_CONFIG_PATH
+        QT5DIR=/usr
         export QT5DIR
+        pathappend $QT5DIR/bin
+        pathappend /usr/lib/qt5/plugins QT_PLUGIN_PATH
+        pathappend $QT5DIR/lib/plugins QT_PLUGIN_PATH
+        pathappend /usr/lib/qt5/qml QML2_IMPORT_PATH
+        pathappend $QT5DIR/lib/qml QML2_IMPORT_PATH
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/qt5.sh",qt5ShData)
     end
@@ -171,13 +167,13 @@ class Target < ISM::Software
             setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt5.png",0o755)
         end
 
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/moc","/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/uic","/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/rcc","/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/qmake","/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/lconvert","/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/lrelease","/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}opt/qt5/bin/lupdate","/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/moc","/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/uic","/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/rcc","/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/qmake","/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/lconvert","/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/lrelease","/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
+        makeLink("#{Ism.settings.rootPath}usr/bin/lupdate","/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
 
         runLdconfigCommand
     end
