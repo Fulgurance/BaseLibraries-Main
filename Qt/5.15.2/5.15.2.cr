@@ -21,7 +21,6 @@ class Target < ISM::Software
                             "--datadir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/qt5",
                             "--docdir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/qt5",
                             "--translationdir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/qt5/translations",
-                            "--examplesdir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/doc/qt5/examples",
                             "--sysconfdir=/etc/xdg",
                             "--confirm-license",
                             "--opensource",
