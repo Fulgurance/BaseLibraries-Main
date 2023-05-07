@@ -1,0 +1,20 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Pycairo",
+  "version": "1.20.1",
+  "architectures": ["x86_64"],
+  "description": "Python bindings for cairo",
+  "website": "https://github.com/pygobject/pycairo",
+  "downloadLinks": ["https://github.com/pygobject/pycairo/releases/download/v1.20.1/pycairo-1.20.1.tar.gz"],
+  "md5sums": ["fa88a28cadbfb34192fe743d32c0ee33"],
+  "patchesLinks": [],
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Cairo",
+      "version": "1.17.4",
+      "options": []
+    }
+  ],
+  "options": []
+}
