@@ -3,7 +3,11 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runPythonCommand(["setup.py","install","--optimize=1","--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr"],buildDirectoryPath)
+        runPythonCommand(["setup.py","install","bdist"],buildDirectoryPath)
+
+        extractSource("#{buildDirectoryPath}/dist/Mako-1.1.5.linux-x86_64.tar.gz")
+
+        copyDirectory("#{buildDirectoryPath}/dist/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
         if File.exists?("#{Ism.settings.rootPath}etc/profile.d/python.sh")
             copyFile("#{Ism.settings.rootPath}etc/profile.d/python.sh","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/python.sh")

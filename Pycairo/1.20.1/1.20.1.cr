@@ -1,19 +1,13 @@
 class Target < ISM::Software
-
-    def build
-        super
-
-        runPythonCommand(["setup.py","build"],buildDirectoryPath)
-    end
     
     def prepareInstallation
         super
 
-        runPythonCommand(["setup.py","install","--optimize=1","--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr"],buildDirectoryPath)
+        runPythonCommand(["setup.py","install","bdist"],buildDirectoryPath)
 
-        runPythonCommand(["setup.py","install_pycairo_header","--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr"],buildDirectoryPath)
+        extractSource("#{buildDirectoryPath}/dist/pycairo-1.20.1.linux-x86_64.tar.gz")
 
-        runPythonCommand(["setup.py","install_pkgconfig","--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr"],buildDirectoryPath)
+        copyDirectory("#{buildDirectoryPath}/dist/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
         if File.exists?("#{Ism.settings.rootPath}etc/profile.d/python.sh")
             copyFile("#{Ism.settings.rootPath}etc/profile.d/python.sh","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/python.sh")
