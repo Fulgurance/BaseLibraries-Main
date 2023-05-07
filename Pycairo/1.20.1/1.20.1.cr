@@ -7,7 +7,7 @@ class Target < ISM::Software
 
         extractSource("#{buildDirectoryPath}/dist/pycairo-1.20.1.linux-x86_64.tar.gz")
 
-        copyDirectory("#{buildDirectoryPath}/dist/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
+        copyDirectory("#{workDirectoryPath(false)}/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
         if File.exists?("#{Ism.settings.rootPath}etc/profile.d/python.sh")
             copyFile("#{Ism.settings.rootPath}etc/profile.d/python.sh","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/python.sh")
