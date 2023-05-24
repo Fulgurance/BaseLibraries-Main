@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Core database of common types and command used to extend it",
   "website": "https://www.freedesktop.org/wiki/Software/shared-mime-info/",
-  "downloadLinks": ["https://gitlab.freedesktop.org/xdg/shared-mime-info/-/archive/2.1/shared-mime-info-2.1.tar.gz"],
-  "md5sums": ["8d059fb2d34062a67fd9ca63fab1fb91"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

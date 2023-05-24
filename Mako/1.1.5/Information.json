@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Mako Templates for Python",
   "website": "https://files.pythonhosted.org",
-  "downloadLinks": ["https://files.pythonhosted.org/packages/source/M/Mako/Mako-1.1.5.tar.gz"],
-  "md5sums": ["409bdc38e9ddda5eada61fb092cb12fd"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

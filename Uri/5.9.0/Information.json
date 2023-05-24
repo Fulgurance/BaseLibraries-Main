@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Uniform Resource Identifiers",
   "website": "https://metacpan.org/pod/URI",
-  "downloadLinks": ["https://www.cpan.org/authors/id/O/OA/OALDERS/URI-5.09.tar.gz"],
-  "md5sums": ["bd66b0c620d076c4b0de9507b5f1fbdf"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

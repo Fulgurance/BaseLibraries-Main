@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine",
   "website": " https://sqlite.org",
-  "downloadLinks": ["https://sqlite.org/2021/sqlite-autoconf-3360000.tar.gz"],
-  "md5sums": ["f5752052fc5b8e1b539af86a3671eac7"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

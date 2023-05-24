@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Library set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl",
   "website": "https://www.pcre.org/",
-  "downloadLinks": ["https://sourceforge.net/projects/pcre/files/pcre/8.45/pcre-8.45.tar.bz2"],
-  "md5sums": ["4452288e6a0eefb2ab11d36010a1eebb"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

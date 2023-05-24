@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "ASN.1 library used by GnuTLS p11-kit and some other packages",
   "website": "https://www.gnu.org/software/libtasn1/",
-  "downloadLinks": ["https://ftp.gnu.org/gnu/libtasn1/libtasn1-4.17.0.tar.gz"],
-  "md5sums": ["c46f6eb3bd1287031ae5d36465094402"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

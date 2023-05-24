@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "The free software ncurses library emulation of curses",
   "website": "https://ninja-build.org/",
-  "downloadLinks": ["https://ftp.gnu.org/gnu/ncurses/ncurses-6.2.tar.gz"],
-  "md5sums": ["e812da327b1c2214ac1aed440ea3ae8d"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {
@@ -28,8 +25,6 @@
           "options": ["Pass1"]
         }
       ],
-      "downloadLinks": [],
-      "md5sums": []
     }
   ]
 }

@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Libsass command line driver",
   "website": " https://github.com/sass/sassc",
-  "downloadLinks": ["https://github.com/sass/sassc/archive/3.6.2/sassc-3.6.2.tar.gz"],
-  "md5sums": ["4c3b06ce2979f2a9f0a35093e501d8bb"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

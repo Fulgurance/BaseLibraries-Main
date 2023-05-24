@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Multi-platform support library with a focus on asynchronous I/O",
   "website": "https://libuv.org/",
-  "downloadLinks": ["https://dist.libuv.org/dist/v1.42.0/libuv-v1.42.0.tar.gz"],
-  "md5sums": ["484dec4a06e183c20be815019ce9ddd0"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

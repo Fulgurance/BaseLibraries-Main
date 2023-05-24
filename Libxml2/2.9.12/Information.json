@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "XML C parser and toolkit developed for the Gnome project",
   "website": "https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home",
-  "downloadLinks": ["http://xmlsoft.org/sources/libxml2-2.9.12.tar.gz"],
-  "md5sums": ["f433a39be087a9f0b197eb2307ad9f75"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

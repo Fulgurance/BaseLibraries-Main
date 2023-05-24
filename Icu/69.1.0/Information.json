@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "ICU set of C/C++ and Java libraries providing Unicode and Globalization support",
   "website": "https://github.com/unicode-org/icu",
-  "downloadLinks": ["https://github.com/unicode-org/icu/releases/download/release-69-1/icu4c-69_1-src.tgz"],
-  "md5sums": ["9403db682507369d0f60a25ea67014c4"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Provide a straightforward and cross-platform cryptographic API using Qt datatypes and conventions",
   "website": "https://api.kde.org/qca/html/",
-  "downloadLinks": ["https://download.kde.org/stable/qca/2.3.3/qca-2.3.3.tar.xz"],
-  "md5sums": ["22d9aad50442168911d442792c047266"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

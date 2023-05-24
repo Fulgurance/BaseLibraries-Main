@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Free peer-reviewed portable C++ source libraries",
   "website": " https://boostorg.jfrog.io",
-  "downloadLinks": ["https://boostorg.jfrog.io/artifactory/main/release/1.77.0/source/boost_1_77_0.tar.bz2"],
-  "md5sums": ["09dc857466718f27237144c6f2432d86"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

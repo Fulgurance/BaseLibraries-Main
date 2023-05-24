@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Ultra-fast, ultra-compact, crash-proof, key-value, embedded data store",
   "website": "https://www.openldap.org/software/repo.html",
-  "downloadLinks": ["https://github.com/LMDB/lmdb/archive/LMDB_0.9.29.tar.gz"],
-  "md5sums": ["84cc7cac4bf15486536560f171297a49"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {

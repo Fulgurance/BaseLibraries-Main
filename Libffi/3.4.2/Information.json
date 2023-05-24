@@ -5,9 +5,6 @@
   "architectures": ["x86_64"],
   "description": "Compilers for high level languages generate code that follows certain conventions",
   "website": "https://sourceware.org/libffi/",
-  "downloadLinks": ["https://github.com/libffi/libffi/releases/download/v3.4.2/libffi-3.4.2.tar.gz"],
-  "md5sums": ["294b921e6cf9ab0fbaea4b639f8fdbe8"],
-  "patchesLinks": [],
   "installedFiles": [],
   "dependencies": [
     {
