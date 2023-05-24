@@ -18,25 +18,25 @@
       "name": "Assistant",
       "description": "Enable assistant support",
       "active": false,
-      "dependencies": [],
+      "dependencies": []
     },
     {
       "name": "Designer",
       "description": "Enable designer support",
       "active": false,
-      "dependencies": [],
+      "dependencies": []
     },
     {
       "name": "Linguist",
       "description": "Enable linguist support",
       "active": false,
-      "dependencies": [],
+      "dependencies": []
     },
     {
       "name": "Qdbusviewer",
       "description": "Enable assistant support",
       "active": false,
-      "dependencies": [],
+      "dependencies": []
     },
     {
       "name": "Harfbuzz",
@@ -48,7 +48,7 @@
           "version": "2.9.0",
           "options": []
         }
-      ],
+      ]
     },
     {
       "name": "Sqlite",
@@ -60,7 +60,7 @@
           "version": "3.36.0",
           "options": []
         }
-      ],
+      ]
     },
     {
       "name": "Xcb",
@@ -77,7 +77,7 @@
           "version": "0.4.1",
           "options": []
         }
-      ],
+      ]
     }
   ]
 }

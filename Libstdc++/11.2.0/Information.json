@@ -24,7 +24,7 @@
           "version": "2.34.0",
           "options": ["Pass1"]
         }
-      ],
+      ]
     },
     {
       "name": "Pass2",
@@ -36,7 +36,7 @@
           "version": "0.2.0",
           "options": ["Pass2"]
         }
-      ],
+      ]
     }
   ]
 }
