@@ -5,7 +5,7 @@ class Target < ISM::Software
 
         runPythonCommand(["setup.py","install","bdist"],buildDirectoryPath)
 
-        extractSource("#{buildDirectoryPath}/dist/pycairo-1.20.1.linux-x86_64.tar.gz")
+        extractArchive("#{buildDirectoryPath}/dist/pycairo-1.20.1.linux-x86_64.tar.gz")
 
         copyDirectory("#{workDirectoryPath(false)}/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
@@ -18,7 +18,7 @@ class Target < ISM::Software
         end
 
         pythonData = <<-CODE
-        pathappend /usr/lib/python3.9/site-packages/pycairo-1.20.1-py3.9.egg PYTHONPATH
+        pathappend /usr/lib/python3.9/site-packages/pycairo-1.20.1-py3.9-linux-x86_64.egg PYTHONPATH
         CODE
         fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/python.sh",pythonData)
     end
