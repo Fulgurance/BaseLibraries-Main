@@ -18,7 +18,7 @@ class Target < ISM::Software
         end
 
         pythonData = <<-CODE
-        pathappend /usr/lib/python3.9/site-packages/MarkupSafe-2.0.1-py3.9egg PYTHONPATH
+        pathappend /usr/lib/python3.9/site-packages/MarkupSafe-2.0.1-py3.9-linux-x86_64.egg PYTHONPATH
         CODE
         fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/python.sh",pythonData)
     end
