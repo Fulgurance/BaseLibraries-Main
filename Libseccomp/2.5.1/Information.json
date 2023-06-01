@@ -1,0 +1,17 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libseccomp",
+  "version": "2.5.1",
+  "architectures": ["x86_64"],
+  "description": "Easy to use platform independent interface to the Linux Kernel's syscall filtering mechanism",
+  "website": "https://github.com/seccomp/libseccomp",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "options": []
+}
