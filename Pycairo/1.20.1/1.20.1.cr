@@ -20,7 +20,7 @@ class Target < ISM::Software
         pythonData = <<-CODE
         pathappend /usr/lib/python3.9/site-packages/pycairo-1.20.1-py3.9-linux-x86_64.egg PYTHONPATH
         CODE
-        fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/python.sh",pythonData)
+        fileUpdateContent("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/python.sh",pythonData)
     end
 
 end
