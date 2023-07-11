@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Qt",
   "version": "5.15.2",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Qt framework with highly intuitive and modularized C++ library to simplify application development",
   "website": "https://www.qt.io/",
   "installedFiles": [],
@@ -19,25 +21,29 @@
       "name": "Assistant",
       "description": "Enable assistant support",
       "active": false,
-      "dependencies": []
+      "dependencies": [],
+      "kernelDependencies": []
     },
     {
       "name": "Designer",
       "description": "Enable designer support",
       "active": false,
-      "dependencies": []
+      "dependencies": [],
+      "kernelDependencies": []
     },
     {
       "name": "Linguist",
       "description": "Enable linguist support",
       "active": false,
-      "dependencies": []
+      "dependencies": [],
+      "kernelDependencies": []
     },
     {
       "name": "Qdbusviewer",
       "description": "Enable assistant support",
       "active": false,
-      "dependencies": []
+      "dependencies": [],
+      "kernelDependencies": []
     },
     {
       "name": "Harfbuzz",
@@ -49,7 +55,8 @@
           "version": "2.9.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Sqlite",
@@ -61,7 +68,8 @@
           "version": "3.36.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Xcb",
@@ -78,7 +86,8 @@
           "version": "0.4.1",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

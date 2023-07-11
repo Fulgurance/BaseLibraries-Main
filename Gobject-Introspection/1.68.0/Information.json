@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Gobject-Introspection",
   "version": "1.68.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Describe the APIs and collect them in a uniform, machine readable format",
   "website": "https://gitlab.gnome.org/GNOME/gobject-introspection",
   "installedFiles": [],

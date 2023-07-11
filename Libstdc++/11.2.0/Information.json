@@ -2,15 +2,19 @@
   "port": "BaseLibraries-Main",
   "name": "Libstdc++",
   "version": "11.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Libstdc++ standard C++ library",
   "website": "https://gcc.gnu.org/",
   "installedFiles": [],
   "dependencies": [
     {
-        "name": "SystemBase",
-        "version": "0.2.0",
-        "options": ["Pass3"]
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
     }
   ],
   "kernelDependencies": [],
@@ -23,9 +27,12 @@
         {
           "name": "Glibc",
           "version": "2.34.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     },
     {
       "name": "Pass2",
@@ -35,9 +42,12 @@
         {
           "name": "SystemBase",
           "version": "0.2.0",
-          "options": ["Pass2"]
+          "options": [
+            "Pass2"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

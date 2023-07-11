@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Glib",
   "version": "2.68.4",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Low-level core library that forms the basis for projects such as GTK+ and GNOME",
   "website": "https://gitlab.gnome.org/GNOME/glib",
   "installedFiles": [],
@@ -30,7 +32,8 @@
           "version": "8.45.0",
           "options": []
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

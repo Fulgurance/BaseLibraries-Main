@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Lmdb",
   "version": "0.9.29",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Ultra-fast, ultra-compact, crash-proof, key-value, embedded data store",
   "website": "https://www.openldap.org/software/repo.html",
   "installedFiles": [],

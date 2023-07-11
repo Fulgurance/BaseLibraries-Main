@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Shared-Mime-Info",
   "version": "2.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Core database of common types and command used to extend it",
   "website": "https://www.freedesktop.org/wiki/Software/shared-mime-info/",
   "installedFiles": [],

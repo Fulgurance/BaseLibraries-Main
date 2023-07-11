@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libuv",
   "version": "1.42.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Multi-platform support library with a focus on asynchronous I/O",
   "website": "https://libuv.org/",
   "installedFiles": [],

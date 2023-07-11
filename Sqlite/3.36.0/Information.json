@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Sqlite",
   "version": "3.36.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "C-language library that implements a small, fast, self-contained, high-reliability, full-featured, SQL database engine",
   "website": " https://sqlite.org",
   "installedFiles": [],

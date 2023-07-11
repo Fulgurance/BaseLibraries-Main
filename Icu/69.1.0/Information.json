@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Icu",
   "version": "69.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "ICU set of C/C++ and Java libraries providing Unicode and Globalization support",
   "website": "https://github.com/unicode-org/icu",
   "installedFiles": [],

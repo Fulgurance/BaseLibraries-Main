@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Yajl",
   "version": "2.1.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "A fast streaming JSON parsing library in C",
   "website": "https://github.com/lloyd/yajl",
   "installedFiles": [],

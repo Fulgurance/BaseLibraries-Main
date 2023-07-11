@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Pycairo",
   "version": "1.20.1",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Python bindings for cairo",
   "website": "https://github.com/pygobject/pycairo",
   "installedFiles": [],

@@ -2,15 +2,19 @@
   "port": "BaseLibraries-Main",
   "name": "Linux-API-Headers",
   "version": "5.13.12",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The Linux kernel API headers",
   "website": "https://www.kernel.org/",
   "installedFiles": [],
   "dependencies": [
     {
-        "name": "SystemBase",
-        "version": "0.2.0",
-        "options": ["Pass3"]
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
     }
   ],
   "kernelDependencies": [],
@@ -23,9 +27,12 @@
         {
           "name": "Gcc",
           "version": "11.2.0",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

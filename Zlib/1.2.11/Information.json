@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Zlib",
   "version": "1.2.11",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Lossless data-compression library portable across platforms",
   "website": "https://www.zlib.net/",
   "installedFiles": [],
@@ -10,7 +12,9 @@
     {
       "name": "SystemBase",
       "version": "0.2.0",
-      "options": ["Pass3"]
+      "options": [
+        "Pass3"
+      ]
     }
   ],
   "kernelDependencies": [],

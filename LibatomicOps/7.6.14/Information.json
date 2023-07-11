@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "LibatomicOps",
   "version": "7.6.14",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Atomic memory update operations portable implementation",
   "website": "https://github.com/ivmai/libatomic_ops/",
   "installedFiles": [],

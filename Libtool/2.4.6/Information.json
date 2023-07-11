@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libtool",
   "version": "2.4.6",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Generic library support script that hides the complexity of using shared libraries behind a consistent, portable interface",
   "website": "https://www.gnu.org/software/libtool/",
   "installedFiles": [],
@@ -10,7 +12,9 @@
     {
       "name": "SystemBase",
       "version": "0.2.0",
-      "options": ["Pass3"]
+      "options": [
+        "Pass3"
+      ]
     },
     {
       "name": "Autoconf",

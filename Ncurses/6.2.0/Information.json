@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Ncurses",
   "version": "6.2.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "The free software ncurses library emulation of curses",
   "website": "https://ninja-build.org/",
   "installedFiles": [],
@@ -23,9 +25,12 @@
         {
           "name": "M4",
           "version": "1.4.19",
-          "options": ["Pass1"]
+          "options": [
+            "Pass1"
+          ]
         }
-      ]
+      ],
+      "kernelDependencies": []
     }
   ]
 }

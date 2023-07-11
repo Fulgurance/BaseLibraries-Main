@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Dbus-Glib",
   "version": "0.112.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Deprecated libdbus wrapper for GLib-based programs",
   "website": "https://gitlab.freedesktop.org/dbus/dbus-glib",
   "installedFiles": [],

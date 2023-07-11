@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libxml2",
   "version": "2.9.12",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "XML C parser and toolkit developed for the Gnome project",
   "website": "https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home",
   "installedFiles": [],

@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Boost",
   "version": "1.77.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Free peer-reviewed portable C++ source libraries",
   "website": " https://boostorg.jfrog.io",
   "installedFiles": [],

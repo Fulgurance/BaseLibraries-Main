@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Uri",
   "version": "5.9.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Uniform Resource Identifiers",
   "website": "https://metacpan.org/pod/URI",
   "installedFiles": [],

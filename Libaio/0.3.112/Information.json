@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libaio",
   "version": "0.3.112",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Linux-native asynchronous I/O facility",
   "website": "https://pagure.io/libaio",
   "installedFiles": [],

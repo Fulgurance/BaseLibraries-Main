@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Mpc",
   "version": "1.2.1",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "C library for the arithmetic of complex numbers with arbitrarily high precision and correct rounding of the result",
   "website": "http://www.multiprecision.org/",
   "installedFiles": [],
@@ -10,7 +12,9 @@
     {
       "name": "SystemBase",
       "version": "0.2.0",
-      "options": ["Pass3"]
+      "options": [
+        "Pass3"
+      ]
     },
     {
       "name": "Gmp",

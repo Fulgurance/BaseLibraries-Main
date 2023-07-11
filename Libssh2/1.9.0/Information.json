@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libssh2",
   "version": "1.9.0",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Client-side C library implementing the SSH2 protocol",
   "website": "https://www.libssh2.org",
   "installedFiles": [],

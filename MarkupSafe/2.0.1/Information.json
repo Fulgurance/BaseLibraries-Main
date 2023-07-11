@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "MarkupSafe",
   "version": "2.0.1",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Safely add untrusted strings to HTML/XML markup",
   "website": "https://files.pythonhosted.org",
   "installedFiles": [],

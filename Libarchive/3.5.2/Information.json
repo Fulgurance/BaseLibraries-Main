@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libarchive",
   "version": "3.5.2",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "Multi-format archive and compression library",
   "website": "https://github.com/libarchive/libarchive",
   "installedFiles": [],

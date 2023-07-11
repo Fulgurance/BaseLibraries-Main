@@ -2,7 +2,9 @@
   "port": "BaseLibraries-Main",
   "name": "Libsass",
   "version": "3.6.5",
-  "architectures": ["x86_64"],
+  "architectures": [
+    "x86_64"
+  ],
   "description": "A C/C++ implementation of a Sass compiler",
   "website": "https://github.com/sass/libsass",
   "installedFiles": [],
