@@ -23,7 +23,7 @@ class Target < ISM::Software
         else
             deleteAllHiddenFilesRecursively("#{mainWorkDirectoryPath(false)}usr/include")
             deleteFile("#{mainWorkDirectoryPath(false)}usr/include/Makefile")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}/usr")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
             copyDirectory("#{mainWorkDirectoryPath(false)}usr/include", "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
         end
     end
