@@ -7,6 +7,8 @@ class Target < ISM::Software
 
         extractArchive("#{buildDirectoryPath(false)}/dist/MarkupSafe-2.0.1.linux-x86_64.tar.gz")
 
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
+
         copyDirectory("#{workDirectoryPath(false)}/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d")
