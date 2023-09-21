@@ -5,7 +5,9 @@ class Target < ISM::Software
 
         runPythonCommand(["setup.py","install","bdist"],buildDirectoryPath)
 
-        extractArchive("#{buildDirectoryPath}/dist/Mako-1.1.5.linux-x86_64.tar.gz")
+        extractArchive("#{buildDirectoryPath(false)}/dist/Mako-1.1.5.linux-x86_64.tar.gz")
+
+        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
         copyDirectory("#{workDirectoryPath(false)}/usr","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr")
 
