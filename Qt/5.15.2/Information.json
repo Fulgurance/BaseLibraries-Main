@@ -88,6 +88,32 @@
         }
       ],
       "kernelDependencies": []
+    },
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Dbus",
+          "version": "1.12.20",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Openssl",
+      "description": "Enable openssl support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Openssl",
+          "version": "1.1.1+l",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
     }
   ],
   "uniqueOptions": []
