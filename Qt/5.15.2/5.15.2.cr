@@ -12,7 +12,7 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr",
+        configureSource([   "--prefix=/usr",
                             "--archdatadir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/qt5",
                             "--bindir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin",
                             "--plugindir=#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/qt5/plugins",
