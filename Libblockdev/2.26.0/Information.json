@@ -1,0 +1,55 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libblockdev",
+  "version": "2.26.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Reading and Parsing Library",
+  "website": "https://github.com/storaged-project/udisks",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Gobject-Introspection",
+      "version": "1.68.0",
+      "options": []
+    },
+    {
+      "name": "Libbytesize",
+      "version": "2.6.0",
+      "options": []
+    },
+    {
+      "name": "Libyaml",
+      "version": "0.2.5",
+      "options": []
+    },
+    {
+      "name": "Parted",
+      "version": "3.4.0",
+      "options": []
+    },
+    {
+      "name": "Volume-Key",
+      "version": "0.3.12",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Btrfs-Progs",
+      "description": "Enable btrfs-progs support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Btrfs-Progs",
+          "version": "5.13.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

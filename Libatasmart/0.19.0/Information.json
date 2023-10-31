@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libatasmart",
+  "version": "0.19.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Reading and Parsing Library",
+  "website": "https://github.com/Rupan/libatasmart",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
