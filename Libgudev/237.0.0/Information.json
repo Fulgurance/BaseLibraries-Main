@@ -1,0 +1,35 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libgudev",
+  "version": "237.0.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Library providing GObject bindings for libudev",
+  "website": "https://gitlab.gnome.org/GNOME/libgudev",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glib",
+      "version": "2.68.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Gobject-Introspection",
+      "description": "Enable gobject-introspection support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Gobject-Introspection",
+          "version": "1.68.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
