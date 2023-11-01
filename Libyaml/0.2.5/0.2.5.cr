@@ -3,7 +3,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runScript("bootstrap.sh", path: buildDirectoryPath)
+        runScript("bootstrap", path: buildDirectoryPath)
 
         configureSource([   "--prefix=/usr",
                             "--disable-static"],
