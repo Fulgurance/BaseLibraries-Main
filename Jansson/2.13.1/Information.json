@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Jansson",
+  "version": "2.13.1",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "C library for encoding, decoding and manipulating JSON data",
+  "website": "https://github.com/akheron/jansson",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
