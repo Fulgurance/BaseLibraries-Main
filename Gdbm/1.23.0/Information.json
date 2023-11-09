@@ -1,0 +1,28 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Gdbm",
+  "version": "1.23.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Library of database functions that use extensible hashing and work similar to the standard UNIX dbm",
+  "website": "https://www.gnu.org/software/gdbm/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    },
+    {
+      "name": "Readline",
+      "version": "8.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
