@@ -1,0 +1,83 @@
+class Target < ISM::Software
+    
+    def prepare
+        if option("Pass1")
+            @buildDirectory = true
+            super
+
+            configureSource(path: buildDirectoryPath)
+            makeSource(["-C","include"],buildDirectoryPath)
+            makeSource(["-C","progs","tic"],buildDirectoryPath)
+        else
+            super
+        end
+    end
+
+    def configure
+        super
+
+        if option("Pass1")
+            configureSource([   "--prefix=/usr",
+                                "--host=#{Ism.settings.chrootTarget}",
+                                "--build=$(./config.guess)",
+                                "--mandir=/usr/share/man",
+                                "--with-manpage-format=normal",
+                                "--with-shared",
+                                "--without-normal",
+                                "--with-cxx-shared",
+                                "--without-debug",
+                                "--without-ada",
+                                "--disable-stripping",
+                                "--enable-widec"],
+                                buildDirectoryPath)
+        else
+            configureSource([   "--prefix=/usr",
+                                "--mandir=/usr/share/man",
+                                "--with-shared",
+                                "--without-debug",
+                                "--without-normal",
+                                "--with-cxx-shared",
+                                "--enable-pc-files",
+                                "--enable-widec",
+                                "--with-pkg-config-libdir=/usr/lib/pkgconfig"],
+                                buildDirectoryPath)
+        end
+    end
+    
+    def build
+        super
+
+        makeSource(path: buildDirectoryPath)
+    end
+    
+    def prepareInstallation
+        super
+
+        if option("Pass1")
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
+        else
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libmenu.so","INPUT(-lmenuw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcursesw.so","INPUT(-lncursesw)")
+        end
+    end
+
+    def install
+        super
+
+        if !option("Pass1")
+            makeLink("ncursesw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
+            makeLink("formw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/form.pc",:symbolicLinkByOverwrite)
+            makeLink("panelw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
+            makeLink("menuw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
+            makeLink("libncurses.so","#{Ism.settings.rootPath}usr/lib/libcurses.so",:symbolicLinkByOverwrite)
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib/libncurses++w.a")
+        end
+
+    end
+
+end

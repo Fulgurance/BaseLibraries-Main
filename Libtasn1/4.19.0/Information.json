@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libtasn1",
+  "version": "4.19.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "ASN.1 library used by GnuTLS p11-kit and some other packages",
+  "website": "https://www.gnu.org/software/libtasn1/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

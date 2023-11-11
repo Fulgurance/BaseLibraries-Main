@@ -1,0 +1,35 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libxml2",
+  "version": "2.10.4",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "XML C parser and toolkit developed for the Gnome project",
+  "website": "https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Icu",
+      "description": "Enable icu support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Icu",
+          "version": "73.2.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

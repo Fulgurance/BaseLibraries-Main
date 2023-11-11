@@ -1,0 +1,125 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Qt",
+  "version": "5.15.2",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "The Qt framework with highly intuitive and modularized C++ library to simplify application development",
+  "website": "https://www.qt.io/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Xorg-Libraries",
+      "version": "21.1.8",
+      "options": []
+    },
+    {
+      "name": "Mesa",
+      "version": "23.1.6",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Assistant",
+      "description": "Enable assistant support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Designer",
+      "description": "Enable designer support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Linguist",
+      "description": "Enable linguist support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Qdbusviewer",
+      "description": "Enable assistant support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Harfbuzz",
+      "description": "Enable harfbuzz support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Harfbuzz",
+          "version": "8.1.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Sqlite",
+      "description": "Enable sqlite support",
+      "active": true,
+      "dependencies": [
+        {
+          "name": "Sqlite",
+          "version": "3.42.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Xcb",
+      "description": "Enable xcb support for X11",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Xcb-Util-Keysyms",
+          "version": "0.4.1",
+          "options": []
+        },
+        {
+          "name": "Xcb-Util-Wm",
+          "version": "0.4.2",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Dbus",
+          "version": "1.14.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Openssl",
+      "description": "Enable openssl support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Openssl",
+          "version": "3.1.2",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}

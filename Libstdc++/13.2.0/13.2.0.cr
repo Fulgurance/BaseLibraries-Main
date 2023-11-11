@@ -3,12 +3,6 @@ class Target < ISM::Software
     def prepare
         @buildDirectory = true
         super
-
-        if option("Pass2")
-            makeLink(   "gthr-posix.h",
-                        "#{mainWorkDirectoryPath(false)}libgcc/gthr-default.h",
-                        :symbolicLink)
-        end
     end
 
     def configure
@@ -25,28 +19,18 @@ class Target < ISM::Software
                                 buildDirectoryPath,
                                 "libstdc++-v3")
         end
-        if option("Pass2")
-            configureSource([   "--prefix=/usr",
-                                "--disable-multilib",
-                                "--disable-nls",
-                                "--host=#{Ism.settings.target}",
-                                "--disable-libstdcxx-pch"],
-                                buildDirectoryPath,
-                                "libstdc++-v3",
-                                {"CXXFLAGS" => "-g -O2 -D_GNU_SOURCE"})
-        end
     end
 
     def build
         super
 
-        if option("Pass1") || option("Pass2")
+        if option("Pass1")
             makeSource(path: buildDirectoryPath)
         end
     end
 
     def prepareInstallation
-        if option("Pass1") || option("Pass2")
+        if option("Pass1")
             super
         else
             Ism.addInstalledSoftware(@information)
@@ -54,11 +38,12 @@ class Target < ISM::Software
 
         if option("Pass1")
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}","install"],buildDirectoryPath)
+
+            deleteFile("#{builtSoftwareDirectoryPath(false)}/usr/lib/libstdc++.la")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}/usr/lib/libstdc++fs.la")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}/usr/lib/libsupc++.la")
         end
 
-        if option("Pass2")
-            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-        end
     end
 
 end

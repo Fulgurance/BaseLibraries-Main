@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Pycairo",
+  "version": "1.24.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Python bindings for cairo",
+  "website": "https://github.com/pygobject/pycairo",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Cairo",
+      "version": "1.17.6",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
