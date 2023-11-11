@@ -3,10 +3,9 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtbase/src/corelib/global/qglobal.h","#endif","#include <limits>\n#endif",48)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtbase/src/corelib/global/qfloat16.h","","#include <limits>\n",47)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtbase/src/corelib/text/qbytearraymatcher.h","","#include <limits>\n",44)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtdeclarative/src/qmldebug/qqmlprofilerevent_p.h","","#include <limits>\n",52)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","\n","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","\n","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","\n","#include <cstdint>\n",2)
     end
     
     def configure
