@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libffi",
+  "version": "3.4.4",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Compilers for high level languages generate code that follows certain conventions",
+  "website": "https://sourceware.org/libffi/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

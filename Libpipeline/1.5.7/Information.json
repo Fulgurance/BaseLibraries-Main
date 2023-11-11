@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libpipeline",
+  "version": "1.5.7",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "C library for manipulating pipelines of subprocesses in a flexible and convenient way",
+  "website": "http://libpipeline.nongnu.org/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

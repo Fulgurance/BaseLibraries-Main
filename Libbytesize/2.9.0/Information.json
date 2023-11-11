@@ -1,0 +1,31 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libbytesize",
+  "version": "2.9.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Reading and Parsing Library",
+  "website": "https://github.com/storaged-project/udisks",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Pcre2",
+      "version": "10.42.0",
+      "options": []
+    },
+    {
+      "name": "Pygments",
+      "version": "2.16.1",
+      "options": []
+    },
+    {
+      "name": "Six",
+      "version": "1.16.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libaio",
+  "version": "0.3.113",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Linux-native asynchronous I/O facility",
+  "website": "https://pagure.io/libaio",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}

@@ -1,0 +1,139 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libblockdev",
+  "version": "3.0.2",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Reading and Parsing Library",
+  "website": "https://github.com/storaged-project/udisks",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Glib",
+      "version": "2.76.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Cryptsetup",
+      "description": "Enable cryptsetup support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Cryptsetup",
+          "version": "2.4.3",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Gobject-Introspection",
+      "description": "Enable gobject-introspection support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Gobject-Introspection",
+          "version": "1.76.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Keyutils",
+      "description": "Enable keyutils support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Keyutils",
+          "version": "1.6.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Libbytesize",
+      "description": "Enable libbytesize support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Libbytesize",
+          "version": "2.9.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Libnvme",
+      "description": "Enable libnvme support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Libnvme",
+          "version": "1.5.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Lvm2",
+      "description": "Enable lvm2 support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Lvm2",
+          "version": "2.3.22",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Volume-Key",
+      "description": "Enable volume-key support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Volume-Key",
+          "version": "0.3.12",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Parted",
+      "description": "Enable parted support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Parted",
+          "version": "3.6.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Btrfs-Progs",
+      "description": "Enable btrfs-progs support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Btrfs-Progs",
+          "version": "5.13.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
