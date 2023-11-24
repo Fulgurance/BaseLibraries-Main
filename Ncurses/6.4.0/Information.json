@@ -10,7 +10,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "Libstdc++",
+      "name": "Gcc",
       "version": "13.2.0",
       "options": []
     }
