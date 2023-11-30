@@ -1,0 +1,31 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libqalculate",
+  "version": "4.7.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "XML C parser and toolkit developed for the Gnome project",
+  "website": "https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Curl",
+      "version": "8.2.1",
+      "options": []
+    },
+    {
+      "name": "Icu",
+      "version": "73.2.0",
+      "options": []
+    },
+    {
+      "name": "Libxml2",
+      "version": "2.10.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
