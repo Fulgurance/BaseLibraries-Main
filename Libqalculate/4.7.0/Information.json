@@ -5,8 +5,8 @@
   "architectures": [
     "x86_64"
   ],
-  "description": "XML C parser and toolkit developed for the Gnome project",
-  "website": "https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home",
+  "description": "Math library for expression evaluation with units, variables and functions support and CAS functionality",
+  "website": "https://qalculate.github.io/reference/index.html",
   "installedFiles": [],
   "dependencies": [
     {
