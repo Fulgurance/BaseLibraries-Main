@@ -1,9 +1,17 @@
 class Target < ISM::Software
 
     def prepare
-        @buildDirectory = true
-        @buildDirectoryNames["32Bits"] = "mainBuild-32"
-        @buildDirectoryNames["x32Bits"] = "mainBuild-x32"
+        if option("32Bits") || option("x32Bits")
+            @buildDirectory = true
+        end
+
+        if option("32Bits")
+            @buildDirectoryNames["32Bits"] = "mainBuild-32"
+        end
+
+        if option("x32Bits")
+            @buildDirectoryNames["x32Bits"] = "mainBuild-x32"
+        end
         super
     end
 
@@ -17,13 +25,13 @@ class Target < ISM::Software
                             path: buildDirectoryPath(entry: "mainBuild"))
 
         if option("32Bits")
-            configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnux32",
+            configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
                                 "--prefix=/usr",
                                 "--libdir=/usr/lib32",
                                 "--disable-static",
                                 "--with-gcc-arch=i686"],
                                 path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "CC" = >"gcc -m32",
+                                environment: {  "CC" =>"gcc -m32",
                                                 "CXX" => "g++ -m32"})
         end
 
@@ -34,7 +42,7 @@ class Target < ISM::Software
                                 "--disable-static",
                                 "--with-gcc-arch=x86_64"],
                                 path: buildDirectoryPath(entry: "x32Bits"),
-                                environment: {  "CC" = >"gcc -mx32",
+                                environment: {  "CC" =>"gcc -mx32",
                                                 "CXX" => "g++ -mx32"})
         end
     end
@@ -80,7 +88,7 @@ class Target < ISM::Software
                         "install"],
                         path: buildDirectoryPath(entry: "x32Bits"))
 
-            copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/32Bits/usr/libx32",
+            copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
                             "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
         end
     end

@@ -24,14 +24,14 @@
       "description": "Enable 32 bits support",
       "active": false,
       "dependencies": [],
-      "kernelDependencies": []
+      "kernelDependencies": ["CONFIG_IA32_EMULATION"]
     },
     {
       "name": "x32Bits",
       "description": "Enable x32 bits support",
       "active": false,
       "dependencies": [],
-      "kernelDependencies": []
+      "kernelDependencies": ["CONFIG_X86_X32"]
     }
   ],
   "uniqueOptions": []
