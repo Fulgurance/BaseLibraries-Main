@@ -75,7 +75,6 @@ class Target < ISM::Software
             makeLink("panelw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
             makeLink("menuw.pc","#{Ism.settings.rootPath}usr/lib/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
             makeLink("libncurses.so","#{Ism.settings.rootPath}usr/lib/libcurses.so",:symbolicLinkByOverwrite)
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib/libncurses++w.a")
         end
 
     end
