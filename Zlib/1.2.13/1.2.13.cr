@@ -57,7 +57,7 @@ class Target < ISM::Software
 
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],path: buildDirectoryPath(entry: "mainBuild"))
 
-        deleteFile("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/usr/lib/libz.a")
+        deleteFile("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/lib/libz.a")
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")
