@@ -75,7 +75,7 @@ class Target < ISM::Software
 
         fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32/pkgconfig/libpsx.pc",
                         "libdir=/lib64",
-                        "libdir=/lib32"))
+                        "libdir=/lib32")
     end
 
     def prepareInstallationx32Bits
