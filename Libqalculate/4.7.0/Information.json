@@ -11,17 +11,17 @@
   "dependencies": [
     {
       "name": "Curl",
-      "version": "8.2.1",
+      "version": ">=8.2.1",
       "options": []
     },
     {
       "name": "Icu",
-      "version": "73.2.0",
+      "version": ">=73.2.0",
       "options": []
     },
     {
       "name": "Libxml2",
-      "version": "2.10.4",
+      "version": ">=2.10.4",
       "options": []
     }
   ],

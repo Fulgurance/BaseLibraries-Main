@@ -11,7 +11,7 @@
   "dependencies": [
     {
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],
@@ -31,7 +31,7 @@
       "dependencies": [
         {
           "name": "Cyrus-Sasl",
-          "version": "2.1.28",
+          "version": ">=2.1.28",
           "options": []
         }
       ],
@@ -44,7 +44,7 @@
       "dependencies": [
         {
           "name": "Gnutls",
-          "version": "3.8.1",
+          "version": ">=3.8.1",
           "options": []
         }
       ],
@@ -57,7 +57,7 @@
       "dependencies": [
         {
           "name": "Pth",
-          "version": "2.0.7",
+          "version": ">=2.0.7",
           "options": []
         }
       ],
@@ -70,7 +70,7 @@
       "dependencies": [
         {
           "name": "UnixOdbc",
-          "version": "2.3.12",
+          "version": ">=2.3.12",
           "options": []
         }
       ],
@@ -83,7 +83,7 @@
       "dependencies": [
         {
           "name": "Mariadb",
-          "version": "10.11.4",
+          "version": ">=10.11.4",
           "options": []
         }
       ],
@@ -96,7 +96,7 @@
       "dependencies": [
         {
           "name": "Postgresql",
-          "version": "15.4.0",
+          "version": ">=15.4.0",
           "options": []
         }
       ],
@@ -109,7 +109,7 @@
       "dependencies": [
         {
           "name": "BerkeleyDb",
-          "version": "5.3.28",
+          "version": ">=5.3.28",
           "options": []
         }
       ],

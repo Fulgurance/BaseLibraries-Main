@@ -11,12 +11,12 @@
   "dependencies": [
     {
       "name": "Dbus",
-      "version": "1.12.20",
+      "version": ">=1.12.20",
       "options": []
     },
     {
       "name": "Glib",
-      "version": "2.68.4",
+      "version": ">=2.68.4",
       "options": []
     }
   ],
