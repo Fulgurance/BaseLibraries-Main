@@ -2,7 +2,7 @@ class Target < ISM::Software
 
     def prepare
         @buildDirectory = true
-        @buildDirectoryNames[:mainBuild] = "source"
+        @buildDirectoryNames["MainBuild"] = "source"
         super
     end
     
@@ -11,7 +11,7 @@ class Target < ISM::Software
 
         configureSource([   "--prefix=/usr"],
                             buildDirectoryPath,
-                            @buildDirectoryNames[:mainBuild])
+                            @buildDirectoryNames["MainBuild"])
     end
 
     def build
