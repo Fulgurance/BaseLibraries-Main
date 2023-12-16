@@ -18,23 +18,15 @@
       "name": "Docbook-Xsl-Nons",
       "version": "1.79.2",
       "options": []
+    },
+    {
+      "name": "Pcre2",
+      "version": "10.42.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
   "options": [
-    {
-      "name": "Pcre2",
-      "description": "Enable pcre2 support",
-      "active": false,
-      "dependencies": [
-        {
-          "name": "Pcre2",
-          "version": "10.42.0",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
     {
       "name": "Gobject-Introspection",
       "description": "Enable gobject-introspection support",
