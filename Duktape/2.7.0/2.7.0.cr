@@ -11,7 +11,7 @@ class Target < ISM::Software
 
         makeSource(["-f",
                     "Makefile.sharedlibrary",
-                    "INSTALL_PREFIX=/usr"]
+                    "INSTALL_PREFIX=/usr"],
                     path: buildDirectoryPath)
     end
     
@@ -22,7 +22,7 @@ class Target < ISM::Software
                     "Makefile.sharedlibrary",
                     "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "INSTALL_PREFIX=/usr",
-                    "install"]
+                    "install"],
                     path: buildDirectoryPath)
     end
 
