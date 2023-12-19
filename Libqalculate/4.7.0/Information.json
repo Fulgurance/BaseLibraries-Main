@@ -23,6 +23,11 @@
       "name": "Libxml2",
       "version": ">=2.10.4",
       "options": []
+    },
+    {
+      "name": "Intltool",
+      "version": ">=0.51.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
