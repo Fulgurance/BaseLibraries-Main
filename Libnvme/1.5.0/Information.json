@@ -13,23 +13,15 @@
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
+    },
+    {
+      "name": "Dbus",
+      "version": ">=1.14.8",
+      "options": []
     }
   ],
   "kernelDependencies": [],
   "options": [
-    {
-      "name": "Dbus",
-      "description": "Enable dbus support",
-      "active": false,
-      "dependencies": [
-        {
-          "name": "Dbus",
-          "version": ">=1.14.8",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
     {
       "name": "Json-C",
       "description": "Enable json-c support",
