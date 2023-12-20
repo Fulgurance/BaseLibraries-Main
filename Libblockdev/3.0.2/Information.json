@@ -11,7 +11,12 @@
   "dependencies": [
     {
       "name": "Glib",
-      "version": "2.76.4",
+      "version": ">=2.76.4",
+      "options": []
+    },
+    {
+      "name": "Keyutils",
+      "version": ">=1.6.1",
       "options": []
     }
   ],
@@ -24,7 +29,7 @@
       "dependencies": [
         {
           "name": "Cryptsetup",
-          "version": "2.4.3",
+          "version": ">=2.4.3",
           "options": []
         }
       ],
@@ -37,20 +42,7 @@
       "dependencies": [
         {
           "name": "Gobject-Introspection",
-          "version": "1.76.1",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Keyutils",
-      "description": "Enable keyutils support",
-      "active": false,
-      "dependencies": [
-        {
-          "name": "Keyutils",
-          "version": "1.6.1",
+          "version": ">=1.76.1",
           "options": []
         }
       ],
@@ -63,7 +55,7 @@
       "dependencies": [
         {
           "name": "Libbytesize",
-          "version": "2.9.0",
+          "version": ">=2.9.0",
           "options": []
         }
       ],
@@ -76,7 +68,7 @@
       "dependencies": [
         {
           "name": "Libnvme",
-          "version": "1.5.0",
+          "version": ">=1.5.0",
           "options": []
         }
       ],
@@ -89,7 +81,7 @@
       "dependencies": [
         {
           "name": "Lvm2",
-          "version": "2.3.22",
+          "version": ">=2.3.22",
           "options": []
         }
       ],
@@ -102,7 +94,7 @@
       "dependencies": [
         {
           "name": "Volume-Key",
-          "version": "0.3.12",
+          "version": ">=0.3.12",
           "options": []
         }
       ],
@@ -115,7 +107,7 @@
       "dependencies": [
         {
           "name": "Parted",
-          "version": "3.6.0",
+          "version": ">=3.6.0",
           "options": []
         }
       ],
@@ -128,7 +120,7 @@
       "dependencies": [
         {
           "name": "Btrfs-Progs",
-          "version": "5.13.1",
+          "version": ">=5.13.1",
           "options": []
         }
       ],
