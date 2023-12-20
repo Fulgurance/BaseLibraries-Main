@@ -18,6 +18,16 @@
       "name": "Keyutils",
       "version": ">=1.6.1",
       "options": []
+    },
+    {
+      "name": "Libbytesize",
+      "version": ">=2.9.0",
+      "options": []
+    },
+    {
+      "name": "Libnvme",
+      "version": ">=1.5.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
@@ -43,32 +53,6 @@
         {
           "name": "Gobject-Introspection",
           "version": ">=1.76.1",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Libbytesize",
-      "description": "Enable libbytesize support",
-      "active": false,
-      "dependencies": [
-        {
-          "name": "Libbytesize",
-          "version": ">=2.9.0",
-          "options": []
-        }
-      ],
-      "kernelDependencies": []
-    },
-    {
-      "name": "Libnvme",
-      "description": "Enable libnvme support",
-      "active": false,
-      "dependencies": [
-        {
-          "name": "Libnvme",
-          "version": ">=1.5.0",
           "options": []
         }
       ],
