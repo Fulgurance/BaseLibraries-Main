@@ -1,0 +1,74 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libnvme",
+  "version": "1.5.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "C Library for NVM Express on Linux ",
+  "website": "https://github.com/linux-nvme/libnvme",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Dbus",
+      "description": "Enable dbus support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Dbus",
+          "version": ">=1.14.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Json-C",
+      "description": "Enable json-c support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Json-C",
+          "version": ">=0.17.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Keyutils",
+      "description": "Enable keyutils support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Keyutils",
+          "version": ">=1.6.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Swig",
+      "description": "Enable swig support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Swig",
+          "version": ">=4.1.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueOptions": []
+}
