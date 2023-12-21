@@ -1,0 +1,21 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Jinja2",
+  "version": "3.1.2",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Fast, expressive, extensible templating engine",
+  "website": "https://jinja.palletsprojects.com",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "Python",
+      "version": ">=3.11.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueOptions": []
+}
