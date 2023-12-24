@@ -3,9 +3,9 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","\n","#include <cstdint>\n",1)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","\n","#include <cstdint>\n",1)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","\n","#include <cstdint>\n",1)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","","#include <cstdint>\n",2)
     end
     
     def configure
