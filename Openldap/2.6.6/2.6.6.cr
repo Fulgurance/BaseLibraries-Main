@@ -3,7 +3,7 @@ class Target < ISM::Software
     def prepare
         super
 
-        runAutoconfCommand
+        runAutoconfCommand(path: buildDirectoryPath)
     end
 
     def configure
