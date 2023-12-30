@@ -73,15 +73,15 @@ class Target < ISM::Software
             runGroupAddCommand(["-g","83","ldap"])
             runUserAddCommand(["-c","\"OpenLDAP Daemon Owner\"","-d","/var/lib/openldap","-u","83","-g","ldap","-s","/bin/false","ldap"])
 
-            runChmodCommand(["700","#{Ism.settings.rootPath}/var/lib/openldap"])
-            runChmodCommand(["700","#{Ism.settings.rootPath}/etc/openldap/slapd.d"])
-            runChmodCommand(["640","#{Ism.settings.rootPath}/etc/openldap/slapd.conf"])
-            runChmodCommand(["640","#{Ism.settings.rootPath}/etc/openldap/slapd.ldif"])
+            setPermissions("#{Ism.settings.rootPath}/var/lib/openldap",0o700)
+            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.d",0o700)
+            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.conf",0o640)
+            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif",0o640)
 
-            runChownCommand(["ldap:ldap","#{Ism.settings.rootPath}/var/lib/openldap"])
-            runChownCommand(["ldap:ldap","#{Ism.settings.rootPath}/etc/openldap/slapd.d"])
-            runChownCommand(["root:ldap","#{Ism.settings.rootPath}/etc/openldap/slapd.conf"])
-            runChownCommand(["root:ldap","#{Ism.settings.rootPath}/etc/openldap/slapd.ldif"])
+            setOwner("#{Ism.settings.rootPath}/var/lib/openldap","ldap:ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.d","ldap:ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.conf","root:ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif","root:ldap")
         end
     end
 
