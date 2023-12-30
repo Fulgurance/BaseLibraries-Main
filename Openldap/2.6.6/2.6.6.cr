@@ -78,10 +78,10 @@ class Target < ISM::Software
             setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.conf",0o640)
             setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif",0o640)
 
-            setOwner("#{Ism.settings.rootPath}/var/lib/openldap","ldap:ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.d","ldap:ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.conf","root:ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif","root:ldap")
+            setOwner("#{Ism.settings.rootPath}/var/lib/openldap","ldap","ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.d","ldap","ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.conf","root","ldap")
+            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif","root","ldap")
         end
     end
 
