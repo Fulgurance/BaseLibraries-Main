@@ -10,6 +10,16 @@
   "installedFiles": [],
   "dependencies": [
     {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": [
+        "Pass3"
+      ]
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
       "name": "32Bits",
       "description": "Enable 32 bits support",
       "active": false,
@@ -22,16 +32,7 @@
       "active": false,
       "dependencies": [],
       "kernelDependencies": ["CONFIG_X86_X32"]
-    },
-    {
-      "name": "SystemBase",
-      "version": "0.2.0",
-      "options": [
-        "Pass3"
-      ]
     }
   ],
-  "kernelDependencies": [],
-  "options": [],
   "uniqueOptions": []
 }
