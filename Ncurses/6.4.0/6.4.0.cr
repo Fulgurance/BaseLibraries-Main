@@ -146,30 +146,6 @@ class Target < ISM::Software
             makeSource(path: buildDirectoryPath(entry: "x32Bits"))
         end
     end
-    
-    def prepareInstallation
-        super
-
-        if option("Pass1")
-            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
-            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
-        else
-            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libmenu.so","INPUT(-lmenuw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcursesw.so","INPUT(-lncursesw)")
-        end
-
-        if option("32Bits")
-            prepareInstallation32Bits
-        end
-
-        if option("x32Bits")
-            prepareInstallationx32Bits
-        end
-    end
 
     def prepareInstallation32Bits
         if option("Pass1")
@@ -227,6 +203,30 @@ class Target < ISM::Software
 
         copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
                         "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+    end
+    
+    def prepareInstallation
+        super
+
+        if option("Pass1")
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","TIC_PATH=$(pwd)/build/progs/tic","install"],buildDirectoryPath)
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
+        else
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libmenu.so","INPUT(-lmenuw)")
+            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcursesw.so","INPUT(-lncursesw)")
+        end
+
+        if option("32Bits")
+            prepareInstallation32Bits
+        end
+
+        if option("x32Bits")
+            prepareInstallationx32Bits
+        end
     end
 
     def install
