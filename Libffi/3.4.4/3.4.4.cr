@@ -1,6 +1,7 @@
 class Target < ISM::Software
 
     def prepare
+
         if option("32Bits") || option("x32Bits")
             @buildDirectory = true
         end
@@ -12,6 +13,7 @@ class Target < ISM::Software
         if option("x32Bits")
             @buildDirectoryNames["x32Bits"] = "mainBuild-x32"
         end
+
         super
     end
 
