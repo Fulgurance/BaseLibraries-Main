@@ -51,7 +51,7 @@ class Target < ISM::Software
                                 "--without-normal",
                                 "--with-cxx-shared",
                                 "--without-debug",
-                                "--enable-pc-files"
+                                "--enable-pc-files",
                                 "--enable-widec",
                                 "--with-pkg-config-libdir=/usr/lib32/pkgconfig"],
                                 path: buildDirectoryPath(entry: "32Bits"),
@@ -64,7 +64,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "--host=#{Ism.settings.target}X32",
                                 "--prefix=/usr",
-                                "--build=$(./config.guess)"
+                                "--build=$(./config.guess)",
                                 "--libdir=/usr/lib32",
                                 "--mandir=/usr/share/man",
                                 "--with-shared",
@@ -85,7 +85,7 @@ class Target < ISM::Software
                                 "--with-shared",
                                 "--without-normal",
                                 "--without-debug",
-                                "--enable-pc-files"
+                                "--enable-pc-files",
                                 "--enable-widec",
                                 "--with-pkg-config-libdir=/usr/libx32/pkgconfig"],
                                 path: buildDirectoryPath(entry: "x32Bits"),
