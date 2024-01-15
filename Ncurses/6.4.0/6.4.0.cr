@@ -29,7 +29,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
                                 "--prefix=/usr",
-                                "--build=$(./config.guess)"
+                                "--build=$(./config.guess)",
                                 "--libdir=/usr/lib32",
                                 "--mandir=/usr/share/man",
                                 "--with-shared",
