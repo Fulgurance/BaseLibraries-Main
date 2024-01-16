@@ -43,7 +43,7 @@ class Target < ISM::Software
                                 environment: {  "ABI" => "32",
                                                 "CFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
                                                 "CXXFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
-                                                "PKG_CONFIG_PATH" => "/usr/lib32/pkgconfig")
+                                                "PKG_CONFIG_PATH" => "/usr/lib32/pkgconfig"})
         end
 
         if option("x32Bits")
@@ -58,7 +58,7 @@ class Target < ISM::Software
                                 environment: {  "ABI" => "x32",
                                                 "CFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
                                                 "CXXFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
-                                                "PKG_CONFIG_PATH" => "/usr/libx32/pkgconfig")
+                                                "PKG_CONFIG_PATH" => "/usr/libx32/pkgconfig"})
         end
     end
 
