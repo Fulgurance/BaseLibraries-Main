@@ -10,7 +10,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "@SystemUsers-Main:Ldap",
+      "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
     }
@@ -21,7 +21,18 @@
       "name": "Server",
       "description": "Enable server support",
       "active": false,
-      "dependencies": [],
+      "dependencies": [
+        {
+          "name": "@SystemUsers-Main:Ldap",
+          "version": ">=0.1.0",
+          "options": []
+        },
+        {
+          "name": "@SystemGroups-Main:Ldap",
+          "version": ">=0.1.0",
+          "options": []
+        }
+      ],
       "kernelDependencies": []
     },
     {

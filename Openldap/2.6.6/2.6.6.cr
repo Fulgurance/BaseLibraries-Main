@@ -70,9 +70,6 @@ class Target < ISM::Software
         super
 
         if option("Server")
-            runGroupAddCommand(["-g","83","ldap"])
-            runUserAddCommand(["-c","\"OpenLDAP Daemon Owner\"","-d","/var/lib/openldap","-u","83","-g","ldap","-s","/bin/false","ldap"])
-
             setPermissions("#{Ism.settings.rootPath}/var/lib/openldap",0o700)
             setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.d",0o700)
             setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.conf",0o640)
