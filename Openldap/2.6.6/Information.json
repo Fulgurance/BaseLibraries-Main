@@ -10,7 +10,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "name": "SystemBase",
+      "name": "@SystemUsers-Main:Ldap",
       "version": ">=0.2.0",
       "options": []
     }
