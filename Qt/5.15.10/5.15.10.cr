@@ -141,6 +141,14 @@ class Target < ISM::Software
         pathappend $QT5DIR/lib/qml QML2_IMPORT_PATH
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/qt5.sh",qt5ShData)
+
+        makeLink("moc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/moc-qt5",:symbolicLinkByOverwrite)
+        makeLink("uic","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/uic-qt5",:symbolicLinkByOverwrite)
+        makeLink("rcc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
+        makeLink("qmake","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
+        makeLink("lconvert","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
+        makeLink("lrelease","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
+        makeLink("lupdate","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
     end
 
     def install
@@ -164,14 +172,6 @@ class Target < ISM::Software
         if option("Qdbusviewer")
             setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt5.png",0o755)
         end
-
-        makeLink("#{Ism.settings.rootPath}usr/bin/moc","/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/uic","/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/rcc","/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/qmake","/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/lconvert","/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/lrelease","/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
-        makeLink("#{Ism.settings.rootPath}usr/bin/lupdate","/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
 
         runLdconfigCommand
     end
