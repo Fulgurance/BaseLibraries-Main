@@ -28,6 +28,7 @@ class Target < ISM::Software
                             option("Harfbuzz") ? "-system-harfbuzz" : "",
                             option("Sqlite") ? "-system-sqlite" : "",
                             option("Xcb") ? "-xcb" : "",
+                            option("Cups") ? "-cups" : "",
                             "--nomake=examples",
                             "--no-rpath",
                             "--syslog",

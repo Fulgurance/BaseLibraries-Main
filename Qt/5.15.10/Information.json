@@ -119,6 +119,19 @@
         }
       ],
       "kernelDependencies": []
+    },
+    {
+      "name": "Cups",
+      "description": "Enable cups support",
+      "active": false,
+      "dependencies": [
+        {
+          "name": "Cups",
+          "version": "2.4.6",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
     }
   ],
   "uniqueDependencies": [],
