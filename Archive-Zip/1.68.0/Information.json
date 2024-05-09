@@ -1,0 +1,24 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Archive-Zip",
+  "version": "1.68.0",
+  "architectures": [
+    "x86_64"
+  ],
+  "description": "Provide an interface to ZIP archive files",
+  "website": "https://metacpan.org/pod/Archive::Zip",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "name": "SystemBase",
+      "version": "0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
