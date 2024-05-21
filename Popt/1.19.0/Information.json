@@ -2,19 +2,16 @@
   "port": "BaseLibraries-Main",
   "name": "Popt",
   "version": "1.19.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "C library for parsing command line parameters",
   "website": "https://github.com/rpm-software-management/popt",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
-      "options": [
-        "Pass3"
-      ]
+      "version": ">=0.2.0",
+      "options": ["Pass3"]
     }
   ],
   "kernelDependencies": [],

@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Duktape",
   "version": "2.7.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Embeddable Javascript engine, with a focus on portability and compact footprint",
   "website": "https://duktape.org/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],

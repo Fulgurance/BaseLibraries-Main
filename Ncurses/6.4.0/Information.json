@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Ncurses",
   "version": "6.4.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The free software ncurses library emulation of curses",
   "website": "https://ninja-build.org/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
       "name": "Gcc",
-      "version": "13.2.0",
+      "version": ">=13.2.0",
       "options": []
     }
   ],
@@ -37,11 +36,10 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "M4",
-          "version": "1.4.19",
-          "options": [
-            "Pass1"
-          ]
+          "version": ">=1.4.19",
+          "options": ["Pass1"]
         }
       ],
       "kernelDependencies": []

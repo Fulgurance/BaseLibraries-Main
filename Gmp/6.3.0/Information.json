@@ -2,19 +2,16 @@
   "port": "BaseLibraries-Main",
   "name": "Gmp",
   "version": "6.3.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "GMP library for arbitrary precision arithmetic, operating on signed integers, rational numbers, and floating-point numbers",
   "website": "https://www.gnu.org/software/gmp/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
-      "options": [
-        "Pass3"
-      ]
+      "version": ">=0.2.0",
+      "options": ["Pass3"]
     }
   ],
   "kernelDependencies": [],

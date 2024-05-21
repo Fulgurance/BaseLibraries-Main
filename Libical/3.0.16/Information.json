@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Libical",
   "version": "3.0.16",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Open Source implementation of the iCalendar protocols and protocol data units",
   "website": "https://github.com/libical/libical",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
       "name": "Cmake",
-      "version": "3.27.2",
+      "version": ">=3.27.2",
       "options": []
     }
   ],
@@ -23,8 +22,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Gobject-Introspection",
-          "version": "1.76.1",
+          "version": ">=1.76.1",
           "options": []
         }
       ],
@@ -36,8 +36,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingLanguages-Main",
           "name": "Vala",
-          "version": "0.56.11",
+          "version": ">=0.56.11",
           "options": []
         }
       ],

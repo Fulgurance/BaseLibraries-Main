@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Six",
   "version": "1.16.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Python 2 and 3 compatibility utilities",
   "website": "https://pypi.org/project/six/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []

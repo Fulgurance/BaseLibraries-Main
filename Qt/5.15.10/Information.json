@@ -2,21 +2,21 @@
   "port": "BaseLibraries-Main",
   "name": "Qt",
   "version": "5.15.10",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "The Qt framework with highly intuitive and modularized C++ library to simplify application development",
   "website": "https://www.qt.io/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "XorgBase-Main",
       "name": "Xorg-Libraries",
-      "version": "21.1.8",
+      "version": ">=21.1.8",
       "options": []
     },
     {
+      "port": "GraphicsLibraries-Main",
       "name": "Mesa",
-      "version": "23.1.6",
+      "version": ">=23.1.6",
       "options": []
     }
   ],
@@ -56,8 +56,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "GraphicsLibraries-Main",
           "name": "Harfbuzz",
-          "version": "8.1.1",
+          "version": ">=8.1.1",
           "options": []
         }
       ],
@@ -69,8 +70,9 @@
       "active": true,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Sqlite",
-          "version": "3.42.0",
+          "version": ">=3.42.0",
           "options": []
         }
       ],
@@ -82,13 +84,15 @@
       "active": false,
       "dependencies": [
         {
+          "port": "GraphicsLibraries-Main",
           "name": "Xcb-Util-Keysyms",
-          "version": "0.4.1",
+          "version": ">=0.4.1",
           "options": []
         },
         {
+          "port": "GraphicsLibraries-Main",
           "name": "Xcb-Util-Wm",
-          "version": "0.4.2",
+          "version": ">=0.4.2",
           "options": []
         }
       ],
@@ -100,8 +104,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Dbus",
-          "version": "1.14.8",
+          "version": ">=1.14.8",
           "options": []
         }
       ],
@@ -113,8 +118,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Openssl",
-          "version": "3.1.2",
+          "version": ">=3.1.2",
           "options": []
         }
       ],
@@ -126,8 +132,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Cups",
-          "version": "2.4.6",
+          "version": ">=2.4.6",
           "options": []
         }
       ],

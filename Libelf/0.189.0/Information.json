@@ -2,21 +2,20 @@
   "port": "BaseLibraries-Main",
   "name": "Libelf",
   "version": "0.189.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Library for handling ELF (Executable and Linkable Format) files",
   "website": "https://sourceware.org/elfutils/",
   "installedFiles": [],
   "dependencies": [
     {
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Zlib",
-      "version": "1.2.13",
+      "version": ">=1.2.13",
       "options": []
     }
   ],

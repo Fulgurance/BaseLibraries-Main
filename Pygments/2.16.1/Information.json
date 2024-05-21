@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Pygments",
   "version": "2.16.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Mako Templates for Python",
   "website": "https://files.pythonhosted.org",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []

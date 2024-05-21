@@ -2,26 +2,27 @@
   "port": "BaseLibraries-Main",
   "name": "Glib",
   "version": "2.76.4",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Low-level core library that forms the basis for projects such as GTK+ and GNOME",
   "website": "https://gitlab.gnome.org/GNOME/glib",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Libxslt",
-      "version": "1.1.38",
+      "version": ">=1.1.38",
       "options": []
     },
     {
+      "port": "Xml-Main",
       "name": "Docbook-Xsl-Nons",
-      "version": "1.79.2",
+      "version": ">=1.79.2",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Pcre2",
-      "version": "10.42.0",
+      "version": ">=10.42.0",
       "options": []
     }
   ],
@@ -33,8 +34,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Gobject-Introspection",
-          "version": "1.76.1",
+          "version": ">=1.76.1",
           "options": []
         }
       ],

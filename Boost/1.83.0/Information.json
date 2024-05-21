@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Boost",
   "version": "1.83.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Free peer-reviewed portable C++ source libraries",
   "website": " https://boostorg.jfrog.io",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "Utilities-Main",
       "name": "Which",
-      "version": "2.21.0",
+      "version": ">=2.21.0",
       "options": []
     }
   ],

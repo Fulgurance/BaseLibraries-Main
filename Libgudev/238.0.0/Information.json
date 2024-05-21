@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Libgudev",
   "version": "238.0.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Library providing GObject bindings for libudev",
   "website": "https://gitlab.gnome.org/GNOME/libgudev",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Glib",
-      "version": "2.76.4",
+      "version": ">=2.76.4",
       "options": []
     }
   ],
@@ -23,8 +22,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Gobject-Introspection",
-          "version": "1.76.1",
+          "version": ">=1.76.1",
           "options": []
         }
       ],

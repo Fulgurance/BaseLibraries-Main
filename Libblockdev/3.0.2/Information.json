@@ -2,29 +2,31 @@
   "port": "BaseLibraries-Main",
   "name": "Libblockdev",
   "version": "3.0.2",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Reading and Parsing Library",
   "website": "https://github.com/storaged-project/udisks",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Glib",
       "version": ">=2.76.4",
       "options": []
     },
     {
+      "port": "Security-Main",
       "name": "Keyutils",
       "version": ">=1.6.1",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Libbytesize",
       "version": ">=2.9.0",
       "options": []
     },
     {
+      "port": "BaseLibraries-Main",
       "name": "Libnvme",
       "version": ">=1.5.0",
       "options": []
@@ -38,6 +40,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Cryptsetup",
           "version": ">=2.4.3",
           "options": []
@@ -51,6 +54,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Gobject-Introspection",
           "version": ">=1.76.1",
           "options": []
@@ -64,6 +68,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "FileSystems-Main",
           "name": "Lvm2",
           "version": ">=2.3.22",
           "options": []
@@ -77,6 +82,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "SecurityLibraries-Main",
           "name": "Volume-Key",
           "version": ">=0.3.12",
           "options": []
@@ -90,6 +96,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Utilities-Main",
           "name": "Parted",
           "version": ">=3.6.0",
           "options": []
@@ -103,6 +110,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "FileSystems-Main",
           "name": "Btrfs-Progs",
           "version": ">=5.13.1",
           "options": []

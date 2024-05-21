@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Libyaml",
   "version": "0.2.5",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "YAML parser and emitter library",
   "website": "https://pyyaml.org/wiki/LibYAML",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []

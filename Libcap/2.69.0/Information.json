@@ -2,19 +2,16 @@
   "port": "BaseLibraries-Main",
   "name": "Libcap",
   "version": "2.69.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Library implements the user-space interfaces to the POSIX capabilities available in Linux kernel",
   "website": "https://sites.google.com/site/fullycapable/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
-      "options": [
-        "Pass3"
-      ]
+      "version": ">=0.2.0",
+      "options": ["Pass3"]
     }
   ],
   "kernelDependencies": [],
@@ -39,8 +36,9 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Linux-Pam",
-          "version": "1.5.3",
+          "version": ">=1.5.3",
           "options": []
         }
       ],

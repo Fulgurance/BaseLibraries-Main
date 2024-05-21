@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Json-C",
   "version": "0.17.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Implements a reference counting object model that allows you to easily construct JSON objects in C",
   "website": "https://github.com/json-c/json-c",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "ProgrammingTools-Main",
       "name": "Cmake",
-      "version": "3.27.2",
+      "version": ">=3.27.2",
       "options": []
     }
   ],

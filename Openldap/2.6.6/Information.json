@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Openldap",
   "version": "2.6.6",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Open source implementation of the Lightweight Directory Access Protocol",
   "website": "https://www.openldap.org/",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
@@ -23,12 +22,14 @@
       "active": false,
       "dependencies": [
         {
-          "name": "@SystemUsers-Main:Ldap",
+          "port": "SystemUsers-Main",
+          "name": "Ldap",
           "version": ">=0.1.0",
           "options": []
         },
         {
-          "name": "@SystemGroups-Main:Ldap",
+          "port": "SystemGroups-Main",
+          "name": "Ldap",
           "version": ">=0.1.0",
           "options": []
         }
@@ -41,6 +42,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "NetworkingLibraries-Main",
           "name": "Cyrus-Sasl",
           "version": ">=2.1.28",
           "options": []
@@ -54,6 +56,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "SecurityLibraries-Main",
           "name": "Gnutls",
           "version": ">=3.8.1",
           "options": []
@@ -67,6 +70,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Pth",
           "version": ">=2.0.7",
           "options": []
@@ -80,6 +84,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "NetworkingLibraries-Main",
           "name": "UnixOdbc",
           "version": ">=2.3.12",
           "options": []
@@ -93,6 +98,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "DatabaseLibraries-Main",
           "name": "Mariadb",
           "version": ">=10.11.4",
           "options": []
@@ -106,6 +112,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "DatabaseLibraries-Main",
           "name": "Postgresql",
           "version": ">=15.4.0",
           "options": []
@@ -119,6 +126,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "DatabaseLibraries-Main",
           "name": "BerkeleyDb",
           "version": ">=5.3.28",
           "options": []

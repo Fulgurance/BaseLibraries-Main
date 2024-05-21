@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Libev",
   "version": "4.33.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Full-featured and high-performance event loop loosely modelled after libevent",
   "website": "http://software.schmorp.de/pkg/libev.html",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []

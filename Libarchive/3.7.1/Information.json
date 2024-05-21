@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Libarchive",
   "version": "3.7.1",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Multi-format archive and compression library",
   "website": "https://github.com/libarchive/libarchive",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],

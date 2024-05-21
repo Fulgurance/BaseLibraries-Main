@@ -2,19 +2,19 @@
   "port": "BaseLibraries-Main",
   "name": "Libnvme",
   "version": "1.5.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "C Library for NVM Express on Linux ",
   "website": "https://github.com/linux-nvme/libnvme",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
       "version": ">=0.2.0",
       "options": []
     },
     {
+      "port": "Utilities-Main",
       "name": "Dbus",
       "version": ">=1.14.8",
       "options": []
@@ -28,6 +28,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "BaseLibraries-Main",
           "name": "Json-C",
           "version": ">=0.17.0",
           "options": []
@@ -41,6 +42,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "Security-Main",
           "name": "Keyutils",
           "version": ">=1.6.1",
           "options": []
@@ -54,6 +56,7 @@
       "active": false,
       "dependencies": [
         {
+          "port": "ProgrammingTools-Main",
           "name": "Swig",
           "version": ">=4.1.1",
           "options": []

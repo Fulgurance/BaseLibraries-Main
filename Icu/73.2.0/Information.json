@@ -2,16 +2,15 @@
   "port": "BaseLibraries-Main",
   "name": "Icu",
   "version": "73.2.0",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "ICU set of C/C++ and Java libraries providing Unicode and Globalization support",
   "website": "https://github.com/unicode-org/icu",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "SystemBase-Main",
       "name": "SystemBase",
-      "version": "0.2.0",
+      "version": ">=0.2.0",
       "options": []
     }
   ],

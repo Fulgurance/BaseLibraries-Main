@@ -2,14 +2,13 @@
   "port": "BaseLibraries-Main",
   "name": "Sassc",
   "version": "3.6.2",
-  "architectures": [
-    "x86_64"
-  ],
+  "architectures": ["x86_64"],
   "description": "Libsass command line driver",
   "website": " https://github.com/sass/sassc",
   "installedFiles": [],
   "dependencies": [
     {
+      "port": "BaseLibraries-Main",
       "name": "Libsass",
       "version": ">=3.6.5",
       "options": []
