@@ -51,13 +51,6 @@ class Target < ISM::Software
         if option("x32Bits")
             makeSource(path: buildDirectoryPath(entry: "x32Bits"))
         end
-
-        if option("Minizip")
-            minizipPath = mainWorkDirectoryPath+"contrib/minizip/"
-
-            runAutoconfCommand(path: minizipPath)
-            makeSource(path: minizipPath)
-        end
     end
 
     def prepareInstallation

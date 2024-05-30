@@ -29,13 +29,6 @@
       "active": false,
       "dependencies": [],
       "kernelDependencies": ["CONFIG_X86_X32"]
-    },
-    {
-      "name": "Minizip",
-      "description": "Enable minizip support",
-      "active": false,
-      "dependencies": [],
-      "kernelDependencies": []
     }
   ],
   "uniqueDependencies": [],
