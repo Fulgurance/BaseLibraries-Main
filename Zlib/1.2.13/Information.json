@@ -34,14 +34,7 @@
       "name": "Minizip",
       "description": "Enable minizip support",
       "active": false,
-      "dependencies": [
-        {
-          "port": "ProgrammingTools-Main",
-          "name": "Automake",
-          "version": ">=1.16.5",
-          "options": []
-        }
-      ],
+      "dependencies": [],
       "kernelDependencies": []
     }
   ],
