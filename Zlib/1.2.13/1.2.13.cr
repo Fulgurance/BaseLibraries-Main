@@ -53,7 +53,7 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            minizipPath = mainWorkDirectoryPath+"/contrib/minizip/"
+            minizipPath = mainWorkDirectoryPath+"contrib/minizip/"
 
             runAutoconfCommand(path: minizipPath)
             makeSource(path: minizipPath)
