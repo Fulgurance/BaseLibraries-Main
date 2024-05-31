@@ -13,7 +13,7 @@ class Target < ISM::Software
             @buildDirectoryNames["x32Bits"] = "mainBuild-x32"
         end
 
-        if option("x32Bits")
+        if option("Minizip")
             @buildDirectoryNames["Minizip"] = "contrib/minizip/"
         end
 
