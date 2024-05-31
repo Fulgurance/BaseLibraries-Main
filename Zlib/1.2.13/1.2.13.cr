@@ -14,7 +14,7 @@ class Target < ISM::Software
         end
 
         if option("x32Bits")
-            @buildDirectoryNames["minizip"] = "contrib/minizip/"
+            @buildDirectoryNames["Minizip"] = "contrib/minizip/"
         end
 
         super
@@ -24,7 +24,7 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/usr"],
-                            path: buildDirectoryPath(entry: "mainBuild"))
+                            path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             configureSource([   "--prefix=/usr",
@@ -46,7 +46,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath(entry: "mainBuild"))
+        makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeSource(path: buildDirectoryPath(entry: "32Bits"))
@@ -57,14 +57,14 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            makeSource(path: buildDirectoryPath(entry: "minizip"))
+            makeSource(path: buildDirectoryPath(entry: "Minizip"))
         end
     end
 
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],path: buildDirectoryPath(entry: "mainBuild"))
+        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],path: buildDirectoryPath(entry: "MainBuild"))
 
         deleteFile("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/usr/lib/libz.a")
 
