@@ -24,11 +24,11 @@ class Target < ISM::Software
                             "--enable-cxx",
                             "--disable-static",
                             "--docdir=/usr/share/doc/gmp-6.3.0"],
-                            buildDirectoryPath(entry: "mainBuild"))
+                            buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits") || option("x32Bits")
-            copyFile("#{buildDirectoryPath(entry: "mainBuild")}/configfsf.guess","config.guess")
-            copyFile("#{buildDirectoryPath(entry: "mainBuild")}/configfsf.sub","config.sub")
+            copyFile("#{buildDirectoryPath(entry: "MainBuild")}/configfsf.guess","config.guess")
+            copyFile("#{buildDirectoryPath(entry: "MainBuild")}/configfsf.sub","config.sub")
         end
 
         if option("32Bits")
@@ -65,7 +65,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath(entry: "mainBuild"))
+        makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits") || option("x32Bits")
             fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath(false)}/build/make/Makefile","includeexecdir = $(exec_prefix)/include","includeexecdir = $(includedir)",617)
@@ -85,7 +85,7 @@ class Target < ISM::Software
 
         makeSource( ["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "install"],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")

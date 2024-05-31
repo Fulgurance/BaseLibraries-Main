@@ -26,7 +26,7 @@ class Target < ISM::Software
                             "--disable-static",
                             "--with-curses",
                             "--docdir=/usr/share/doc/readline-8.2"],
-                            path: buildDirectoryPath(entry: "mainBuild"))
+                            path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
@@ -53,7 +53,7 @@ class Target < ISM::Software
         super
 
         makeSource( ["SHLIB_LIBS=\"-lncursesw\""],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeSource( ["SHLIB_LIBS=\"-lncursesw\""],
@@ -72,7 +72,7 @@ class Target < ISM::Software
         makeSource( ["SHLIB_LIBS=\"-lncursesw\"",
                     "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "install"],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")

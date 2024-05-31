@@ -21,7 +21,7 @@ class Target < ISM::Software
         configureSource([   "--prefix=/usr",
                             "--disable-debuginfod",
                             "--enable-libdebuginfod=dummy"],
-                            path: buildDirectoryPath(entry: "mainBuild"))
+                            path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
@@ -49,7 +49,7 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(path: buildDirectoryPath(entry: "mainBuild"))
+        makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeSource(path: buildDirectoryPath(entry: "32Bits"))
@@ -67,7 +67,7 @@ class Target < ISM::Software
                     "libelf",
                     "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
                     "install"],
-                    path: buildDirectoryPath(entry: "mainBuild"))
+                    path: buildDirectoryPath(entry: "MainBuild"))
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig")
 
