@@ -57,11 +57,11 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            fileReplaceText("#{mainWorkDirectoryPath(false)}/contrib/minizip/Makefile",
+            fileReplaceText("#{buildDirectoryPath(false, entry: "Minizip")}Makefile",
                             "UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../libz.a",
                             "UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../#{buildDirectoryPath(false, entry: "MainBuild")}/libz.a")
 
-            fileReplaceText("#{mainWorkDirectoryPath(false)}/contrib/minizip/Makefile",
+            fileReplaceText("#{buildDirectoryPath(false, entry: "Minizip")}Makefile",
                             "ZIP_OBJS = minizip.o zip.o   ioapi.o ../../libz.a",
                             "ZIP_OBJS = minizip.o zip.o   ioapi.o ../../#{buildDirectoryPath(false, entry: "MainBuild")}/libz.a")
 
@@ -101,9 +101,8 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "Minizip")}",
-                        "install"],
-                        path: buildDirectoryPath(entry: "Minizip"))
+            moveFile("#{buildDirectoryPath(false, entry: "Minizip")}minizip","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/minizip")
+            moveFile("#{buildDirectoryPath(false, entry: "Minizip")}miniunz","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/miniunz")
         end
     end
 
