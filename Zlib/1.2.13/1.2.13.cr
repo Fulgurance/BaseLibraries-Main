@@ -57,7 +57,8 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            runAutoreconfCommand(path: buildDirectoryPath(entry: "Minizip"))
+            runAutoreconfCommand(   ["-fiv"],
+                                    path: buildDirectoryPath(entry: "Minizip"))
 
             configureSource([   "--prefix=/usr",
                                 "--enable-shared",
