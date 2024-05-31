@@ -101,6 +101,7 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
+            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin")
             moveFile("#{buildDirectoryPath(false, entry: "Minizip")}minizip","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/minizip")
             moveFile("#{buildDirectoryPath(false, entry: "Minizip")}miniunz","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/miniunz")
         end
