@@ -1,7 +1,7 @@
 class Target < ISM::Software
 
     def prepare
-        if option("32Bits") || option("x32Bits")
+        if option("32Bits") || option("x32Bits") || option("Minizip")
             @buildDirectory = true
         end
 
