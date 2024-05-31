@@ -48,7 +48,7 @@ class Target < ISM::Software
 
         if option("Minizip")
             configureSource([   "--prefix=/usr",
-                                "--enable-shared"
+                                "--enable-shared",
                                 "--disable-static"],
                             path: buildDirectoryPath(entry: "Minizip"))
         end
