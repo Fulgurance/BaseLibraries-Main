@@ -18,6 +18,10 @@ class Target < ISM::Software
         end
 
         super
+
+        if option("Minizip")
+            runAutoreconfCommand(path: buildDirectoryPath(entry: "Minizip"))
+        end
     end
 
     def configure
@@ -41,6 +45,13 @@ class Target < ISM::Software
                                 environment: {  "CFLAGS" => "$(CFLAGS) -mx32",
                                                 "CXXFLAGS" => "$(CXXFLAGS) -mx32"})
         end
+
+        if option("Minizip")
+            configureSource([   "--prefix=/usr",
+                                "--enable-shared"
+                                "--disable-static"],
+                            path: buildDirectoryPath(entry: "Minizip"))
+        end
     end
 
     def build
@@ -57,14 +68,6 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            fileReplaceText("#{buildDirectoryPath(false, entry: "Minizip")}Makefile",
-                            "UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../libz.a",
-                            "UNZ_OBJS = miniunz.o unzip.o ioapi.o #{buildDirectoryPath(false, entry: "MainBuild")}/libz.a")
-
-            fileReplaceText("#{buildDirectoryPath(false, entry: "Minizip")}Makefile",
-                            "ZIP_OBJS = minizip.o zip.o   ioapi.o ../../libz.a",
-                            "ZIP_OBJS = minizip.o zip.o   ioapi.o #{buildDirectoryPath(false, entry: "MainBuild")}/libz.a")
-
             makeSource(path: buildDirectoryPath(entry: "Minizip"))
         end
     end
@@ -101,9 +104,7 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin")
-            moveFile("#{buildDirectoryPath(false, entry: "Minizip")}minizip","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/minizip")
-            moveFile("#{buildDirectoryPath(false, entry: "Minizip")}miniunz","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/miniunz")
+            makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],path: buildDirectoryPath(entry: "Minizip"))
         end
     end
 
