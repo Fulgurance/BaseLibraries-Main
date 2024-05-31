@@ -1,7 +1,7 @@
 class Target < ISM::Software
 
     def prepare
-        if option("32Bits") || option("x32Bits")
+        if option("32Bits") || option("x32Bits") || option("Minizip")
             @buildDirectory = true
         end
 
@@ -11,6 +11,10 @@ class Target < ISM::Software
 
         if option("x32Bits")
             @buildDirectoryNames["x32Bits"] = "mainBuild-x32"
+        end
+
+        if option("x32Bits")
+            @buildDirectoryNames["minizip"] = "contrib/minizip/"
         end
 
         super
@@ -50,6 +54,10 @@ class Target < ISM::Software
 
         if option("x32Bits")
             makeSource(path: buildDirectoryPath(entry: "x32Bits"))
+        end
+
+        if option("Minizip")
+            makeSource(path: buildDirectoryPath(entry: "minizip"))
         end
     end
 
