@@ -18,10 +18,6 @@ class Target < ISM::Software
         end
 
         super
-
-        if option("Minizip")
-            runAutoreconfCommand(path: buildDirectoryPath(entry: "Minizip"))
-        end
     end
 
     def configure
@@ -45,13 +41,6 @@ class Target < ISM::Software
                                 environment: {  "CFLAGS" => "$(CFLAGS) -mx32",
                                                 "CXXFLAGS" => "$(CXXFLAGS) -mx32"})
         end
-
-        if option("Minizip")
-            configureSource([   "--prefix=/usr",
-                                "--enable-shared",
-                                "--disable-static"],
-                            path: buildDirectoryPath(entry: "Minizip"))
-        end
     end
 
     def build
@@ -68,6 +57,13 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
+            runAutoreconfCommand(path: buildDirectoryPath(entry: "Minizip"))
+
+            configureSource([   "--prefix=/usr",
+                                "--enable-shared",
+                                "--disable-static"],
+                            path: buildDirectoryPath(entry: "Minizip"))
+
             makeSource(path: buildDirectoryPath(entry: "Minizip"))
         end
     end
