@@ -1,7 +1,7 @@
 class Target < ISM::Software
 
     def prepare
-        if option("32Bits") || option("x32Bits") || option("Minizip")
+        if option("32Bits") || option("x32Bits")
             @buildDirectory = true
         end
 
@@ -57,6 +57,14 @@ class Target < ISM::Software
         end
 
         if option("Minizip")
+            fileReplaceText("#{mainWorkDirectoryPath(false)}/contrib/minizip/Makefile",
+                            "UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../libz.a",
+                            "UNZ_OBJS = miniunz.o unzip.o ioapi.o ../../#{buildDirectoryPath(entry: "MainBuild")}/libz.a")
+
+            fileReplaceText("#{mainWorkDirectoryPath(false)}/contrib/minizip/Makefile",
+                            "ZIP_OBJS = minizip.o zip.o   ioapi.o ../../libz.a",
+                            "ZIP_OBJS = minizip.o zip.o   ioapi.o ../../#{buildDirectoryPath(false)(entry: "MainBuild")}/libz.a")
+
             makeSource(path: buildDirectoryPath(entry: "Minizip"))
         end
     end
@@ -90,6 +98,12 @@ class Target < ISM::Software
 
             copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
                             "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+        end
+
+        if option("Minizip")
+            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "Minizip")}",
+                        "install"],
+                        path: buildDirectoryPath(entry: "Minizip"))
         end
     end
 
