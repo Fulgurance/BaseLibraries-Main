@@ -63,7 +63,8 @@ class Target < ISM::Software
             configureSource([   "--prefix=/usr",
                                 "--enable-shared",
                                 "--disable-static"],
-                            path: buildDirectoryPath(entry: "Minizip"))
+                            path: buildDirectoryPath(entry: "Minizip"),
+                            relatedToMainBuild: false)
 
             makeSource(path: buildDirectoryPath(entry: "Minizip"))
         end
