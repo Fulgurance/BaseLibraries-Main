@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libidl",
+  "version": "0.8.14",
+  "architectures": ["x86_64"],
+  "description": "Library for creating trees of CORBA Interface Definition Language (IDL) files",
+  "website": "https://gitlab.gnome.org/Archive/libidl",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
