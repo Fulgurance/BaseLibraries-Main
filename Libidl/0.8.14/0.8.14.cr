@@ -1,11 +1,14 @@
 class Target < ISM::Software
-    
+
     def configure
         super
 
+        runAutoreconfCommand(["-fiv"], path: buildDirectoryPath)
+
         configureSource([   "--prefix=/usr",
+                            "--enable-shared",
                             "--disable-static"],
-                            buildDirectoryPath)
+                            path: buildDirectoryPath)
     end
 
     def build
