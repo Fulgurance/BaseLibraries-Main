@@ -12,6 +12,7 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/usr",
+                            "--extprefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}",
                             "--archdatadir=/usr/lib/qt5",
                             "--bindir=/usr/bin",
                             "--plugindir=/usr/lib/qt5/plugins",
@@ -45,7 +46,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["install"],buildDirectoryPath)
+        makeSource(["install"], path: buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
         makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
