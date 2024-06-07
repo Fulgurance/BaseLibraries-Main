@@ -12,6 +12,12 @@
       "name": "Glib",
       "version": ">=2.76.4",
       "options": []
+    },
+    {
+      "port": "FileSystems-Main",
+      "name": "Eudev",
+      "version": ">=3.2.14",
+      "options": []
     }
   ],
   "kernelDependencies": [],
