@@ -12,7 +12,7 @@ class Target < ISM::Software
         super
 
         configureSource([   "--prefix=/usr",
-                            "--extprefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}",
+                            "--extprefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr",
                             "--archdatadir=/usr/lib/qt5",
                             "--bindir=/usr/bin",
                             "--plugindir=/usr/lib/qt5/plugins",
@@ -69,7 +69,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/assistant-qt5.desktop",assistantData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/bin/assistant")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/assistant")
         end
 
         if option("Designer")
@@ -90,7 +90,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/designer-qt5.desktop",designerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/bin/designer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/designer")
         end
 
         if option("Linguist")
@@ -110,7 +110,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/linguist-qt5.desktop",linguistData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/bin/linguist")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/linguist")
         end
 
         if option("Qdbusviewer")
@@ -130,7 +130,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt5.desktop",qdbusviewerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/bin/qdbusviewer")
+            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
         end
 
         qt5ShData = <<-CODE
