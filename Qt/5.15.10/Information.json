@@ -101,7 +101,7 @@
     {
       "name": "Dbus",
       "description": "Enable dbus support",
-      "active": false,
+      "active": true,
       "dependencies": [
         {
           "port": "Utilities-Main",
