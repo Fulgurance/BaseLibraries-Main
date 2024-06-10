@@ -3,9 +3,9 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","","#include <cstdint>\n",2)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","","#include <cstdint>\n",2)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","","#include <cstdint>\n",2)
     end
     
     def configure
@@ -47,13 +47,13 @@ class Target < ISM::Software
 
         makeSource(["INSTALL_ROOT=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"], path: buildDirectoryPath)
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/")
 
         if option("Assistant")
-            copyFile("#{buildDirectoryPath(false)}qttools/src/assistant/assistant/images/assistant-128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png")
+            copyFile("#{buildDirectoryPath}qttools/src/assistant/assistant/images/assistant-128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png")
 
             assistantData = <<-CODE
             [Desktop Entry]
@@ -66,13 +66,13 @@ class Target < ISM::Software
             Type=Application
             Categories=Qt;Development;Documentation;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/assistant-qt5.desktop",assistantData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/assistant-qt5.desktop",assistantData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/assistant")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/assistant")
         end
 
         if option("Designer")
-            copyFile("#{buildDirectoryPath(false)}qttools/src/designer/src/designer/images/designer.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/designer-qt5.png")
+            copyFile("#{buildDirectoryPath}qttools/src/designer/src/designer/images/designer.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/designer-qt5.png")
 
             designerData = <<-CODE
             [Desktop Entry]
@@ -87,13 +87,13 @@ class Target < ISM::Software
             Type=Application
             Categories=Qt;Development;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/designer-qt5.desktop",designerData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/designer-qt5.desktop",designerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/designer")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/designer")
         end
 
         if option("Linguist")
-            copyFile("#{buildDirectoryPath(false)}qttools/src/linguist/linguist/images/icons/linguist-128-32.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/linguist-qt5.png")
+            copyFile("#{buildDirectoryPath}qttools/src/linguist/linguist/images/icons/linguist-128-32.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/linguist-qt5.png")
 
             linguistData = <<-CODE
             [Desktop Entry]
@@ -107,13 +107,13 @@ class Target < ISM::Software
             Type=Application
             Categories=Qt;Development;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/linguist-qt5.desktop",linguistData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/linguist-qt5.desktop",linguistData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/linguist")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/linguist")
         end
 
         if option("Qdbusviewer")
-            copyFile("#{buildDirectoryPath(false)}qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt5.png")
+            copyFile("#{buildDirectoryPath}qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt5.png")
 
             qdbusviewerData = <<-CODE
             [Desktop Entry]
@@ -127,9 +127,9 @@ class Target < ISM::Software
             Type=Application
             Categories=Qt;Development;Debugger;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt5.desktop",qdbusviewerData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt5.desktop",qdbusviewerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
         end
 
         qt5ShData = <<-CODE
@@ -141,15 +141,15 @@ class Target < ISM::Software
         pathappend /usr/lib/qt5/qml QML2_IMPORT_PATH
         pathappend $QT5DIR/lib/qml QML2_IMPORT_PATH
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}etc/profile.d/qt5.sh",qt5ShData)
+        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt5.sh",qt5ShData)
 
-        makeLink("moc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
-        makeLink("uic","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
-        makeLink("rcc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
-        makeLink("qmake","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
-        makeLink("lconvert","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
-        makeLink("lrelease","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
-        makeLink("lupdate","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
+        makeLink("moc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
+        makeLink("uic","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
+        makeLink("rcc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
+        makeLink("qmake","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
+        makeLink("lconvert","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
+        makeLink("lrelease","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
+        makeLink("lupdate","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
     end
 
     def install

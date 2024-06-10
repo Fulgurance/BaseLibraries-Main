@@ -11,7 +11,7 @@ class Target < ISM::Software
 
         makeSource(path: buildDirectoryPath)
 
-        fileReplaceText("#{buildDirectoryPath(false)}Makefile","liblmdb.a","")
+        fileReplaceText("#{buildDirectoryPath}Makefile","liblmdb.a","")
     end
     
     def prepareInstallation

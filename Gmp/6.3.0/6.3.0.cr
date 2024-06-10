@@ -68,7 +68,7 @@ class Target < ISM::Software
         makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits") || option("x32Bits")
-            fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath(false)}/build/make/Makefile","includeexecdir = $(exec_prefix)/include","includeexecdir = $(includedir)",617)
+            fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath}/build/make/Makefile","includeexecdir = $(exec_prefix)/include","includeexecdir = $(includedir)",617)
         end
 
         if option("32Bits")
@@ -89,26 +89,26 @@ class Target < ISM::Software
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
             makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits",
                         "install"],
                         path: buildDirectoryPath(entry: "32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32",
-                            "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32")
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
         end
 
         if option("x32Bits")
             makeDirectory("#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
             makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits",
                         "install"],
                         path: buildDirectoryPath(entry: "x32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
-                            "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
         end
     end
 

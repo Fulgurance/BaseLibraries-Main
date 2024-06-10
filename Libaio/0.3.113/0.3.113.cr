@@ -3,7 +3,7 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileDeleteLine("#{buildDirectoryPath(false)}src/Makefile",63)
+        fileDeleteLine("#{buildDirectoryPath}src/Makefile",63)
     end
 
     def build

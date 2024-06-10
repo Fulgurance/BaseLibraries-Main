@@ -170,10 +170,10 @@ class Target < ISM::Software
         end
 
         makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
         copyDirectory(  "#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
     end
 
     def prepareInstallationx32Bits
@@ -199,10 +199,10 @@ class Target < ISM::Software
         end
 
         makeDirectory("#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits")
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
         copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
     end
     
     def prepareInstallation
@@ -213,24 +213,24 @@ class Target < ISM::Software
             fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
         else
             makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libmenu.so","INPUT(-lmenuw)")
-            fileAppendData("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcursesw.so","INPUT(-lncursesw)")
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so","INPUT(-lncursesw)")
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libform.so","INPUT(-lformw)")
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libpanel.so","INPUT(-lpanelw)")
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libmenu.so","INPUT(-lmenuw)")
+            fileAppendData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libcursesw.so","INPUT(-lncursesw)")
         end
 
         if option("32Bits")
             prepareInstallation32Bits
 
             if option("Pass1")
-                makeLink("libncursesw.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/libcursesw.so",:symbolicLinkByOverwrite)
+                makeLink("libncursesw.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/libcursesw.so",:symbolicLinkByOverwrite)
             else
-                makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
-                makeLink("formw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig/form.pc",:symbolicLinkByOverwrite)
-                makeLink("panelw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
-                makeLink("menuw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
-                makeLink("libncurses.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/libcurses.so",:symbolicLinkByOverwrite)
+                makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
+                makeLink("formw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/form.pc",:symbolicLinkByOverwrite)
+                makeLink("panelw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
+                makeLink("menuw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
+                makeLink("libncurses.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/libcurses.so",:symbolicLinkByOverwrite)
             end
         end
 
@@ -238,22 +238,22 @@ class Target < ISM::Software
             prepareInstallationx32Bits
 
             if option("Pass1")
-                makeLink("libncursesw.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/libcursesw.so",:symbolicLinkByOverwrite)
+                makeLink("libncursesw.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/libcursesw.so",:symbolicLinkByOverwrite)
             else
-                makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
-                makeLink("formw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig/form.pc",:symbolicLinkByOverwrite)
-                makeLink("panelw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
-                makeLink("menuw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
-                makeLink("libncurses.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/libcurses.so",:symbolicLinkByOverwrite)
+                makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
+                makeLink("formw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/form.pc",:symbolicLinkByOverwrite)
+                makeLink("panelw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
+                makeLink("menuw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
+                makeLink("libncurses.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/libcurses.so",:symbolicLinkByOverwrite)
             end
         end
 
         if !option("Pass1")
-            makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
-            makeLink("formw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/form.pc",:symbolicLinkByOverwrite)
-            makeLink("panelw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
-            makeLink("menuw.pc","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
-            makeLink("libncurses.so","#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libcurses.so",:symbolicLinkByOverwrite)
+            makeLink("ncursesw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/ncurses.pc",:symbolicLinkByOverwrite)
+            makeLink("formw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/form.pc",:symbolicLinkByOverwrite)
+            makeLink("panelw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/panel.pc",:symbolicLinkByOverwrite)
+            makeLink("menuw.pc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/menu.pc",:symbolicLinkByOverwrite)
+            makeLink("libncurses.so","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libcurses.so",:symbolicLinkByOverwrite)
         end
     end
 

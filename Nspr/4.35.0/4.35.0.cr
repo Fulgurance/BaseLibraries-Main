@@ -3,9 +3,9 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileDeleteLine("#{buildDirectoryPath(false)}pr/src/misc/Makefile.in",54)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",116)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",125)
+        fileDeleteLine("#{buildDirectoryPath}pr/src/misc/Makefile.in",54)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",116)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",125)
     end
     
     def configure

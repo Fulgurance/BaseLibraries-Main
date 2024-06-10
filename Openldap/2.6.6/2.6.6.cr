@@ -56,13 +56,13 @@ class Target < ISM::Software
         makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
 
         if option("Server")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/var/lib/openldap")
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/openldap/slapd.d")
+            makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/var/lib/openldap")
+            makeDirectory("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/openldap/slapd.d")
 
-            fileReplaceText("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/openldap/slapd.conf",".la",".so")
-            fileReplaceText("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/openldap/slapd.ldif",".la",".so")
-            fileReplaceText("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/openldap/slapd.conf.default}",".la",".so")
-            fileReplaceText("#{builtSoftwareDirectoryPath(false)}/#{Ism.settings.rootPath}/etc/openldap/slapd.ldif.default}",".la",".so")
+            fileReplaceText("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/openldap/slapd.conf",".la",".so")
+            fileReplaceText("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/openldap/slapd.ldif",".la",".so")
+            fileReplaceText("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/openldap/slapd.conf.default}",".la",".so")
+            fileReplaceText("#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}/etc/openldap/slapd.ldif.default}",".la",".so")
         end
     end
 

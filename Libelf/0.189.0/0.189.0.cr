@@ -69,10 +69,10 @@ class Target < ISM::Software
                     "install"],
                     path: buildDirectoryPath(entry: "MainBuild"))
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig")
 
-        copyFile(   "#{buildDirectoryPath(false)}config/libelf.pc",
-                    "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc")
+        copyFile(   "#{buildDirectoryPath}config/libelf.pc",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc")
 
         if option("32Bits")
             makeSource( ["-C",
@@ -81,13 +81,13 @@ class Target < ISM::Software
                     "install"],
                     path: buildDirectoryPath(entry: "32Bits"))
 
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig")
 
             copyFile(   "#{buildDirectoryPath(false, entry: "32Bits")}/config/libelf.pc",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib32/pkgconfig/libelf.pc")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/libelf.pc")
 
             copyDirectory(  "#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32",
-                            "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32")
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
         end
 
         if option("x32Bits")
@@ -97,16 +97,16 @@ class Target < ISM::Software
                     "install"],
                     path: buildDirectoryPath(entry: "x32Bits"))
 
-            makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig")
+            makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig")
 
             copyFile(   "#{buildDirectoryPath(false, entry: "x32Bits")}/config/libelf.pc",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/libx32/pkgconfig/libelf.pc")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/libelf.pc")
 
             copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
-                            "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+                            "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
         end
 
-        deleteFile("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}usr/lib/libelf.a")
+        deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libelf.a")
     end
 
     def install

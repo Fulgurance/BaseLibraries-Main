@@ -3,7 +3,7 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath(false)}/boost/phoenix/stl.hpp","#include <boost/phoenix/stl/tuple.hpp>","",14)
+        fileReplaceTextAtLineNumber("#{buildDirectoryPath}/boost/phoenix/stl.hpp","#include <boost/phoenix/stl/tuple.hpp>","",14)
     end
 
     def configure

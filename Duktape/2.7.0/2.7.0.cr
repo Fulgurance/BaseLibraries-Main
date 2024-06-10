@@ -3,7 +3,7 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceText("#{buildDirectoryPath(false)}/Makefile.sharedlibrary","-Os","-O2")
+        fileReplaceText("#{buildDirectoryPath}/Makefile.sharedlibrary","-Os","-O2")
     end
 
     def build

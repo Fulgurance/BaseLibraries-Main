@@ -4,8 +4,8 @@ class Target < ISM::Software
         @buildDirectory = true
         super
 
-        fileDeleteLine("#{mainWorkDirectoryPath(false)}/CMakeLists.txt",312)
-        fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath(false)}/CMakeLists.txt","/etc/pki/tls/cert.pem","\"/usr/share/ssl/certs/ca-bundle.crt\"/n/etc/pki/tls/certs/ca-bundle.crt",313)
+        fileDeleteLine("#{mainWorkDirectoryPath}/CMakeLists.txt",312)
+        fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath}/CMakeLists.txt","/etc/pki/tls/cert.pem","\"/usr/share/ssl/certs/ca-bundle.crt\"/n/etc/pki/tls/certs/ca-bundle.crt",313)
     end
     
     def configure

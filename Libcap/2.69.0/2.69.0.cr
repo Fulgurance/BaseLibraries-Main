@@ -3,8 +3,8 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileDeleteLine("#{buildDirectoryPath(false)}/libcap/Makefile",190)
-        fileDeleteLine("#{buildDirectoryPath(false)}/libcap/Makefile",200)
+        fileDeleteLine("#{buildDirectoryPath}/libcap/Makefile",190)
+        fileDeleteLine("#{buildDirectoryPath}/libcap/Makefile",200)
     end
 
     def build
@@ -54,9 +54,9 @@ class Target < ISM::Software
 
     def prepareInstallation32Bits
 
-        makeDirectory("#{buildDirectoryPath(false)}/32Bits")
+        makeDirectory("#{buildDirectoryPath}/32Bits")
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
         makeSource( ["lib=lib32",
                     "prefix=#{buildDirectoryPath}/32Bits/usr",
@@ -66,23 +66,23 @@ class Target < ISM::Software
                     path: buildDirectoryPath,
                     environment: {"CC" => "gcc -m32 -march=i686"})
 
-        copyDirectory(  "#{buildDirectoryPath(false)}/32Bits/usr/lib32",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32")
+        copyDirectory(  "#{buildDirectoryPath}/32Bits/usr/lib32",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
 
-        fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32/pkgconfig/libcap.pc",
+        fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32/pkgconfig/libcap.pc",
                         "libdir=/lib64",
                         "libdir=/lib32")
 
-        fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/lib32/pkgconfig/libpsx.pc",
+        fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32/pkgconfig/libpsx.pc",
                         "libdir=/lib64",
                         "libdir=/lib32")
     end
 
     def prepareInstallationx32Bits
 
-        makeDirectory("#{buildDirectoryPath(false)}/x32Bits")
+        makeDirectory("#{buildDirectoryPath}/x32Bits")
 
-        makeDirectory("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr")
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
         makeSource( ["lib=libx32",
                     "prefix=#{buildDirectoryPath}/32Bits/usr",
@@ -92,14 +92,14 @@ class Target < ISM::Software
                     path: buildDirectoryPath,
                     environment: {"CC" => "gcc -mx32 -march=x86-64"})
 
-        copyDirectory(  "#{buildDirectoryPath(false)}/x32Bits/usr/libx32",
-                        "#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32")
+        copyDirectory(  "#{buildDirectoryPath}/x32Bits/usr/libx32",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
 
-        fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32/pkgconfig/libcap.pc",
+        fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32/pkgconfig/libcap.pc",
                         "libdir=/lib64",
                         "libdir=/libx32")
 
-        fileReplaceText("#{builtSoftwareDirectoryPath(false)}#{Ism.settings.rootPath}/usr/libx32/pkgconfig/libpsx.pc",
+        fileReplaceText("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32/pkgconfig/libpsx.pc",
                         "libdir=/lib64",
                         "libdir=/libx32")
     end
