@@ -108,11 +108,11 @@ class Target < ISM::Software
         super
 
         if option("32Bits")
-            setPermissions("#{Ism.settings.rootPath}/usr/lib32/libcap.so.2.69",0o755)
+            runChmodCommand(["0755","/usr/lib32/libcap.so.2.69"])
         end
 
         if option("x32Bits")
-            setPermissions("#{Ism.settings.rootPath}/usr/libx32/libcap.so.2.69",0o755)
+            runChmodCommand(["0755","/usr/libx32/libcap.so.2.69"])
         end
     end
 

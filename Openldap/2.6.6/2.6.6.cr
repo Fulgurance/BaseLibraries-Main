@@ -70,15 +70,15 @@ class Target < ISM::Software
         super
 
         if option("Server")
-            setPermissions("#{Ism.settings.rootPath}/var/lib/openldap",0o700)
-            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.d",0o700)
-            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.conf",0o640)
-            setPermissions("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif",0o640)
+            runChmodCommand(["0700","/var/lib/openldap"])
+            runChmodCommand(["0700","/etc/openldap/slapd.d"])
+            runChmodCommand(["0640","/etc/openldap/slapd.conf"])
+            runChmodCommand(["0640","/etc/openldap/slapd.ldif"])
 
-            setOwner("#{Ism.settings.rootPath}/var/lib/openldap","ldap","ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.d","ldap","ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.conf","root","ldap")
-            setOwner("#{Ism.settings.rootPath}/etc/openldap/slapd.ldif","root","ldap")
+            runChownCommand(["ldap:ldap","/var/lib/openldap"])
+            runChownCommand(["ldap:ldap","/etc/openldap/slapd.d"])
+            runChownCommand(["root:ldap","/etc/openldap/slapd.conf"])
+            runChownCommand(["root:ldap","/etc/openldap/slapd.ldif"])
         end
     end
 

@@ -155,23 +155,23 @@ class Target < ISM::Software
     def install
         super
 
-        setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps",0o755)
-        setPermissions("#{Ism.settings.rootPath}usr/share/applications",0o755)
+        runChmodCommand(["0755","/usr/share/pixmaps"])
+        runChmodCommand(["0755","/usr/share/applications"])
 
         if option("Assistant")
-            setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png",0o755)
+            runChmodCommand(["0755","/usr/share/pixmaps/assistant-qt5.png"])
         end
 
         if option("Designer")
-            setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/designer-qt5.png",0o755)
+            runChmodCommand(["0755","/usr/share/pixmaps/designer-qt5.png"])
         end
 
         if option("Linguist")
-            setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/linguist-qt5.png",0o755)
+            runChmodCommand(["0755","/usr/share/pixmaps/linguist-qt5.png"])
         end
 
         if option("Qdbusviewer")
-            setPermissions("#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt5.png",0o755)
+            runChmodCommand(["0755","/usr/share/pixmaps/qdbusviewer-qt5.png"])
         end
 
         runLdconfigCommand

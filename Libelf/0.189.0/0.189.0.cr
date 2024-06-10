@@ -112,14 +112,14 @@ class Target < ISM::Software
     def install
         super
 
-        setPermissions("#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc",0o644)
+        runChmodCommand(["0644","/usr/lib/pkgconfig/libelf.pc"])
 
         if option("32Bits")
-            setPermissions("#{Ism.settings.rootPath}usr/lib32/pkgconfig/libelf.pc",0o644)
+            runChmodCommand(["0644","/usr/lib32/pkgconfig/libelf.pc"])
         end
 
         if option("x32Bits")
-            setPermissions("#{Ism.settings.rootPath}usr/libx32/pkgconfig/libelf.pc",0o644)
+            runChmodCommand(["0644","/usr/libx32/pkgconfig/libelf.pc"])
         end
     end
 
