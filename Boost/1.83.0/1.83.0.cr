@@ -9,7 +9,7 @@ class Target < ISM::Software
     def configure
         super
 
-        runScript(  "bootstrap.sh",
+        runFile(  "bootstrap.sh",
                     [   "--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr",
                         "--with-python=python3"],
                             buildDirectoryPath)
@@ -18,7 +18,7 @@ class Target < ISM::Software
     def build
         super
 
-        runScript(  "b2",
+        runFile(  "b2",
                     [   "stage",
                         "#{Ism.settings.makeOptions}",
                         "threading=multi",
@@ -29,7 +29,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runScript(  "b2",
+        runFile(  "b2",
                     [   "install",
                         "threading=multi",
                         "link=shared"],
