@@ -27,7 +27,7 @@ class Target < ISM::Software
 
     def configure32Bits
         if option("Pass1")
-            configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
+            configureSource([   "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
                                 "--prefix=/usr",
                                 "--build=$(./config.guess)",
                                 "--libdir=/usr/lib32",
@@ -43,7 +43,7 @@ class Target < ISM::Software
                                 environment: {  "CC" =>"gcc -m32",
                                                 "CXX" => "g++ -m32"})
         else
-            configureSource([   "--host=i686-#{Ism.settings.targetName}-linux-gnu",
+            configureSource([   "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
                                 "--prefix=/usr",
                                 "--libdir=/usr/lib32",
                                 "--mandir=/usr/share/man",
@@ -62,7 +62,7 @@ class Target < ISM::Software
 
     def configurex32Bits
         if option("Pass1")
-            configureSource([   "--host=#{Ism.settings.target}X32",
+            configureSource([   "--host=#{Ism.settings.systemTarget}X32",
                                 "--prefix=/usr",
                                 "--build=$(./config.guess)",
                                 "--libdir=/usr/lib32",
@@ -78,7 +78,7 @@ class Target < ISM::Software
                                 environment: {  "CC" =>"gcc -mx32",
                                                 "CXX" => "g++ -mx32"})
         else
-            configureSource([   "--host=#{Ism.settings.target}x32",
+            configureSource([   "--host=#{Ism.settings.systemTarget}x32",
                                 "--prefix=/usr",
                                 "--libdir=/usr/lib32",
                                 "--mandir=/usr/share/man",
