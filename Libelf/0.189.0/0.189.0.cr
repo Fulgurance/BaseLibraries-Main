@@ -83,10 +83,10 @@ class Target < ISM::Software
 
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig")
 
-            copyFile(   "#{buildDirectoryPath(false, entry: "32Bits")}/config/libelf.pc",
+            copyFile(   "#{buildDirectoryPath(entry: "32Bits")}/config/libelf.pc",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig/libelf.pc")
 
-            copyDirectory(  "#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32",
+            copyDirectory(  "#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32",
                             "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
         end
 
@@ -99,10 +99,10 @@ class Target < ISM::Software
 
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig")
 
-            copyFile(   "#{buildDirectoryPath(false, entry: "x32Bits")}/config/libelf.pc",
+            copyFile(   "#{buildDirectoryPath(entry: "x32Bits")}/config/libelf.pc",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig/libelf.pc")
 
-            copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
+            copyDirectory(  "#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32",
                             "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
         end
 

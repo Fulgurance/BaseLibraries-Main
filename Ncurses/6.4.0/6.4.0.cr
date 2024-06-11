@@ -160,19 +160,19 @@ class Target < ISM::Software
                         "install"],
                         path: buildDirectoryPath(entry: "32Bits"))
 
-            makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/pkgconfig")
+            makeDirectory("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/pkgconfig")
 
-            fileAppendData("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/libncurses.so","INPUT(-lncursesw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/libform.so","INPUT(-lformw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/libpanel.so","INPUT(-lpanelw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/libmenu.so","INPUT(-lmenuw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32/libcursesw.so","INPUT(-lncursesw)")
+            fileAppendData("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/libncurses.so","INPUT(-lncursesw)")
+            fileAppendData("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/libform.so","INPUT(-lformw)")
+            fileAppendData("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/libpanel.so","INPUT(-lpanelw)")
+            fileAppendData("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/libmenu.so","INPUT(-lmenuw)")
+            fileAppendData("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/libcursesw.so","INPUT(-lncursesw)")
         end
 
-        makeDirectory("#{buildDirectoryPath(false, entry: "32Bits")}/32Bits")
+        makeDirectory("#{buildDirectoryPath(entry: "32Bits")}/32Bits")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-        copyDirectory(  "#{buildDirectoryPath(false, entry: "32Bits")}/32Bits/usr/lib32",
+        copyDirectory(  "#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib32")
     end
 
@@ -189,19 +189,19 @@ class Target < ISM::Software
                         "install"],
                         path: buildDirectoryPath(entry: "x32Bits"))
 
-            makeDirectory("#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32/pkgconfig")
+            makeDirectory("#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32/pkgconfig")
 
-            fileAppendData("#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32/libncurses.so","INPUT(-lncursesw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "x32Bits")}/32Bits/usr/libx32/libform.so","INPUT(-lformw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "x32Bits")}/32Bits/usr/libx32/libpanel.so","INPUT(-lpanelw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "x32Bits")}/32Bits/usr/libx32/libmenu.so","INPUT(-lmenuw)")
-            fileAppendData("#{buildDirectoryPath(false, entry: "x32Bits")}/32Bits/usr/libx32/libcursesw.so","INPUT(-lncursesw)")
+            fileAppendData("#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32/libncurses.so","INPUT(-lncursesw)")
+            fileAppendData("#{buildDirectoryPath(entry: "x32Bits")}/32Bits/usr/libx32/libform.so","INPUT(-lformw)")
+            fileAppendData("#{buildDirectoryPath(entry: "x32Bits")}/32Bits/usr/libx32/libpanel.so","INPUT(-lpanelw)")
+            fileAppendData("#{buildDirectoryPath(entry: "x32Bits")}/32Bits/usr/libx32/libmenu.so","INPUT(-lmenuw)")
+            fileAppendData("#{buildDirectoryPath(entry: "x32Bits")}/32Bits/usr/libx32/libcursesw.so","INPUT(-lncursesw)")
         end
 
-        makeDirectory("#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits")
+        makeDirectory("#{buildDirectoryPath(entry: "x32Bits")}/x32Bits")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-        copyDirectory(  "#{buildDirectoryPath(false, entry: "x32Bits")}/x32Bits/usr/libx32",
+        copyDirectory(  "#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32",
                         "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/libx32")
     end
     
