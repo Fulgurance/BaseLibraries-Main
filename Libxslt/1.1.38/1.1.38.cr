@@ -3,11 +3,11 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--disable-static",
-                            "--with-python=/usr/bin/python3",
-                            "--docdir=/usr/share/doc/libxslt-1.1.38"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr                  \
+                                    --disable-static                \
+                                    --with-python=/usr/bin/python3  \
+                                    --docdir=/usr/share/doc/libxslt-1.1.38",
+                        path:       buildDirectoryPath)
     end
     
     def build
@@ -19,7 +19,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

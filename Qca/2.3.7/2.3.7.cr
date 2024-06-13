@@ -5,17 +5,21 @@ class Target < ISM::Software
         super
 
         fileDeleteLine("#{mainWorkDirectoryPath}/CMakeLists.txt",312)
-        fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath}/CMakeLists.txt","/etc/pki/tls/cert.pem","\"/usr/share/ssl/certs/ca-bundle.crt\"/n/etc/pki/tls/certs/ca-bundle.crt",313)
+
+        fileReplaceTextAtLineNumber(path:       "#{mainWorkDirectoryPath}/CMakeLists.txt",
+                                    text:       "/etc/pki/tls/cert.pem",
+                                    newText:    "\"/usr/share/ssl/certs/ca-bundle.crt\"/n/etc/pki/tls/certs/ca-bundle.crt",
+                                    lineNumber: 313)
     end
     
     def configure
         super
 
-        runCmakeCommand([   "-DCMAKE_INSTALL_PREFIX=/usr",
-                            "-DCMAKE_BUILD_TYPE=Release",
-                            "-DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man",
-                            ".."],
-                            buildDirectoryPath)
+        runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr                \
+                                    -DCMAKE_BUILD_TYPE=Release                  \
+                                    -DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man   \
+                                    ..",
+                        path:       buildDirectoryPath)
     end
     
     def build
@@ -27,7 +31,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

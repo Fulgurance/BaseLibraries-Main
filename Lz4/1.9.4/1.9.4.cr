@@ -3,13 +3,15 @@ class Target < ISM::Software
     def build
         super
 
-        makeSource(["PREFIX=/usr"],path: buildDirectoryPath)
+        makeSource( arguments:  "PREFIX=/usr",
+                    path:       buildDirectoryPath)
     end
     
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","PREFIX=/usr","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} PREFIX=/usr install",
+                    path:       buildDirectoryPath)
     end
 
 end

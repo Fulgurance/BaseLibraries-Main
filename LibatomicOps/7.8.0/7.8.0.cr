@@ -3,11 +3,11 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--enable-shared",
-                            "--disable-static",
-                            "--docdir=/usr/share/doc/libatomic_ops-7.8.0"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr      \
+                                    --enable-shared     \
+                                    --disable-static    \
+                                    --docdir=/usr/share/doc/libatomic_ops-7.8.0"],
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -19,7 +19,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

@@ -8,12 +8,12 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand([   "setup",
-                            "--reconfigure",
-                            "--prefix=/usr",
-                            "--buildtype=release",
-                            "-Dupdate-mimedb=true",
-                            ".."],buildDirectoryPath)
+        runMesonCommand(arguments:  "setup --reconfigure    \
+                                    --prefix=/usr           \
+                                    --buildtype=release     \
+                                    -Dupdate-mimedb=true    \
+                                    .."],
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -25,8 +25,9 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runNinjaCommand(["install"],buildDirectoryPath,
-                                    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+        runNinjaCommand(arguments:      "install",
+                        path:           buildDirectoryPath,
+                        environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
     end
 
 end

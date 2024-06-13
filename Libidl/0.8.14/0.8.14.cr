@@ -3,12 +3,13 @@ class Target < ISM::Software
     def configure
         super
 
-        runAutoreconfCommand(["-fiv"], path: buildDirectoryPath)
+        runAutoreconfCommand(   arguments:  "-fiv",
+                                path:       buildDirectoryPath)
 
-        configureSource([   "--prefix=/usr",
-                            "--enable-shared",
-                            "--disable-static"],
-                            path: buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --enable-shared \
+                                    --disable-static",
+                        path: buildDirectoryPath)
     end
 
     def build
@@ -20,7 +21,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

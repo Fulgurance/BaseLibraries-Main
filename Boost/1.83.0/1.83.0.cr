@@ -3,37 +3,35 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}/boost/phoenix/stl.hpp","#include <boost/phoenix/stl/tuple.hpp>","",14)
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}/boost/phoenix/stl.hpp",
+                                    text:       "#include <boost/phoenix/stl/tuple.hpp>",
+                                    newText:    "",
+                                    lineNumber: 14)
     end
 
     def configure
         super
 
-        runFile(  "bootstrap.sh",
-                    [   "--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr",
-                        "--with-python=python3"],
-                            buildDirectoryPath)
+        runFile(file:       "bootstrap.sh",
+                arguments:  "--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr \
+                            --with-python=python3"],
+                path:       buildDirectoryPath)
     end
 
     def build
         super
 
-        runFile(  "b2",
-                    [   "stage",
-                        "#{Ism.settings.makeOptions}",
-                        "threading=multi",
-                        "link=shared"],
-                            buildDirectoryPath)
+        runFile(file:       "b2",
+                arguments:  "stage #{Ism.settings.makeOptions} threading=multi link=shared"],
+                path:       buildDirectoryPath)
     end
 
     def prepareInstallation
         super
 
-        runFile(  "b2",
-                    [   "install",
-                        "threading=multi",
-                        "link=shared"],
-                            buildDirectoryPath)
+        runFile(file:       "b2",
+                arguments:  "install threading=multi link=shared"],
+                path:       buildDirectoryPath)
     end
 
 end

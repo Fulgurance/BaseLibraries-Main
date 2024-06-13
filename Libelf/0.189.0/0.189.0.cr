@@ -18,30 +18,30 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--disable-debuginfod",
-                            "--enable-libdebuginfod=dummy"],
-                            path: buildDirectoryPath(entry: "MainBuild"))
+        configureSource(arguments:  "--prefix=/usr          \
+                                    --disable-debuginfod    \
+                                    --enable-libdebuginfod=dummy",
+                        path:       buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
-            configureSource([   "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
-                                "--prefix=/usr",
-                                "--libdir=/usr/lib32",
-                                "--disable-debuginfod",
-                                "--enable-libdebuginfod=dummy"],
-                                path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "CC" =>"gcc -m32",
+            configureSource(arguments:      "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu \
+                                            --prefix=/usr                                           \
+                                            --libdir=/usr/lib32                                     \
+                                            --disable-debuginfod                                    \
+                                            --enable-libdebuginfod=dummy",
+                            path:           buildDirectoryPath(entry: "32Bits"),
+                            environment:    {   "CC" =>"gcc -m32",
                                                 "CXX" => "g++ -m32"})
         end
 
         if option("x32Bits")
-            configureSource([   "--host=#{Ism.settings.systemTarget}x32",
-                                "--prefix=/usr",
-                                "--libdir=/usr/libx32",
-                                "--disable-static",
-                                "--with-gcc-arch=x86_64"],
-                                path: buildDirectoryPath(entry: "x32Bits"),
-                                environment: {  "CC" =>"gcc -mx32",
+            configureSource(arguments:      "--host=#{Ism.settings.systemTarget}x32 \
+                                            --prefix=/usr                           \
+                                            --libdir=/usr/libx32                    \
+                                            --disable-static                        \
+                                            --with-gcc-arch=x86_64",
+                            path:           buildDirectoryPath(entry: "x32Bits"),
+                            environment:    {   "CC" =>"gcc -mx32",
                                                 "CXX" => "g++ -mx32"})
         end
     end
@@ -63,11 +63,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( ["-C",
-                    "libelf",
-                    "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
-                    "install"],
-                    path: buildDirectoryPath(entry: "MainBuild"))
+        makeSource( arguments:  "-C libelf DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath(entry: "MainBuild"))
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig")
 
@@ -75,11 +72,8 @@ class Target < ISM::Software
                     "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/pkgconfig/libelf.pc")
 
         if option("32Bits")
-            makeSource( ["-C",
-                    "libelf",
-                    "DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits",
-                    "install"],
-                    path: buildDirectoryPath(entry: "32Bits"))
+            makeSource( arguments:  "-C libelf DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits install",
+                        path:       buildDirectoryPath(entry: "32Bits"))
 
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib32/pkgconfig")
 
@@ -91,11 +85,8 @@ class Target < ISM::Software
         end
 
         if option("x32Bits")
-            makeSource( ["-C",
-                    "libelf",
-                    "DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits",
-                    "install"],
-                    path: buildDirectoryPath(entry: "x32Bits"))
+            makeSource( arguments:  "-C libelf DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits install",
+                        path:       buildDirectoryPath(entry: "x32Bits"))
 
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/libx32/pkgconfig")
 
@@ -112,14 +103,14 @@ class Target < ISM::Software
     def install
         super
 
-        runChmodCommand(["0644","/usr/lib/pkgconfig/libelf.pc"])
+        runChmodCommand("0644 /usr/lib/pkgconfig/libelf.pc")
 
         if option("32Bits")
-            runChmodCommand(["0644","/usr/lib32/pkgconfig/libelf.pc"])
+            runChmodCommand("0644 /usr/lib32/pkgconfig/libelf.pc")
         end
 
         if option("x32Bits")
-            runChmodCommand(["0644","/usr/libx32/pkgconfig/libelf.pc"])
+            runChmodCommand("0644 /usr/libx32/pkgconfig/libelf.pc")
         end
     end
 

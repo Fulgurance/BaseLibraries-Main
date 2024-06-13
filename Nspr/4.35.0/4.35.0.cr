@@ -4,18 +4,26 @@ class Target < ISM::Software
         super
 
         fileDeleteLine("#{buildDirectoryPath}pr/src/misc/Makefile.in",54)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",116)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}config/rules.mk","$(SHARED_LIBRARY)","$(LIBRARY) $(SHARED_LIBRARY)",125)
+
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}config/rules.mk",
+                                    text:       "$(SHARED_LIBRARY)",
+                                    newText:    "$(LIBRARY) $(SHARED_LIBRARY)",
+                                    lineNumber: 116)
+
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}config/rules.mk",
+                                    text:       "$(SHARED_LIBRARY)",
+                                    newText:    "$(LIBRARY) $(SHARED_LIBRARY)",
+                                    lineNumber: 125)
     end
     
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--with-mozilla",
-                            "--with-pthreads",
-                            "--enable-64bit"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr  \
+                                    --with-mozilla  \
+                                    --with-pthreads \
+                                    --enable-64bit",
+                        path:       buildDirectoryPath)
     end
 
     def build
@@ -27,7 +35,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

@@ -3,37 +3,48 @@ class Target < ISM::Software
     def prepare
         super
 
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp","","#include <cstdint>\n",2)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp","","#include <cstdint>\n",2)
-        fileReplaceTextAtLineNumber("#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp","","#include <cstdint>\n",2)
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp",
+                                    text:       "",
+                                    newText:    "#include <cstdint>\n",
+                                    lineNumber: 2)
+
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp",
+                                    text:       "",
+                                    newText:    "#include <cstdint>\n",
+                                    lineNumber: 2)
+
+        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp",
+                                    text:       "",
+                                    newText:    "#include <cstdint>\n",
+                                    lineNumber: 2)
     end
     
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--archdatadir=/usr/lib/qt5",
-                            "--bindir=/usr/bin",
-                            "--plugindir=/usr/lib/qt5/plugins",
-                            "--importdir=/usr/lib/qt5/imports",
-                            "--headerdir=/usr/include/qt5",
-                            "--datadir=/usr/share/qt5",
-                            "--docdir=/usr/share/doc/qt5",
-                            "--translationdir=/usr/share/qt5/translations",
-                            "--sysconfdir=/etc/xdg",
-                            "--confirm-license",
-                            "--opensource",
-                            option("Dbus") ? "--dbus-linked" : "",
-                            option("Openssl") ? "--openssl-linked" : "",
-                            option("Harfbuzz") ? "-system-harfbuzz" : "",
-                            option("Sqlite") ? "-system-sqlite" : "",
-                            option("Xcb") ? "-xcb" : "",
-                            option("Cups") ? "-cups" : "",
-                            "--nomake=examples",
-                            "--no-rpath",
-                            "--syslog",
-                            "--skip=qtwebengine"],
-                            buildDirectoryPath)
+        configureSource(arguments:  "--prefix=/usr                                  \
+                                    --archdatadir=/usr/lib/qt5                      \
+                                    --bindir=/usr/bin                               \
+                                    --plugindir=/usr/lib/qt5/plugins                \
+                                    --importdir=/usr/lib/qt5/imports                \
+                                    --headerdir=/usr/include/qt5                    \
+                                    --datadir=/usr/share/qt5                        \
+                                    --docdir=/usr/share/doc/qt5                     \
+                                    --translationdir=/usr/share/qt5/translations    \
+                                    --sysconfdir=/etc/xdg                           \
+                                    --confirm-license                               \
+                                    --opensource                                    \
+                                    #{option("Dbus") ? "--dbus-linked" : ""}        \
+                                    #{option("Openssl") ? "--openssl-linked" : ""}  \
+                                    #{option("Harfbuzz") ? "-system-harfbuzz" : ""} \
+                                    #{option("Sqlite") ? "-system-sqlite" : ""}     \
+                                    #{option("Xcb") ? "-xcb" : ""}                  \
+                                    #{option("Cups") ? "-cups" : ""}                \
+                                    --nomake=examples                               \
+                                    --no-rpath                                      \
+                                    --syslog                                        \
+                                    --skip=qtwebengine",
+                                    buildDirectoryPath)
     end
     
     def build
@@ -45,7 +56,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource(["INSTALL_ROOT=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"], path: buildDirectoryPath)
+        makeSource( arguments:  "INSTALL_ROOT=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications")
@@ -53,7 +65,8 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/")
 
         if option("Assistant")
-            copyFile("#{buildDirectoryPath}qttools/src/assistant/assistant/images/assistant-128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png")
+            copyFile(   "#{buildDirectoryPath}qttools/src/assistant/assistant/images/assistant-128.png",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt5.png")
 
             assistantData = <<-CODE
             [Desktop Entry]
@@ -143,35 +156,55 @@ class Target < ISM::Software
         CODE
         fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt5.sh",qt5ShData)
 
-        makeLink("moc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt5",:symbolicLinkByOverwrite)
-        makeLink("uic","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-qt5",:symbolicLinkByOverwrite)
-        makeLink("rcc","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-qt5",:symbolicLinkByOverwrite)
-        makeLink("qmake","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-qt5",:symbolicLinkByOverwrite)
-        makeLink("lconvert","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt5",:symbolicLinkByOverwrite)
-        makeLink("lrelease","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt5",:symbolicLinkByOverwrite)
-        makeLink("lupdate","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt5",:symbolicLinkByOverwrite)
+        makeLink(   target: "moc",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt5",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target: "uic",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-qt5",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target: "rcc",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-qt5",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target: "qmake",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-qt5",
+                    type:   :symbolicLinkByOverwrite)
+
+        makeLink(   target:     "lconvert",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt5",
+                    newPath:    :symbolicLinkByOverwrite)
+
+        makeLink(   target:     "lrelease",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt5",
+                    newPath:    :symbolicLinkByOverwrite)
+
+        makeLink(   target:     "lupdate",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt5",
+                    newPath:    :symbolicLinkByOverwrite)
     end
 
     def install
         super
 
-        runChmodCommand(["0755","/usr/share/pixmaps"])
-        runChmodCommand(["0755","/usr/share/applications"])
+        runChmodCommand("0755 /usr/share/pixmaps")
+        runChmodCommand("0755 /usr/share/applications")
 
         if option("Assistant")
-            runChmodCommand(["0755","/usr/share/pixmaps/assistant-qt5.png"])
+            runChmodCommand("0755 /usr/share/pixmaps/assistant-qt5.png")
         end
 
         if option("Designer")
-            runChmodCommand(["0755","/usr/share/pixmaps/designer-qt5.png"])
+            runChmodCommand("0755 /usr/share/pixmaps/designer-qt5.png")
         end
 
         if option("Linguist")
-            runChmodCommand(["0755","/usr/share/pixmaps/linguist-qt5.png"])
+            runChmodCommand("0755 /usr/share/pixmaps/linguist-qt5.png")
         end
 
         if option("Qdbusviewer")
-            runChmodCommand(["0755","/usr/share/pixmaps/qdbusviewer-qt5.png"])
+            runChmodCommand("0755 /usr/share/pixmaps/qdbusviewer-qt5.png")
         end
 
         runLdconfigCommand

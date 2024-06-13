@@ -3,7 +3,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        runPythonCommand(["setup.py","install","bdist"],buildDirectoryPath)
+        runPythonCommand(   arguments:  "setup.py install bdist",
+                            path:       buildDirectoryPath)
 
         extractArchive("#{buildDirectoryPath}/dist/Jinja2-3.1.2.linux-x86_64.tar.gz")
 

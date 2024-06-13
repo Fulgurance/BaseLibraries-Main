@@ -11,13 +11,16 @@ class Target < ISM::Software
 
         makeSource(path: buildDirectoryPath)
 
-        fileReplaceText("#{buildDirectoryPath}Makefile","liblmdb.a","")
+        fileReplaceText(path:       "#{buildDirectoryPath}Makefile",
+                        text:       "liblmdb.a",
+                        newText:    "")
     end
     
     def prepareInstallation
         super
 
-        makeSource(["prefix=/usr","DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}","install"],buildDirectoryPath)
+        makeSource( arguments:  "prefix=/usr DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
     end
 
 end

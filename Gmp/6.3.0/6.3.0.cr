@@ -20,11 +20,11 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource([   "--prefix=/usr",
-                            "--enable-cxx",
-                            "--disable-static",
-                            "--docdir=/usr/share/doc/gmp-6.3.0"],
-                            buildDirectoryPath(entry: "MainBuild"))
+        configureSource(arguments:  "--prefix=/usr      \
+                                    --enable-cxx        \
+                                    --disable-static    \
+                                    --docdir=/usr/share/doc/gmp-6.3.0",
+                        path:       buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits") || option("x32Bits")
             copyFile("#{buildDirectoryPath(entry: "MainBuild")}/configfsf.guess","config.guess")
@@ -33,32 +33,32 @@ class Target < ISM::Software
 
         if option("32Bits")
 
-            configureSource([   "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu",
-                                "--prefix=/usr",
-                                "--libdir=/usr/lib32",
-                                "--disable-static",
-                                "--enable-cxx",
-                                "--includedir=/usr/include/m32/gmp"],
-                                path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "ABI" => "32",
-                                                "CFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
-                                                "CXXFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
-                                                "PKG_CONFIG_PATH" => "/usr/lib32/pkgconfig"})
+            configureSource(arguments:      "--host=i686-#{Ism.settings.systemTargetName}-linux-gnu \
+                                            --prefix=/usr                                           \
+                                            --libdir=/usr/lib32                                     \
+                                            --disable-static                                        \
+                                            --enable-cxx                                            \
+                                            --includedir=/usr/include/m32/gmp",
+                            path:           buildDirectoryPath(entry: "32Bits"),
+                            environment:    {"ABI" => "32",
+                                            "CFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
+                                            "CXXFLAGS" => "-m32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=i686",
+                                            "PKG_CONFIG_PATH" => "/usr/lib32/pkgconfig"})
         end
 
         if option("x32Bits")
 
-            configureSource([   "--host=#{Ism.settings.systemTarget}x32",
-                                "--prefix=/usr",
-                                "--libdir=/usr/libx32",
-                                "--disable-static",
-                                "--enable-cxx",
-                                "--includedir=/usr/include/mx32/gmp"],
-                                path: buildDirectoryPath(entry: "32Bits"),
-                                environment: {  "ABI" => "x32",
-                                                "CFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
-                                                "CXXFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
-                                                "PKG_CONFIG_PATH" => "/usr/libx32/pkgconfig"})
+            configureSource(arguments:      "--host=#{Ism.settings.systemTarget}x32 \
+                                            --prefix=/usr                           \
+                                            --libdir=/usr/libx32                    \
+                                            --disable-static                        \
+                                            --enable-cxx                            \
+                                            --includedir=/usr/include/mx32/gmp"],
+                            path:           buildDirectoryPath(entry: "32Bits"),
+                            environment:    {"ABI" => "x32",
+                                            "CFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
+                                            "CXXFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
+                                            "PKG_CONFIG_PATH" => "/usr/libx32/pkgconfig"})
         end
     end
 
@@ -68,7 +68,10 @@ class Target < ISM::Software
         makeSource(path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits") || option("x32Bits")
-            fileReplaceTextAtLineNumber("#{mainWorkDirectoryPath}/build/make/Makefile","includeexecdir = $(exec_prefix)/include","includeexecdir = $(includedir)",617)
+            fileReplaceTextAtLineNumber(path:       "#{mainWorkDirectoryPath}/build/make/Makefile",
+                                        text:       "includeexecdir = $(exec_prefix)/include",
+                                        newText:    "includeexecdir = $(includedir)",
+                                        lineNumber: 617)
         end
 
         if option("32Bits")
@@ -83,16 +86,14 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( ["DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath}",
-                    "install"],
+        makeSource( arguments:   "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
                     path: buildDirectoryPath(entry: "MainBuild"))
 
         if option("32Bits")
             makeDirectory("#{buildDirectoryPath(entry: "32Bits")}/32Bits")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits",
-                        "install"],
+            makeSource( arguments:   "DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits install",
                         path: buildDirectoryPath(entry: "32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32",
@@ -103,8 +104,7 @@ class Target < ISM::Software
             makeDirectory("#{buildDirectoryPath(entry: "x32Bits")}/x32Bits")
             makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr")
 
-            makeSource( ["DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits",
-                        "install"],
+            makeSource( arguments:   "DESTDIR=#{buildDirectoryPath(entry: "x32Bits")}/x32Bits install",
                         path: buildDirectoryPath(entry: "x32Bits"))
 
             copyDirectory(  "#{buildDirectoryPath(entry: "x32Bits")}/x32Bits/usr/libx32",
