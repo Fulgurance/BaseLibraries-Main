@@ -158,7 +158,7 @@ class Target < ISM::Software
                         path:       buildDirectoryPath(entry: "32Bits"))
         else
 
-            makeSource( arguments:   "DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits install"],
+            makeSource( arguments:   "DESTDIR=#{buildDirectoryPath(entry: "32Bits")}/32Bits install",
                         path:        buildDirectoryPath(entry: "32Bits"))
 
             makeDirectory("#{buildDirectoryPath(entry: "32Bits")}/32Bits/usr/lib32/pkgconfig")

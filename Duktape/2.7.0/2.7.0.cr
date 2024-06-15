@@ -18,7 +18,7 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "-f Makefile.sharedlibrary DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} INSTALL_PREFIX=/usr install"],
+        makeSource( arguments:  "-f Makefile.sharedlibrary DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} INSTALL_PREFIX=/usr install",
                     path:       buildDirectoryPath)
     end
 
