@@ -42,7 +42,7 @@ class Target < ISM::Software
                                             --without-debug                                         \
                                             --without-ada                                           \
                                             --disable-stripping                                     \
-                                            --enable-widec"],
+                                            --enable-widec",
                             path:           buildDirectoryPath(entry: "32Bits"),
                             environment:    {   "CC" =>"gcc -m32",
                                                 "CXX" => "g++ -m32"})
