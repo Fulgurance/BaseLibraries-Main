@@ -14,14 +14,6 @@ class Target < ISM::Software
         end
 
         super
-
-        fileReplaceText(path:       "#{buildDirectoryPath}/Makefile.in",
-                        text:       "-$(MV)",
-                        newText:    "")
-
-        fileReplaceLineContaining(  path:       "#{buildDirectoryPath}/support/shlib-install",
-                                    text:       "{OLDSUFF}",
-                                    newLine:    ":")
     end
 
     def configure
