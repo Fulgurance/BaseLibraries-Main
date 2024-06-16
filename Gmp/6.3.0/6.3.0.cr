@@ -53,7 +53,7 @@ class Target < ISM::Software
                                             --libdir=/usr/libx32                    \
                                             --disable-static                        \
                                             --enable-cxx                            \
-                                            --includedir=/usr/include/mx32/gmp"],
+                                            --includedir=/usr/include/mx32/gmp",
                             path:           buildDirectoryPath(entry: "32Bits"),
                             environment:    {"ABI" => "x32",
                                             "CFLAGS" => "-mx32 -O2 -pedantic -fomit-frame-pointer -mtune=generic -march=x86-64",
