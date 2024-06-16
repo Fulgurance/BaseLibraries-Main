@@ -44,7 +44,7 @@ class Target < ISM::Software
         end
 
         if option("x32Bits")
-            configureSource([arguments:     "--host=#{Ism.settings.systemTarget}x32 \
+            configureSource(arguments:     "--host=#{Ism.settings.systemTarget}x32  \
                                             --prefix=/usr                           \
                                             --libdir=/usr/libx32                    \
                                             --disable-static                        \
