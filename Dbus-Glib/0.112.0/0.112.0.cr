@@ -5,7 +5,7 @@ class Target < ISM::Software
 
         configureSource(arguments:  "--prefix=/usr      \
                                     --sysconfdir=/etc   \
-                                    --disable-static"],
+                                    --disable-static",
                         path:       buildDirectoryPath)
     end
 
