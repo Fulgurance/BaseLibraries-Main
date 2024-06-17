@@ -14,7 +14,7 @@ class Target < ISM::Software
 
         runFile(file:       "bootstrap.sh",
                 arguments:  "--prefix=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr \
-                            --with-python=python3"],
+                            --with-python=python3",
                 path:       buildDirectoryPath)
     end
 
@@ -22,7 +22,7 @@ class Target < ISM::Software
         super
 
         runFile(file:       "b2",
-                arguments:  "stage #{Ism.settings.makeOptions} threading=multi link=shared"],
+                arguments:  "stage #{Ism.settings.makeOptions} threading=multi link=shared",
                 path:       buildDirectoryPath)
     end
 
@@ -30,7 +30,7 @@ class Target < ISM::Software
         super
 
         runFile(file:       "b2",
-                arguments:  "install threading=multi link=shared"],
+                arguments:  "install threading=multi link=shared",
                 path:       buildDirectoryPath)
     end
 
