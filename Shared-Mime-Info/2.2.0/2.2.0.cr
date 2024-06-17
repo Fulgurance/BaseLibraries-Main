@@ -12,7 +12,7 @@ class Target < ISM::Software
                                     --prefix=/usr           \
                                     --buildtype=release     \
                                     -Dupdate-mimedb=true    \
-                                    .."],
+                                    ..",
                         path:       buildDirectoryPath)
     end
 
