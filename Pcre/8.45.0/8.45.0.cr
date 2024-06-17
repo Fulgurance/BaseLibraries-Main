@@ -11,7 +11,7 @@ class Target < ISM::Software
                                     --enable-pcregrep-libz              \
                                     --enable-pcregrep-libbz2            \
                                     --enable-pcretest-libreadline       \
-                                    --disable-static"],
+                                    --disable-static",
                         path:       buildDirectoryPath)
     end
 
