@@ -13,7 +13,7 @@ class Target < ISM::Software
                                     --prefix=/usr               \
                                     --buildtype=release         \
                                     -Dlibdbus=auto              \
-                                    .."],
+                                    ..",
                         path:       buildDirectoryPath)
     end
 
