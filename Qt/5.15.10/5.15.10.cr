@@ -44,7 +44,7 @@ class Target < ISM::Software
                                     --no-rpath                                      \
                                     --syslog                                        \
                                     --skip=qtwebengine",
-                                    buildDirectoryPath)
+                        path:       buildDirectoryPath)
     end
     
     def build
