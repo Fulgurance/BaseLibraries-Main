@@ -174,15 +174,15 @@ class Target < ISM::Software
 
         makeLink(   target:     "lconvert",
                     path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt5",
-                    newPath:    :symbolicLinkByOverwrite)
+                    type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lrelease",
                     path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt5",
-                    newPath:    :symbolicLinkByOverwrite)
+                    type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lupdate",
                     path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt5",
-                    newPath:    :symbolicLinkByOverwrite)
+                    type:    :symbolicLinkByOverwrite)
     end
 
     def install
