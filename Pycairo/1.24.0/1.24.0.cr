@@ -6,7 +6,8 @@ class Target < ISM::Software
         runPythonCommand(   arguments:  "setup.py install bdist",
                             path:       buildDirectoryPath)
 
-        extractArchive("#{buildDirectoryPath}/dist/pycairo-1.24.0.linux-x86_64.tar.gz")
+        runTarCommand(  arguments:  "-xf pycairo-1.24.0.linux-x86_64.tar.gz",
+                        path:       "#{buildDirectoryPath}/dist/")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 

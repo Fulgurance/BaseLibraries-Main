@@ -6,7 +6,8 @@ class Target < ISM::Software
         runPythonCommand(   arguments:  "setup.py install bdist",
                             path:       buildDirectoryPath)
 
-        extractArchive("#{buildDirectoryPath}/dist/Jinja2-3.1.2.linux-x86_64.tar.gz")
+        runTarCommand(  arguments:  "-xf Jinja2-3.1.2.linux-x86_64.tar.gz",
+                        path:       "#{buildDirectoryPath}/dist/")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 

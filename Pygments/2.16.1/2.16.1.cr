@@ -6,7 +6,8 @@ class Target < ISM::Software
         runPythonCommand(   arguments: "setup.py install bdist",
                             path:       buildDirectoryPath)
 
-        extractArchive("#{buildDirectoryPath}/dist/Pygments-2.16.1.linux-x86_64.tar.gz")
+        runTarCommand(  arguments:  "-xf Pygments-2.16.1.linux-x86_64.tar.gz",
+                        path:       "#{buildDirectoryPath}/dist/")
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr")
 
