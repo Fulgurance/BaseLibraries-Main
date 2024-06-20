@@ -1,14 +1,5 @@
 class Target < ISM::Software
 
-    def prepare
-        super
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}/boost/phoenix/stl.hpp",
-                                    text:       "#include <boost/phoenix/stl/tuple.hpp>",
-                                    newText:    "",
-                                    lineNumber: 14)
-    end
-
     def configure
         super
 
