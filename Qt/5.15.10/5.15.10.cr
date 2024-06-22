@@ -1,23 +1,4 @@
 class Target < ISM::Software
-
-    def prepare
-        super
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/geometry.hpp",
-                                    text:       "",
-                                    newText:    "#include <cstdint>\n",
-                                    lineNumber: 2)
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/include/mbgl/util/string.hpp",
-                                    text:       "",
-                                    newText:    "#include <cstdint>\n",
-                                    lineNumber: 2)
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}qtlocation/src/3rdparty/mapbox-gl-native/src/mbgl/gl/stencil_mode.hpp",
-                                    text:       "",
-                                    newText:    "#include <cstdint>\n",
-                                    lineNumber: 2)
-    end
     
     def configure
         super
