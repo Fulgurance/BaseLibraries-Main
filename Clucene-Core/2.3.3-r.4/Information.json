@@ -1,0 +1,38 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Clucene-Core",
+  "version": "2.3.3-r.4",
+  "architectures": ["x86_64"],
+  "description": "High-performance, scalable, cross platform, full-featured, open-source indexing and searching API",
+  "website": "https://clucene.sourceforge.net/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Cmake",
+      "version": ">=3.27.2",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Boost",
+      "description": "Enable boost support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Boost",
+          "version": ">=1.83.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
