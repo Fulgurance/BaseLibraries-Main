@@ -8,7 +8,7 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
+      "port": "NetworkingLibraries-Main",
       "name": "Curl",
       "version": ">=8.2.1",
       "options": []
