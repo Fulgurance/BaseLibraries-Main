@@ -6,7 +6,7 @@ class Target < ISM::Software
         configureSource(arguments:  "--prefix=/usr      \
                                     --enable-shared     \
                                     --disable-static    \
-                                    --docdir=/usr/share/doc/libatomic_ops-7.8.0"],
+                                    --docdir=/usr/share/doc/libatomic_ops-7.8.0",
                         path:       buildDirectoryPath)
     end
 
