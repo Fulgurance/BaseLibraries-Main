@@ -5,8 +5,8 @@ class Target < ISM::Software
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/include")
 
-        copyFile(   "#{buildDirectoryPath}/include/*",
-                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/include/")
+        copyFile(   "#{buildDirectoryPath}/include/nlohmann",
+                    "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/include/nlohmann")
     end
 
 end
