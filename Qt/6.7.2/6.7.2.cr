@@ -14,8 +14,8 @@ class Target < ISM::Software
                                     --sysconfdir=/etc/xdg                           \
                                     #{option("Dbus") ? "--dbus-linked" : ""}        \
                                     #{option("Openssl") ? "--openssl-linked" : ""}  \
-                                    #{option("Harfbuzz") ? "-system-harfbuzz" : ""} \
-                                    #{option("Sqlite") ? "-system-sqlite" : ""}     \
+                                    #{option("Harfbuzz") ? "-harfbuzz" : ""}        \
+                                    #{option("Sqlite") ? "-sqlite" : ""}            \
                                     #{option("Xcb") ? "-xcb" : ""}                  \
                                     #{option("Cups") ? "-cups" : ""}                \
                                     --nomake=examples                               \
