@@ -15,7 +15,7 @@ class Target < ISM::Software
                                     #{option("Dbus") ? "--dbus-linked" : ""}                    \
                                     #{option("Openssl") ? "--openssl-linked" : ""}              \
                                     #{option("Harfbuzz") ? "--harfbuzz=system" : "--harfbuzz=no"} \
-                                    #{option("Sqlite") ? "-sqlite=system" : ""}                        \
+                                    #{option("Sqlite") ? "--sqlite=system" : "--sqlite=qt"}                        \
                                     #{option("Xcb") ? "-xcb" : ""}                              \
                                     #{option("Cups") ? "-cups" : ""}                            \
                                     --nomake=examples                                           \
