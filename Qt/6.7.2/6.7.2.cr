@@ -166,6 +166,8 @@ class Target < ISM::Software
         makeLink(   target:     "lupdate",
                     path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt6",
                     type:    :symbolicLinkByOverwrite)
+
+        exit
     end
 
     def install
