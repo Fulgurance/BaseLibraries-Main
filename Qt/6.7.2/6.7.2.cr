@@ -7,7 +7,6 @@ class Target < ISM::Software
                                     --archdatadir=/usr/lib/qt6                      \
                                     --bindir=/usr/bin                               \
                                     --plugindir=/usr/lib/qt6/plugins                \
-                                    --importdir=/usr/lib/qt6/imports                \
                                     --headerdir=/usr/include/qt6                    \
                                     --datadir=/usr/share/qt6                        \
                                     --docdir=/usr/share/doc/qt6                     \
