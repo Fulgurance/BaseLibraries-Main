@@ -3,27 +3,27 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr                                  \
-                                    --archdatadir=/usr/lib/qt6                      \
-                                    --bindir=/usr/bin                               \
-                                    --plugindir=/usr/lib/qt6/plugins                \
-                                    --headerdir=/usr/include/qt6                    \
-                                    --datadir=/usr/share/qt6                        \
-                                    --docdir=/usr/share/doc/qt6                     \
-                                    --translationdir=/usr/share/qt6/translations    \
-                                    --sysconfdir=/etc/xdg                           \
-                                    #{option("Dbus") ? "--dbus-linked" : ""}        \
-                                    #{option("Openssl") ? "--openssl-linked" : ""}  \
-                                    #{option("Harfbuzz") ? "-harfbuzz" : ""}        \
-                                    #{option("Sqlite") ? "-sqlite" : ""}            \
-                                    #{option("Xcb") ? "-xcb" : ""}                  \
-                                    #{option("Cups") ? "-cups" : ""}                \
-                                    --nomake=examples                               \
-                                    --no-rpath                                      \
-                                    --syslog                                        \
-                                    --skip=qt3d                                     \
-                                    --skip=qtquick3dphysics                         \
-                                    --skip=qtwebengine                              \
+        configureSource(arguments:  "--prefix=/usr                                              \
+                                    --archdatadir=/usr/lib/qt6                                  \
+                                    --bindir=/usr/bin                                           \
+                                    --plugindir=/usr/lib/qt6/plugins                            \
+                                    --headerdir=/usr/include/qt6                                \
+                                    --datadir=/usr/share/qt6                                    \
+                                    --docdir=/usr/share/doc/qt6                                 \
+                                    --translationdir=/usr/share/qt6/translations                \
+                                    --sysconfdir=/etc/xdg                                       \
+                                    #{option("Dbus") ? "--dbus-linked" : ""}                    \
+                                    #{option("Openssl") ? "--openssl-linked" : ""}              \
+                                    #{option("Harfbuzz") ? "-harfbuzz=system" : "-harfbuzz=no"} \
+                                    #{option("Sqlite") ? "-sqlite=system" : ""}                        \
+                                    #{option("Xcb") ? "-xcb" : ""}                              \
+                                    #{option("Cups") ? "-cups" : ""}                            \
+                                    --nomake=examples                                           \
+                                    --no-rpath                                                  \
+                                    --syslog                                                    \
+                                    --skip=qt3d                                                 \
+                                    --skip=qtquick3dphysics                                     \
+                                    --skip=qtwebengine                                          \
                                     -W no-dev",
                         path:       buildDirectoryPath)
     end
