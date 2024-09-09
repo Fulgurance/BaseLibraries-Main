@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "NlohmannJson",
+  "version": "3.7.3",
+  "architectures": ["x86_64"],
+  "description": "JSON for Modern C++",
+  "website": "https://json.nlohmann.me/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
