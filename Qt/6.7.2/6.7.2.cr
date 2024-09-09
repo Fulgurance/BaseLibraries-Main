@@ -25,7 +25,7 @@ class Target < ISM::Software
                                     --skip=qt3d                                     \
                                     --skip=qtquick3dphysics                         \
                                     --skip=qtwebengine                              \
-                                    -W no-dev"),
+                                    -W no-dev",
                         path:       buildDirectoryPath)
     end
     
