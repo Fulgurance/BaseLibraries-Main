@@ -1,10 +1,10 @@
 {
   "port": "BaseLibraries-Main",
   "name": "NlohmannJson",
-  "version": "3.7.3",
+  "version": "3.11.3",
   "architectures": ["x86_64"],
   "description": "JSON for Modern C++",
-  "website": "https://json.nlohmann.me/",
+  "website": "https://github.com/nlohmann/json",
   "installedFiles": [],
   "dependencies": [
     {
