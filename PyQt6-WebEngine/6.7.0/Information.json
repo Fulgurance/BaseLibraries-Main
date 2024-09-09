@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "PyQt6-WebEngine",
+  "version": "6.7.0",
+  "architectures": ["x86_64"],
+  "description": "Python bindings for the Qt WebEngine framework",
+  "website": "https://pypi.org/project/PyQt6-WebEngine/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.11.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

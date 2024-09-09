@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "PyQt6",
+  "version": "6.7.1",
+  "architectures": ["x86_64"],
+  "description": "Python bindings for the Qt cross platform application toolkit",
+  "website": "https://pypi.org/project/PyQt6/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.11.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
