@@ -12,6 +12,12 @@
       "name": "Python",
       "version": ">=3.11.4",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Qt",
+      "version": ">=6.7.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
