@@ -127,7 +127,14 @@ class Target < ISM::Software
             deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
         end
 
-        qt6ShData = <<-CODE
+        if File.exists?("#{Ism.settings.rootPath}etc/profile.d/qt.sh")
+            copyFile(   "/etc/profile.d/qt.sh",
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt.sh")
+        else
+            generateEmptyFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt.sh")
+        end
+
+        qtData = <<-CODE
         QT6DIR=/usr
         export QT6DIR
         pathappend $QT6DIR/bin
@@ -136,7 +143,7 @@ class Target < ISM::Software
         pathappend /usr/lib/qt6/qml QML2_IMPORT_PATH
         pathappend $QT6DIR/lib/qml QML2_IMPORT_PATH
         CODE
-        fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt6.sh",qt6ShData)
+        fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt.sh",qtData)
 
         makeLink(   target: "moc",
                     path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt6",
