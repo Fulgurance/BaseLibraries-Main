@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Spirv-Tools",
+  "name": "Spirv-Headers",
   "version": "1.3.290",
   "architectures": ["x86_64"],
-  "description": "API and commands for processing SPIR-V modules",
-  "website": "https://github.com/KhronosGroup/SPIRV-Tools",
+  "description": "Machine-readable files for the SPIR-V Registry",
+  "website": "https://github.com/KhronosGroup/SPIRV-Headers",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Spirv-Headers",
-      "version": ">=1.3.290",
+      "port": "ProgrammingTools-Main",
+      "name": "Cmake",
+      "version": ">=3.27.2",
       "options": []
     }
   ],
