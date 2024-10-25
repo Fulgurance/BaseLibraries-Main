@@ -12,7 +12,7 @@ class Target < ISM::Software
                                     -DCMAKE_BUILD_TYPE=Release      \
                                     -G Ninja ..",
                         path:       buildDirectoryPath,
-                        environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{dependencyMajorVersion("@ProgrammingLanguages-Main:Llvm")}" })
+                        environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}" })
     end
 
     def build
