@@ -15,7 +15,7 @@ class Target < ISM::Software
                                         -DLLVM_EXTERNAL_SPIRV_HEADERS_SOURCE_DIR=/usr   \
                                         -G Ninja ..",
                         path:           buildDirectoryPath,
-                        environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{dependency("@ProgrammingLanguages-Main:Lllvm").version.major}" })
+                        environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{dependency("@ProgrammingLanguages-Main:Llvm").version.major}" })
     end
 
     def build
