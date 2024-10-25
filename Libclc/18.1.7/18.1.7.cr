@@ -11,7 +11,8 @@ class Target < ISM::Software
         runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr    \
                                     -DCMAKE_BUILD_TYPE=Release      \
                                     -G Ninja ..",
-                        path:       buildDirectoryPath)
+                        path:       buildDirectoryPath,
+                        environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{dependencyMajorVersion("@ProgrammingLanguages-Main:Llvm")}" })
     end
 
     def build
