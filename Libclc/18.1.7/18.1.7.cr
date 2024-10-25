@@ -8,9 +8,10 @@ class Target < ISM::Software
     def configure
         super
 
-        runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr    \
-                                    -DCMAKE_BUILD_TYPE=Release      \
-                                    -DLLVM_SPIRV=/usr                \
+        runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr                                                        \
+                                    -DCMAKE_BUILD_TYPE=Release                                                          \
+                                    -DLLVM_SPIRV=/usr                                                                   \
+                                    -DLIBCLC_TARGETS_TO_BUILD=\"nvptx--;nvptx64--;nvptx--nvidiacl;nvptx64--nvidiacl\"   \
                                     -G Ninja ..",
                         path:       buildDirectoryPath,
                         environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}" })
