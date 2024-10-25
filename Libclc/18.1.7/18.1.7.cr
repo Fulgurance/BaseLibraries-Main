@@ -10,7 +10,7 @@ class Target < ISM::Software
 
         runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr    \
                                     -DCMAKE_BUILD_TYPE=Release      \
-                                    -DLLVM_SPIR=/usr                \
+                                    -DLLVM_SPIRV=/usr                \
                                     -G Ninja ..",
                         path:       buildDirectoryPath,
                         environment:    { "LLVM_DIR" => "/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}" })
