@@ -4,7 +4,7 @@
   "version": "1.5.7",
   "architectures": ["x86_64"],
   "description": "C library for manipulating pipelines of subprocesses in a flexible and convenient way",
-  "website": "http://libpipeline.nongnu.org/",
+  "website": "https://gitlab.com/libpipeline/libpipeline",
   "installedFiles": [],
   "dependencies": [
     {

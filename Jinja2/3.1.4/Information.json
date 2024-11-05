@@ -1,0 +1,29 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Jinja2",
+  "version": "3.1.4",
+  "architectures": ["x86_64"],
+  "description": "Fast, expressive, extensible templating engine",
+  "website": "https://github.com/pallets/jinja/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.11.4",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "MarkupSafe",
+      "version": ">=2.0.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

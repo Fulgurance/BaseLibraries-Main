@@ -4,7 +4,7 @@
   "version": "4.7.0",
   "architectures": ["x86_64"],
   "description": "Math library for expression evaluation with units, variables and functions support and CAS functionality",
-  "website": "https://qalculate.github.io/reference/index.html",
+  "website": "https://github.com/Qalculate/libqalculate",
   "installedFiles": [],
   "dependencies": [
     {

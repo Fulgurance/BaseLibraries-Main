@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Boost",
+  "version": "1.86.0",
+  "architectures": ["x86_64"],
+  "description": "Free peer-reviewed portable C++ source libraries",
+  "website": "https://github.com/boostorg/boost",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "Utilities-Main",
+      "name": "Which",
+      "version": ">=2.21.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

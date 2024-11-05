@@ -6,7 +6,7 @@ class Target < ISM::Software
         configureSource(arguments:  "--prefix=/usr      \
                                     --disable-static    \
                                     --with-curses       \
-                                    --docdir=/usr/share/doc/readline-8.2",
+                                    --docdir=/usr/share/doc/#{versionName}",
                         path:       buildDirectoryPath)
     end
 

@@ -4,7 +4,7 @@
   "version": "0.9.33",
   "architectures": ["x86_64"],
   "description": "Rasqal RDF Query Library",
-  "website": "https://librdf.org/rasqal/",
+  "website": "https://github.com/dajobe/rasqal/",
   "installedFiles": [],
   "dependencies": [
     {

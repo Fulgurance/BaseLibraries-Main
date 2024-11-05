@@ -1,0 +1,44 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Shared-Mime-Info",
+  "version": "2.4.0",
+  "architectures": ["x86_64"],
+  "description": "Core database of common types and command used to extend it",
+  "website": "https://www.freedesktop.org/wiki/Software/shared-mime-info/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Glib",
+      "version": ">=2.76.4",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libxml2",
+      "version": ">=2.10.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Xmlto",
+      "description": "Enable xmlto support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "Xml-Main",
+          "name": "Xmlto",
+          "version": ">=0.0.28",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

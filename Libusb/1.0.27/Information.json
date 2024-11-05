@@ -1,0 +1,27 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libusb",
+  "version": "1.0.27",
+  "architectures": ["x86_64"],
+  "description": "A cross-platform library to access USB devices ",
+  "website": "https://github.com/libusb/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [ "CONFIG_USB_SUPPORT",
+                          "CONFIG_USB",
+                          "CONFIG_USB_XHCI_HCD",
+                          "CONFIG_USB_EHCI_HCD",
+                          "CONFIG_USB_OHCI_HCD"],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

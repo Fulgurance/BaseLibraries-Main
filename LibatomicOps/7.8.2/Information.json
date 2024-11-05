@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "LibatomicOps",
+  "version": "7.8.2",
+  "architectures": ["x86_64"],
+  "description": "Atomic memory update operations portable implementation",
+  "website": "https://github.com/ivmai/libatomic_ops/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

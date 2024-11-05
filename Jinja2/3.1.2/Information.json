@@ -4,7 +4,7 @@
   "version": "3.1.2",
   "architectures": ["x86_64"],
   "description": "Fast, expressive, extensible templating engine",
-  "website": "https://jinja.palletsprojects.com",
+  "website": "https://github.com/pallets/jinja/",
   "installedFiles": [],
   "dependencies": [
     {

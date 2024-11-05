@@ -1,0 +1,41 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Qca",
+  "version": "2.3.9",
+  "architectures": ["x86_64"],
+  "description": "Provide a straightforward and cross-platform cryptographic API using Qt datatypes and conventions",
+  "website": "https://api.kde.org/qca/html/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "Security-Main",
+      "name": "Make-Ca",
+      "version": ">=1.12.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Cmake",
+      "version": ">=3.27.2",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Qt",
+      "version": ">=5.0.0",
+      "options": []
+    },
+    {
+      "port": "Utilities-Main",
+      "name": "Which",
+      "version": ">=2.21.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

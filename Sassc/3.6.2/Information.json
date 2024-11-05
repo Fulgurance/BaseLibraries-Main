@@ -4,7 +4,7 @@
   "version": "3.6.2",
   "architectures": ["x86_64"],
   "description": "Libsass command line driver",
-  "website": " https://github.com/sass/sassc",
+  "website": "https://github.com/sass/sassc",
   "installedFiles": [],
   "dependencies": [
     {

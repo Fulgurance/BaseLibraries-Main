@@ -1,0 +1,44 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libelf",
+  "version": "0.192.0",
+  "architectures": ["x86_64"],
+  "description": "Library for handling ELF (Executable and Linkable Format) files",
+  "website": "https://sourceware.org/elfutils/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Zlib",
+      "version": ">=1.2.13",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "32Bits",
+      "description": "Enable 32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_IA32_EMULATION"]
+    },
+    {
+      "name": "x32Bits",
+      "description": "Enable x32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_X86_X32"]
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

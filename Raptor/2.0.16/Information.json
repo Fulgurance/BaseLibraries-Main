@@ -4,7 +4,7 @@
   "version": "2.0.16",
   "architectures": ["x86_64"],
   "description": "Rasqal RDF Query Library",
-  "website": "https://librdf.org/rasqal/",
+  "website": "https://github.com/dajobe/raptor",
   "installedFiles": [],
   "dependencies": [
     {

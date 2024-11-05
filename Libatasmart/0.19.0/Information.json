@@ -4,7 +4,7 @@
   "version": "0.19.0",
   "architectures": ["x86_64"],
   "description": "Reading and Parsing Library",
-  "website": "https://github.com/Rupan/libatasmart",
+  "website": "https://github.com/libatasmart/libatasmart",
   "installedFiles": [],
   "dependencies": [
     {

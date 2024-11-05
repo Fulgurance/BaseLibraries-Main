@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "MarkupSafe",
+  "version": "3.0.2",
+  "architectures": ["x86_64"],
+  "description": "Safely add untrusted strings to HTML/XML markup",
+  "website": "https://pypi.org/project/MarkupSafe/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

@@ -1,0 +1,50 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libtool",
+  "version": "2.5.3",
+  "architectures": ["x86_64"],
+  "description": "Generic library support script that hides the complexity of using shared libraries behind a consistent, portable interface",
+  "website": "https://www.gnu.org/software/libtool/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": ["Pass3"]
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Autoconf",
+      "version": ">=2.71.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Automake",
+      "version": ">=1.16.5",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "32Bits",
+      "description": "Enable 32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_IA32_EMULATION"]
+    },
+    {
+      "name": "x32Bits",
+      "description": "Enable x32 bits support",
+      "active": false,
+      "dependencies": [],
+      "kernelDependencies": ["CONFIG_X86_X32"]
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

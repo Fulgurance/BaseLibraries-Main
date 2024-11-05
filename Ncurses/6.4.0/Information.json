@@ -4,7 +4,7 @@
   "version": "6.4.0",
   "architectures": ["x86_64"],
   "description": "The free software ncurses library emulation of curses",
-  "website": "https://ninja-build.org/",
+  "website": "https://invisible-island.net/ncurses/announce.html",
   "installedFiles": [],
   "dependencies": [
     {

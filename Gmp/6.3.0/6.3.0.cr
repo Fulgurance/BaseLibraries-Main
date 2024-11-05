@@ -6,7 +6,7 @@ class Target < ISM::Software
         configureSource(arguments:  "--prefix=/usr      \
                                     --enable-cxx        \
                                     --disable-static    \
-                                    --docdir=/usr/share/doc/gmp-6.3.0",
+                                    --docdir=/usr/share/doc/#{versionName}",
                         path:       buildDirectoryPath)
     end
 

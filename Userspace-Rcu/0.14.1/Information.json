@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Userspace-Rcu",
+  "version": "0.14.1",
+  "architectures": ["x86_64"],
+  "description": "Userspace RCU (read-copy-update) library. This data synchronization library provides read-side access which scales linearly with the number of cores",
+  "website": "https://liburcu.org/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

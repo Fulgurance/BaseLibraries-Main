@@ -1,0 +1,142 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Openldap",
+  "version": "2.6.8",
+  "architectures": ["x86_64"],
+  "description": "Open source implementation of the Lightweight Directory Access Protocol",
+  "website": "https://www.openldap.org/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Server",
+      "description": "Enable server support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "SystemUsers-Main",
+          "name": "Ldap",
+          "version": ">=0.1.0",
+          "options": []
+        },
+        {
+          "port": "SystemGroups-Main",
+          "name": "Ldap",
+          "version": ">=0.1.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Cyrus-Sasl",
+      "description": "Enable cyrus-sasl support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "NetworkingLibraries-Main",
+          "name": "Cyrus-Sasl",
+          "version": ">=2.1.28",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Gnutls",
+      "description": "Enable gnutls support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "SecurityLibraries-Main",
+          "name": "Gnutls",
+          "version": ">=3.8.1",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Pth",
+      "description": "Enable pth support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "BaseLibraries-Main",
+          "name": "Pth",
+          "version": ">=2.0.7",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "UnixOdbc",
+      "description": "Enable unixodbc support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "NetworkingLibraries-Main",
+          "name": "UnixOdbc",
+          "version": ">=2.3.12",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Mariadb",
+      "description": "Enable mariadb support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "DatabaseLibraries-Main",
+          "name": "Mariadb",
+          "version": ">=10.11.4",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Postgresql",
+      "description": "Enable postgresql support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "DatabaseLibraries-Main",
+          "name": "Postgresql",
+          "version": ">=15.4.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "BerkeleyDb",
+      "description": "Enable berkeleydb support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "DatabaseLibraries-Main",
+          "name": "BerkeleyDb",
+          "version": ">=5.3.28",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}

@@ -4,7 +4,7 @@
   "version": "1.83.0",
   "architectures": ["x86_64"],
   "description": "Free peer-reviewed portable C++ source libraries",
-  "website": " https://boostorg.jfrog.io",
+  "website": "https://github.com/boostorg/boost",
   "installedFiles": [],
   "dependencies": [
     {

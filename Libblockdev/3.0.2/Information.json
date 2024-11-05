@@ -4,7 +4,7 @@
   "version": "3.0.2",
   "architectures": ["x86_64"],
   "description": "Reading and Parsing Library",
-  "website": "https://github.com/storaged-project/udisks",
+  "website": "https://github.com/storaged-project/libblockdev",
   "installedFiles": [],
   "dependencies": [
     {
