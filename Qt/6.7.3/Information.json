@@ -84,31 +84,31 @@
       "active": false,
       "dependencies": [
         {
-          "port": "GraphicsLibraries-Main",
+          "port": "XorgBase-Main",
           "name": "Libxkbcommon",
           "version": ">=1.5.0",
           "options": ["Libxcb"]
         },
         {
-          "port": "GraphicsLibraries-Main",
+          "port": "XorgBase-Main",
           "name": "Xcb-Util-Image",
           "version": ">=0.4.1",
           "options": []
         },
         {
-          "port": "GraphicsLibraries-Main",
+          "port": "XorgBase-Main",
           "name": "Xcb-Util-Keysyms",
           "version": ">=0.4.1",
           "options": []
         },
         {
-          "port": "GraphicsLibraries-Main",
+          "port": "XorgBase-Main",
           "name": "Xcb-Util-Renderutil",
           "version": ">=0.3.10",
           "options": []
         },
         {
-          "port": "GraphicsLibraries-Main",
+          "port": "XorgBase-Main",
           "name": "Xcb-Util-Wm",
           "version": ">=0.4.2",
           "options": []
