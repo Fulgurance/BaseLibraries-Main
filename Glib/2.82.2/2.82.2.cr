@@ -13,7 +13,7 @@ class Target < ISM::Software
                                     --buildtype=release         \
                                     -Dintrospection=disabled    \
                                     -Dglib_debug=disabled       \
-                                    -Dman-pages=enabled         \
+                                    -Dman-pages=disabled         \
                                     -Dsysprof=disabled          \
                                     ..",
                         path:       buildDirectoryPath)
