@@ -8,13 +8,13 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(arguments:  "setup --reconfigure        \
-                                    --prefix=/usr               \
-                                    --buildtype=release         \
-                                    -Dintrospection=disabled    \
-                                    -Dglib_debug=disabled       \
-                                    -Dman-pages=disabled         \
-                                    -Dsysprof=disabled          \
+        runMesonCommand(arguments:  "setup --reconfigure                                                        \
+                                    --prefix=/usr                                                               \
+                                    --buildtype=release                                                         \
+                                    -Dintrospection=#{option("Gobject-Introspection") ? "enabled" : "disabled"} \
+                                    -Dglib_debug=disabled                                                       \
+                                    -Dman-pages=disabled                                                        \
+                                    -Dsysprof=disabled                                                          \
                                     ..",
                         path:       buildDirectoryPath)
     end
