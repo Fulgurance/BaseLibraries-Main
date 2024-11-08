@@ -11,6 +11,7 @@ class Target < ISM::Software
         runMesonCommand(arguments:  "setup --reconfigure    \
                                     --prefix=/usr           \
                                     --buildtype=release     \
+                                    -Dintrospection=#{option("Gobject-Introspection") ? "enabled" : "disabled"} \
                                     ..",
                         path:       buildDirectoryPath)
     end
