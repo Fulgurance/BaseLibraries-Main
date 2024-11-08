@@ -1,20 +1,4 @@
 class Target < ISM::Software
-
-    def prepare
-        super
-
-        fileDeleteLine("#{buildDirectoryPath}pr/src/misc/Makefile.in",54)
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}config/rules.mk",
-                                    text:       "$(SHARED_LIBRARY)",
-                                    newText:    "$(LIBRARY) $(SHARED_LIBRARY)",
-                                    lineNumber: 116)
-
-        fileReplaceTextAtLineNumber(path:       "#{buildDirectoryPath}config/rules.mk",
-                                    text:       "$(SHARED_LIBRARY)",
-                                    newText:    "$(LIBRARY) $(SHARED_LIBRARY)",
-                                    lineNumber: 125)
-    end
     
     def configure
         super
