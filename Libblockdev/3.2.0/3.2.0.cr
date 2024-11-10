@@ -11,7 +11,8 @@ class Target < ISM::Software
                                     #{option("Parted") ? "--with-lvm" : "--without-lvm"}            \
                                     #{option("Parted") ? "--with-lvm_dbus" : "--without-lvm_dbus"}  \
                                     --without-nvdimm                                                \
-                                    #{option("Parted") ? "--with-tools" : "--without-tools"}",
+                                    #{option("Parted") ? "--with-tools" : "--without-tools"}        \
+                                    --enable-introspection=#{option("Gobject-Introspection") ? "yes" : "no"}",
                         path:   buildDirectoryPath)
     end
 
