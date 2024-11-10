@@ -9,9 +9,10 @@ class Target < ISM::Software
         super
 
         runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr                \
-                                    -DCMAKE_BUILD_TYPE=Release                  \
-                                    -DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man   \
-                                    -DQT6=ON                                    \
+                                    -D CMAKE_BUILD_TYPE=Release                 \
+                                    -D QT6=ON                                   \
+                                    -D QCA_INSTALL_IN_QT_PREFIX=ON              \
+                                    -D QCA_MAN_INSTALL_DIR:PATH=/usr/share/man  \
                                     ..",
                         path:       buildDirectoryPath)
     end
