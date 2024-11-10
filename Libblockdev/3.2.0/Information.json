@@ -9,8 +9,8 @@
   "dependencies": [
     {
       "port": "BaseLibraries-Main",
-      "name": "Glib",
-      "version": ">=2.76.4",
+      "name": "Json-Glib",
+      "version": ">=1.10.0",
       "options": []
     },
     {
