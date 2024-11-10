@@ -8,11 +8,10 @@ class Target < ISM::Software
     def configure
         super
 
-        runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr            \
-                                    -DCMAKE_BUILD_TYPE=Release              \
-                                    -DQT6=ON                                \
-                                    -DQCA_INSTALL_IN_QT_PREFIX=ON           \
-                                    -DQCA_MAN_INSTALL_DIR=/usr/share/man    \
+        runCmakeCommand(arguments:  "-DCMAKE_INSTALL_PREFIX=/usr                \
+                                    -DCMAKE_BUILD_TYPE=Release                  \
+                                    -DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man   \
+                                    -DQT6=ON                                    \
                                     ..",
                         path:       buildDirectoryPath)
     end
