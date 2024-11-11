@@ -1,27 +1,15 @@
 {
-  "port": "KdeBase-Main",
-  "name": "Kbookmarks",
-  "version": "6.7.0",
+  "port": "BaseLibraries-Main",
+  "name": "Qcoro",
+  "version": "0.11.0",
   "architectures": ["x86_64"],
-  "description": "Bookmarks management library",
-  "website": "https://api.kde.org/frameworks/kbookmarks/html/index.html",
+  "description": "C++ Coroutines for Qt",
+  "website": "https://github.com/qcoro/qcoro",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "ProgrammingTools-Main",
-      "name": "Extra-Cmake-Modules",
-      "version": ">=6.0.0 ~ <7.0.0",
-      "options": []
-    },
-    {
       "port": "BaseLibraries-Main",
       "name": "Qt",
-      "version": ">=6.0.0 ~ <7.0.0",
-      "options": []
-    },
-    {
-      "port": "KdeBase-Main",
-      "name": "Kxmlgui",
       "version": ">=6.0.0 ~ <7.0.0",
       "options": []
     }
