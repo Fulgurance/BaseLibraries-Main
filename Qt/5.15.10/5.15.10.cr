@@ -5,7 +5,7 @@ class Target < ISM::Software
 
         configureSource(arguments:  "--prefix=/usr                                  \
                                     --archdatadir=/usr/lib/qt5                      \
-                                    --bindir=/usr/bin                               \
+                                    --bindir=/usr/bin/qt5                           \
                                     --plugindir=/usr/lib/qt5/plugins                \
                                     --importdir=/usr/lib/qt5/imports                \
                                     --headerdir=/usr/include/qt5                    \
