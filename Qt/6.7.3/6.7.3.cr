@@ -1,16 +1,18 @@
 class Target < ISM::Software
+
+    @@qtName = "qt#{majorVersion}"
     
     def configure
         super
 
         configureSource(arguments:  "--prefix=/usr                                                  \
-                                    --archdatadir=/usr/lib/qt6                                      \
-                                    --bindir=/usr/bin/qt6                                           \
-                                    --plugindir=/usr/lib/qt6/plugins                                \
-                                    --headerdir=/usr/include/qt6                                    \
-                                    --datadir=/usr/share/qt6                                        \
-                                    --docdir=/usr/share/doc/qt6                                     \
-                                    --translationdir=/usr/share/qt6/translations                    \
+                                    --archdatadir=/usr/lib/#{@@qtName}                                      \
+                                    --bindir=/usr/bin/#{@@qtName}                                           \
+                                    --plugindir=/usr/lib/#{@@qtName}/plugins                                \
+                                    --headerdir=/usr/include/#{@@qtName}                                    \
+                                    --datadir=/usr/share/#{@@qtName}                                        \
+                                    --docdir=/usr/share/doc/#{@@qtName}                                     \
+                                    --translationdir=/usr/share/#{@@qtName}/translations                    \
                                     --sysconfdir=/etc/xdg                                           \
                                     #{option("Dbus") ? "--dbus-linked" : ""}                        \
                                     #{option("Openssl") ? "--openssl-linked" : ""}                  \
@@ -48,81 +50,81 @@ class Target < ISM::Software
 
         if option("Assistant")
             copyFile(   "#{buildDirectoryPath}qttools/src/assistant/assistant/images/assistant-128.png",
-                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-qt6.png")
+                        "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/assistant-#{@@qtName}.png")
 
             assistantData = <<-CODE
             [Desktop Entry]
             Name=Qt6 Assistant
             Comment=Shows Qt6 documentation and examples
-            Exec=/usr/qt6/bin/assistant
-            Icon=assistant-qt6.png
+            Exec=/usr/#{@@qtName}/bin/assistant
+            Icon=assistant-#{@@qtName}.png
             Terminal=false
             Encoding=UTF-8
             Type=Application
             Categories=Qt;Development;Documentation;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/assistant-qt6.desktop",assistantData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/assistant-#{@@qtName}.desktop",assistantData)
         else
             deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/assistant")
         end
 
         if option("Designer")
-            copyFile("#{buildDirectoryPath}qttools/src/designer/src/designer/images/designer.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/designer-qt6.png")
+            copyFile("#{buildDirectoryPath}qttools/src/designer/src/designer/images/designer.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/designer-#{@@qtName}.png")
 
             designerData = <<-CODE
             [Desktop Entry]
             Name=Qt6 Designer
             GenericName=Interface Designer
             Comment=Design GUIs for Qt6 applications
-            Exec=/usr/qt6/bin/designer
-            Icon=designer-qt6.png
+            Exec=/usr/#{@@qtName}/bin/designer
+            Icon=designer-#{@@qtName}.png
             MimeType=application/x-designer;
             Terminal=false
             Encoding=UTF-8
             Type=Application
             Categories=Qt;Development;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/designer-qt6.desktop",designerData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/designer-#{@@qtName}.desktop",designerData)
         else
             deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/designer")
         end
 
         if option("Linguist")
-            copyFile("#{buildDirectoryPath}qttools/src/linguist/linguist/images/icons/linguist-128-32.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/linguist-qt6.png")
+            copyFile("#{buildDirectoryPath}qttools/src/linguist/linguist/images/icons/linguist-128-32.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/linguist-#{@@qtName}.png")
 
             linguistData = <<-CODE
             [Desktop Entry]
             Name=Qt6 Linguist
             Comment=Add translations to Qt6 applications
-            Exec=/usr/qt6/bin/linguist
-            Icon=linguist-qt6.png
+            Exec=/usr/#{@@qtName}/bin/linguist
+            Icon=linguist-#{@@qtName}.png
             MimeType=text/vnd.trolltech.linguist;application/x-linguist;
             Terminal=false
             Encoding=UTF-8
             Type=Application
             Categories=Qt;Development;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/linguist-qt6.desktop",linguistData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/linguist-#{@@qtName}.desktop",linguistData)
         else
             deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/linguist")
         end
 
         if option("Qdbusviewer")
-            copyFile("#{buildDirectoryPath}qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-qt6.png")
+            copyFile("#{buildDirectoryPath}qttools/src/qdbus/qdbusviewer/images/qdbusviewer-128.png","#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/pixmaps/qdbusviewer-#{@@qtName}.png")
 
             qdbusviewerData = <<-CODE
             [Desktop Entry]
             Name=Qt6 QDbusViewer
             GenericName=D-Bus Debugger
             Comment=Debug D-Bus applications
-            Exec=/usr/qt6/bin/qdbusviewer
-            Icon=qdbusviewer-qt6.png
+            Exec=/usr/#{@@qtName}/bin/qdbusviewer
+            Icon=qdbusviewer-#{@@qtName}.png
             Terminal=false
             Encoding=UTF-8
             Type=Application
             Categories=Qt;Development;Debugger;
             CODE
-            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt6.desktop",qdbusviewerData)
+            fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-#{@@qtName}.desktop",qdbusviewerData)
         else
             deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
         end
@@ -138,40 +140,52 @@ class Target < ISM::Software
         QT6DIR=/usr
         export QT6DIR
         pathappend $QT6DIR/bin
-        pathappend /usr/lib/qt6/plugins QT_PLUGIN_PATH
+        pathappend /usr/lib/#{@@qtName}/plugins QT_PLUGIN_PATH
         pathappend $QT6DIR/lib/plugins QT_PLUGIN_PATH
-        pathappend /usr/lib/qt6/qml QML2_IMPORT_PATH
+        pathappend /usr/lib/#{@@qtName}/qml QML2_IMPORT_PATH
         pathappend $QT6DIR/lib/qml QML2_IMPORT_PATH
         CODE
         fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt.sh",qtData)
 
         makeLink(   target: "moc",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-#{@@qtName}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "uic",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-qt6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-#{@@qtName}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "rcc",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-qt6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-#{@@qtName}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "qmake",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-qt6",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-#{@@qtName}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lconvert",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt6",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-#{@@qtName}",
                     type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lrelease",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt6",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-#{@@qtName}",
                     type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lupdate",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt6",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-#{@@qtName}",
                     type:    :symbolicLinkByOverwrite)
+
+        if isGreatestVersion
+            Dir.glob(["#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/#{@@qtName}/**/*"], match: :dot_files).each do |filePath|
+
+                fileName = filePath.lchop(directoryPath[0..filePath.rindex("/")])
+
+                makeLink(   target: "/usr/bin/#{@@qtName}/#{fileName}",
+                            path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/#{fileName}",
+                            type:   :symbolicLinkByOverwrite)
+
+            end
+        end
     end
 
     def install
@@ -181,19 +195,19 @@ class Target < ISM::Software
         runChmodCommand("0755 /usr/share/applications")
 
         if option("Assistant")
-            runChmodCommand("0755 /usr/share/pixmaps/assistant-qt6.png")
+            runChmodCommand("0755 /usr/share/pixmaps/assistant-#{@@qtName}.png")
         end
 
         if option("Designer")
-            runChmodCommand("0755 /usr/share/pixmaps/designer-qt6.png")
+            runChmodCommand("0755 /usr/share/pixmaps/designer-#{@@qtName}.png")
         end
 
         if option("Linguist")
-            runChmodCommand("0755 /usr/share/pixmaps/linguist-qt6.png")
+            runChmodCommand("0755 /usr/share/pixmaps/linguist-#{@@qtName}.png")
         end
 
         if option("Qdbusviewer")
-            runChmodCommand("0755 /usr/share/pixmaps/qdbusviewer-qt6.png")
+            runChmodCommand("0755 /usr/share/pixmaps/qdbusviewer-#{@@qtName}.png")
         end
 
         runLdconfigCommand
