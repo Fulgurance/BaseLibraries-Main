@@ -175,13 +175,15 @@ class Target < ISM::Software
                     path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-#{@@qtName}",
                     type:    :symbolicLinkByOverwrite)
 
+        makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin")
+
         if isGreatestVersion
             Dir.glob(["#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/#{@@qtName}/**/*"], match: :dot_files).each do |filePath|
 
                 fileName = filePath.lchop(directoryPath[0..filePath.rindex("/")])
 
                 makeLink(   target: "/usr/bin/#{@@qtName}/#{fileName}",
-                            path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/#{fileName}",
+                            path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/#{fileName}",
                             type:   :symbolicLinkByOverwrite)
 
             end
