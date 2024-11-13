@@ -12,7 +12,7 @@ class Target < ISM::Software
                                     -DCMAKE_BUILD_TYPE=Release                 \
                                     -DQT6=ON                                   \
                                     -DQCA_INSTALL_IN_QT_PREFIX=ON              \
-                                    -DQCA_MAN_INSTALL_DIR:PATH=/usr/share/man  \
+                                    -DQCA_MAN_INSTALL_DIR=/usr/share/man       \
                                     ..",
                         path:       buildDirectoryPath)
     end
