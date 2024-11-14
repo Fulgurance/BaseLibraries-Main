@@ -175,7 +175,7 @@ class Target < ISM::Software
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin")
 
         if isGreatestVersion
-            Dir.glob(["#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/**/*"], match: :dot_files).each do |filePath|
+            directoryContent(["#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/**/*"], match: :dot_files).each do |filePath|
 
                 fileName = filePath.lchop(filePath[0..filePath.rindex("/")])
 
