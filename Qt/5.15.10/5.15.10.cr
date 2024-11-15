@@ -62,7 +62,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/assistant-qt#{majorVersion}.desktop",assistantData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/assistant")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/assistant")
         end
 
         if option("Designer")
@@ -83,7 +83,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/designer-qt#{majorVersion}.desktop",designerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/designer")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/designer")
         end
 
         if option("Linguist")
@@ -103,7 +103,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/linguist-qt#{majorVersion}.desktop",linguistData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/linguist")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/linguist")
         end
 
         if option("Qdbusviewer")
@@ -123,7 +123,7 @@ class Target < ISM::Software
             CODE
             fileWriteData("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/share/applications/qdbusviewer-qt#{majorVersion}.desktop",qdbusviewerData)
         else
-            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qdbusviewer")
+            deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/qdbusviewer")
         end
 
         if File.exists?("#{Ism.settings.rootPath}etc/profile.d/qt.sh")
@@ -145,31 +145,31 @@ class Target < ISM::Software
         fileUpdateContent("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}etc/profile.d/qt.sh",qtData)
 
         makeLink(   target: "moc",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/moc-qt#{majorVersion}",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/moc-qt#{majorVersion}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "uic",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/uic-qt#{majorVersion}",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/uic-qt#{majorVersion}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "rcc",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/rcc-qt#{majorVersion}",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/rcc-qt#{majorVersion}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target: "qmake",
-                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qmake-qt#{majorVersion}",
+                    path:   "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/qmake-qt#{majorVersion}",
                     type:   :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lconvert",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lconvert-qt#{majorVersion}",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/lconvert-qt#{majorVersion}",
                     type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lrelease",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lrelease-qt#{majorVersion}",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/lrelease-qt#{majorVersion}",
                     type:    :symbolicLinkByOverwrite)
 
         makeLink(   target:     "lupdate",
-                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/lupdate-qt#{majorVersion}",
+                    path:       "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin/qt#{majorVersion}/lupdate-qt#{majorVersion}",
                     type:    :symbolicLinkByOverwrite)
 
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/bin")
