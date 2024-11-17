@@ -1,7 +1,7 @@
 {
   "port": "BaseLibraries-Main",
   "name": "PyQt6-Sip",
-  "version": "6.8.6",
+  "version": "13.8.0",
   "architectures": ["x86_64"],
   "description": "A Python bindings generator for C/C++ libraries",
   "website": "https://pypi.org/project/sip/",
