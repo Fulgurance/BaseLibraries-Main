@@ -1,7 +1,7 @@
 {
   "port": "BaseLibraries-Main",
   "name": "Qt",
-  "version": "5.15.10",
+  "version": "5.15.16",
   "architectures": ["x86_64"],
   "description": "The Qt framework with highly intuitive and modularized C++ library to simplify application development",
   "website": "https://www.qt.io/",

@@ -3,15 +3,15 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr                                          \
-                                    --archdatadir=/usr/lib/qt#{majorVersion}                      \
-                                    --bindir=/usr/bin/qt#{majorVersion}                           \
-                                    --plugindir=/usr/lib/qt#{majorVersion}/plugins                \
-                                    --importdir=/usr/lib/qt#{majorVersion}/imports                \
-                                    --headerdir=/usr/include/qt#{majorVersion}                    \
-                                    --datadir=/usr/share/qt#{majorVersion}                        \
-                                    --docdir=/usr/share/doc/qt#{majorVersion}                     \
-                                    --translationdir=/usr/share/qt#{majorVersion}/translations    \
+        configureSource(arguments:  "--prefix=/usr                                              \
+                                    --archdatadir=/usr/lib/qt#{majorVersion}                    \
+                                    --bindir=/usr/bin/qt#{majorVersion}                         \
+                                    --plugindir=/usr/lib/qt#{majorVersion}/plugins              \
+                                    --importdir=/usr/lib/qt#{majorVersion}/imports              \
+                                    --headerdir=/usr/include/qt#{majorVersion}                  \
+                                    --datadir=/usr/share/qt#{majorVersion}                      \
+                                    --docdir=/usr/share/doc/qt#{majorVersion}                   \
+                                    --translationdir=/usr/share/qt#{majorVersion}/translations  \
                                     --sysconfdir=/etc/xdg                           \
                                     --confirm-license                               \
                                     --opensource                                    \
