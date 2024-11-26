@@ -14,7 +14,7 @@
       "options": []
     },
     {
-      "port": "Security-Main",
+      "port": "SecuritySoftwares-Main",
       "name": "Keyutils",
       "version": ">=1.6.1",
       "options": []
@@ -32,7 +32,7 @@
       "options": []
     },
     {
-      "port": "Security-Main",
+      "port": "SecuritySoftwares-Main",
       "name": "Cryptsetup",
       "version": ">=2.4.3",
       "options": []

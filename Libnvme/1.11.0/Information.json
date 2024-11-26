@@ -42,7 +42,7 @@
       "active": false,
       "dependencies": [
         {
-          "port": "Security-Main",
+          "port": "SecuritySoftwares-Main",
           "name": "Keyutils",
           "version": ">=1.6.1",
           "options": []
