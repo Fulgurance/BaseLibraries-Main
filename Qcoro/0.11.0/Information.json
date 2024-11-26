@@ -9,10 +9,10 @@
   "dependencies": [
     {
       "port": "QtLibraries-Main",
-      "name": "Qtbase",
+      "name": "Qtwebsockets",
       "version": ">=6.0.0 ~ <7.0.0",
       "options": []
-    }
+    },
   ],
   "kernelDependencies": [],
   "options": [],
