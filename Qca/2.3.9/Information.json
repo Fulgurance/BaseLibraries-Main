@@ -21,8 +21,8 @@
     },
     {
       "port": "QtLibraries-Main",
-      "name": "Qtbase",
-      "version": ">=5.0.0",
+      "name": "Qt5compat",
+      "version": ">=6.0.0 ~ <7.0.0",
       "options": []
     },
     {
