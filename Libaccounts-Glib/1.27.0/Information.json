@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Glib",
-      "version": ">=1.76.4",
+      "port": "ProgrammingLanguages-Main",
+      "name": "Vala",
+      "version": ">=0.9.8",
       "options": []
     }
   ],
