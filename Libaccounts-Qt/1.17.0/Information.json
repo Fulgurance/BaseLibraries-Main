@@ -12,6 +12,12 @@
       "name": "Qtbase",
       "version": ">=6.0.0 ~ <7.0.0",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libaccounts-Glib",
+      "version": ">=1.27.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
