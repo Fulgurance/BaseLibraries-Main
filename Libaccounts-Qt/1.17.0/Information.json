@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Uri",
-  "version": "5.17.0",
+  "name": "Libaccounts-Qt",
+  "version": "1.17.0",
   "architectures": ["x86_64"],
-  "description": "Uniform Resource Identifiers",
-  "website": "https://metacpan.org/pod/URI",
+  "description": "Qt-based client library for the accounts database",
+  "website": "https://gitlab.com/accounts-sso/libaccounts-qt",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "QtLibraries-Main",
+      "name": "Qtbase",
+      "version": ">=6.0.0 ~ <7.0.0",
       "options": []
     }
   ],
