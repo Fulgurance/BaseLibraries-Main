@@ -12,6 +12,12 @@
       "name": "Vala",
       "version": ">=0.56.17",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "PyGobject",
+      "version": ">=3.50.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
