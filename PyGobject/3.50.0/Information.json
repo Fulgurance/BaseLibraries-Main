@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "PyGobject",
+  "version": "3.5.0",
+  "architectures": ["x86_64"],
+  "description": "Python bindings for GObject Introspection",
+  "website": "https://pypi.org/project/PyGObject/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.9.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
