@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libaccounts-Glib",
+  "version": "1.27.0",
+  "architectures": ["x86_64"],
+  "description": "GLib-based client library for the accounts database",
+  "website": "https://gitlab.com/accounts-sso/libaccounts-glib",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Glib",
+      "version": ">=1.76.4",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
