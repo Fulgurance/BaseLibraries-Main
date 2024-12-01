@@ -8,7 +8,9 @@ class Target < ISM::Software
     def configure
         super
 
-        runQmakeCommand(arguments:  "..",
+        runQmakeCommand(arguments:  "PREFIX=/usr    \
+                                    LIBDIR=/usr/lib \
+                                    ..",
                         path:       buildDirectoryPath,
                         environment:    {"PATH" => "/usr/bin/qt#{softwareMajorVersion("@QtLibraries-Main:Qtbase")}:$PATH"})
     end
