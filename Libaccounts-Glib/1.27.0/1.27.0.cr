@@ -8,10 +8,9 @@ class Target < ISM::Software
     def configure
         super
 
-        runMesonCommand(arguments:  "setup --reconfigure        \
-                                    --prefix=/usr               \
-                                    --buildtype=release         \
-                                    -Dinstall-py-overrides=true \
+        runMesonCommand(arguments:  "setup --reconfigure    \
+                                    --prefix=/usr           \
+                                    --buildtype=release     \
                                     ..",
                         path:       buildDirectoryPath)
     end
