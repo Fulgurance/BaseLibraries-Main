@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Lxml",
+  "version": "5.3.0",
+  "architectures": ["x86_64"],
+  "description": "Powerful and Pythonic XML processing library combining libxml2/libxslt with the ElementTree API.",
+  "website": "https://pypi.org/project/lxml/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.9.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
