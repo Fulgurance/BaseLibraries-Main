@@ -9,7 +9,7 @@ class Target < ISM::Software
         super
 
         runCmakeCommand(arguments:      "-DCMAKE_INSTALL_PREFIX=/usr    \
-                                        --D CMAKE_BUILD_TYPE=Release    \
+                                        -DCMAKE_BUILD_TYPE=Release      \
                                         -B #{buildDirectoryPath}        \
                                         -G Ninja",
                         path:           mainWorkDirectoryPath)
