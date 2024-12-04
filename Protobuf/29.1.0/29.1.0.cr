@@ -10,12 +10,13 @@ class Target < ISM::Software
 
         runCmakeCommand(arguments:      "-DCMAKE_INSTALL_PREFIX=/usr        \
                                         -DCMAKE_BUILD_TYPE=Release          \
-                                        -D CMAKE_SKIP_INSTALL_RPATH=ON      \
-                                        -D protobuf_BUILD_TESTS=OFF         \
-                                        -D protobuf_ABSL_PROVIDER=package   \
-                                        -D protobuf_BUILD_LIBUPB=OFF        \
-                                        -D protobuf_BUILD_SHARED_LIBS=ON    \
-                                        -D utf8_range_ENABLE_INSTALL=OFF    \
+                                        -DCMAKE_SKIP_INSTALL_RPATH=ON       \
+                                        -Dprotobuf_BUILD_TESTS=OFF          \
+                                        -Dprotobuf_ABSL_PROVIDER=package    \
+                                        -Dprotobuf_BUILD_LIBUPB=OFF         \
+                                        -Dprotobuf_INSTALL=OFF              \
+                                        -Dprotobuf_BUILD_SHARED_LIBS=ON     \
+                                        -Dutf8_range_ENABLE_INSTALL=OFF     \
                                         -B #{buildDirectoryPath}            \
                                         -G Ninja",
                         path:           mainWorkDirectoryPath)
