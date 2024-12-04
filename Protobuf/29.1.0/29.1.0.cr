@@ -14,9 +14,9 @@ class Target < ISM::Software
                                         -Dprotobuf_BUILD_TESTS=OFF          \
                                         -Dprotobuf_ABSL_PROVIDER=package    \
                                         -Dprotobuf_BUILD_LIBUPB=OFF         \
-                                        -Dprotobuf_INSTALL=OFF              \
+                                        -Dprotobuf_INSTALL=ON               \
                                         -Dprotobuf_BUILD_SHARED_LIBS=ON     \
-                                        -Dutf8_range_ENABLE_INSTALL=OFF     \
+                                        -Dutf8_range_ENABLE_INSTALL=ON      \
                                         -B #{buildDirectoryPath}            \
                                         -G Ninja",
                         path:           mainWorkDirectoryPath)
