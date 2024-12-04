@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Lz4",
-  "version": "1.9.4",
+  "name": "Protobuf",
+  "version": "29.1.0",
   "architectures": ["x86_64"],
-  "description": "Extremely Fast Compression algorithm",
-  "website": "https://github.com/lz4/lz4",
+  "description": "Protocol Buffers - Google's data interchange format",
+  "website": "https://github.com/protocolbuffers/protobuf",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "BaseLibraries-Main",
+      "name": "Abseil-Cpp",
+      "version": ">=0.0.0-20240722",
       "options": []
     }
   ],
