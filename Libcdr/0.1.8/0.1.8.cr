@@ -3,8 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr  \
-                                    --disable-static",
+        configureSource(arguments:  "--prefix=/usr      \
+                                    --disable-static    \
+                                    --without-docs",
                         path:       buildDirectoryPath)
     end
 
