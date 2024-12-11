@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Libcdr",
-  "version": "0.1.8",
+  "name": "Librevenge",
+  "version": "0.0.5",
   "architectures": ["x86_64"],
-  "description": "Library that parses the file format of CorelDRAW documents of all versions",
-  "website": "https://wiki.documentfoundation.org/DLP/Libraries/libcdr",
+  "description": "Base library for writing document import filters",
+  "website": "https://sourceforge.net/p/libwpd/librevenge/ci/master/tree/",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Librevenge",
-      "version": ">=0.0.5",
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
       "options": []
     }
   ],
