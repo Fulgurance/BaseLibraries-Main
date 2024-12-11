@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libcdr",
+  "version": "0.1.8",
+  "architectures": ["x86_64"],
+  "description": "Library that parses the file format of CorelDRAW documents of all versions",
+  "website": "https://wiki.documentfoundation.org/DLP/Libraries/libcdr",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
