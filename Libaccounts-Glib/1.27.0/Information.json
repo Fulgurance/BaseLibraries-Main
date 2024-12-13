@@ -24,6 +24,12 @@
       "name": "PyGobject",
       "version": ">=3.50.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Setuptools",
+      "version": ">=0.0.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
