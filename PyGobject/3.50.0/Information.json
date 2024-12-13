@@ -12,6 +12,12 @@
       "name": "Python",
       "version": ">=3.12.0",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Pycairo",
+      "version": ">=1.24.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
