@@ -12,6 +12,7 @@ class Target < ISM::Software
                                     --prefix=/usr           \
                                     --buildtype=release     \
                                     -Dintrospection=#{option("Gobject-Introspection") ? "enabled" : "disabled"} \
+                                    -Dvapi=disabled         \
                                     ..",
                         path:       buildDirectoryPath)
     end
