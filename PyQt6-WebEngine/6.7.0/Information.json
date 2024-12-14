@@ -15,7 +15,7 @@
     },
     {
       "port": "QtLibraries-Main",
-      "name": "Qtbase",
+      "name": "Qtwebengine",
       "version": ">=6.7.0",
       "options": []
     }
