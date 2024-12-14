@@ -1,7 +1,7 @@
 {
   "port": "BaseLibraries-Main",
   "name": "Html5lib",
-  "version": "6.7.1",
+  "version": "1.1.0",
   "architectures": ["x86_64"],
   "description": "HTML parser based on the WHATWG HTML specification",
   "website": "https://pypi.org/project/html5lib/",
