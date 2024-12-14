@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Html5lib",
-  "version": "1.1.0",
+  "name": "Webencodings",
+  "version": "0.5.1",
   "architectures": ["x86_64"],
-  "description": "HTML parser based on the WHATWG HTML specification",
-  "website": "https://pypi.org/project/html5lib/",
+  "description": "Character encoding aliases for legacy web content",
+  "website": "https://pypi.org/project/webencodings/",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Webencodings",
-      "version": ">=0.5.1",
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.11.4",
       "options": []
     }
   ],
