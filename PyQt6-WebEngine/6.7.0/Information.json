@@ -18,6 +18,12 @@
       "name": "Qtwebengine",
       "version": ">=6.7.0",
       "options": []
+    },
+    {
+      "port": "QtLibraries-Main",
+      "name": "Qtwebchannel",
+      "version": ">=6.7.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
