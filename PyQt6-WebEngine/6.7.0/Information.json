@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "ProgrammingLanguages-Main",
-      "name": "Python",
-      "version": ">=3.11.4",
+      "port": "BaseLibraries-Main",
+      "name": "PyQt6-WebEngine-Qt6",
+      "version": ">=6.7.0",
       "options": []
     },
     {

@@ -1,10 +1,10 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "PyQt6-Sip",
-  "version": "13.8.0",
+  "name": "PyQt6-WebEngine-Qt6",
+  "version": "6.7.3",
   "architectures": ["x86_64"],
-  "description": "A Python bindings generator for C/C++ libraries",
-  "website": "https://pypi.org/project/sip/",
+  "description": "The subset of a Qt installation needed by PyQt6-WebEngine",
+  "website": "https://pypi.org/project/PyQt6-WebEngine-Qt6/",
   "installedFiles": [],
   "dependencies": [
     {
