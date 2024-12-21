@@ -1,0 +1,41 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libzmf",
+  "version": "0.0.2",
+  "architectures": ["x86_64"],
+  "description": "Library that parses the file format of Zoner Callisto/Draw documents",
+  "website": "https://wiki.documentfoundation.org/DLP/Libraries/libzmf",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Boost",
+      "version": ">=1.83.0",
+      "options": []
+    },
+    {
+      "port": "GraphicsLibraries-Main",
+      "name": "Libpng",
+      "version": ">=1.6.40",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Icu",
+      "version": ">=73.2.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Librevenge",
+      "version": ">=0.0.5",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
