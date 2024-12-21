@@ -4,6 +4,7 @@ class Target < ISM::Software
         super
 
         configureSource(arguments:  "--prefix=/usr      \
+                                    --disable-werror    \
                                     --disable-static",
                         path:       buildDirectoryPath)
     end
