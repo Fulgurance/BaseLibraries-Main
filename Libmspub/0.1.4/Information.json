@@ -1,0 +1,35 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Libmspub",
+  "version": "0.1.4",
+  "architectures": ["x86_64"],
+  "description": "Library that parses the file format of Microsoft Publisher documents",
+  "website": "https://wiki.documentfoundation.org/DLP/Libraries/libmspub",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Boost",
+      "version": ">=1.83.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Icu",
+      "version": ">=73.2.0",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Librevenge",
+      "version": ">=0.0.5",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
