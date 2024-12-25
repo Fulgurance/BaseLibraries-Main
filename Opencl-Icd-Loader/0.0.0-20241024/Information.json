@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Opencl-Headers",
+  "name": "Opencl-Icd-Loader",
   "version": "0.0.0-20241024",
   "architectures": ["x86_64"],
-  "description": "Khronos OpenCL-Headers",
-  "website": "https://github.com/KhronosGroup/OpenCL-Headers",
+  "description": "The OpenCL ICD Loader project",
+  "website": "https://github.com/KhronosGroup/OpenCL-ICD-Loader",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Opencl-Icd-Loader",
-      "version": ">=0.0.0-20241024",
+      "port": "ProgrammingTools-Main",
+      "name": "Cmake",
+      "version": ">=3.27.2",
       "options": []
     }
   ],
