@@ -33,7 +33,22 @@
     }
   ],
   "kernelDependencies": [],
-  "options": [],
+  "options": [
+    {
+      "name": "Qt5",
+      "description": "Enable qt5 support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "QtLibraries-Main",
+          "name": "Qtbase",
+          "version": ">=5.0.0 ~ <6.0.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
