@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "BaseLibraries-Main",
-      "name": "Opencl-Icd-Loader",
-      "version": ">=0.0.0-20241024",
+      "port": "ProgrammingTools-Main",
+      "name": "Cmake",
+      "version": ">=3.27.2",
       "options": []
     }
   ],
