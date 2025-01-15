@@ -8,12 +8,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": []
-    },
-    {
       "port": "BaseLibraries-Main",
       "name": "Zlib",
       "version": ">=1.2.13",
