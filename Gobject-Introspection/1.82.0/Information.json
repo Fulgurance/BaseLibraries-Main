@@ -19,5 +19,5 @@
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
-  "allowCodependencies": []
+  "allowCodependencies": ["@BaseLibraries-Main:Glib"]
 }
