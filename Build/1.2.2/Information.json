@@ -1,0 +1,52 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Build",
+  "version": "1.2.2",
+  "architectures": ["x86_64"],
+  "description": "A simple, correct Python build frontend",
+  "website": "https://pypi.org/project/build/",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "ProgrammingLanguages-Main",
+      "name": "Python",
+      "version": ">=3.12.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [
+    {
+      "name": "Python-3.12",
+      "description": "Enable python-3.12 support",
+      "active": false,
+      "dependencies": [
+        {
+          "port": "ProgrammingLanguages-Main",
+          "name": "Python",
+          "version": ">=3.12.0 ~ <3.13.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    },
+    {
+      "name": "Python-3.13",
+      "description": "Enable python-3.13 support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "ProgrammingLanguages-Main",
+          "name": "Python",
+          "version": ">=3.13.0 ~ <3.14.0",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
