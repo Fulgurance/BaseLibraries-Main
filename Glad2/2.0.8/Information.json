@@ -1,6 +1,6 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Glad",
+  "name": "Glad2",
   "version": "2.0.8",
   "architectures": ["x86_64"],
   "description": "Multi-Language GL/GLES/EGL/GLX/WGL Loader-Generator based on the official specs",
