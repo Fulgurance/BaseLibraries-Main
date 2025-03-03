@@ -26,11 +26,4 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
-    def install
-        super
-
-        runChmodCommand("644 /usr/include/linear.h")
-        runChmodCommand("755 /usr/lib/linear.so.6")
-    end
-
 end

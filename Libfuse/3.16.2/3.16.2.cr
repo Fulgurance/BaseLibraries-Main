@@ -29,10 +29,4 @@ class Target < ISM::Software
                         environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
     end
 
-    def install
-        super
-
-        runChmodCommand("u+s /usr/bin/fusermount3")
-    end
-
 end

@@ -29,10 +29,4 @@ class Target < ISM::Software
         deleteFile("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libelf.a")
     end
 
-    def install
-        super
-
-        runChmodCommand("0644 /usr/lib/pkgconfig/libelf.pc")
-    end
-
 end
