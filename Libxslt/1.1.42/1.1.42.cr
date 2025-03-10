@@ -6,7 +6,7 @@ class Target < ISM::Software
         configureSource(arguments:  "--prefix=/usr                  \
                                     --disable-static                \
                                     --with-python=/usr/bin/python3  \
-                                    --docdir=/usr/share/doc/#{versionName}",
+                                    --disable-doc",
                         path:       buildDirectoryPath)
     end
     

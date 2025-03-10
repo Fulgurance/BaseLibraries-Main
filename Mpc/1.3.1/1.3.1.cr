@@ -5,7 +5,7 @@ class Target < ISM::Software
 
         configureSource(arguments:  "--prefix=/usr      \
                                     --disable-static    \
-                                    --docdir=/usr/share/doc/mpc-1.3.1",
+                                    --disable-doc",
                         path:       buildDirectoryPath)
     end
 

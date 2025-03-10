@@ -9,7 +9,7 @@ class Target < ISM::Software
                                     --with-history                                      \
                                     --with-python=/usr/bin/python3                      \
                                     #{option("Icu") ? "--with-icu" : "--without-icu"}   \
-                                    --docdir=/usr/share/doc/#{versionName}",
+                                    --disable-doc",
                         path:       buildDirectoryPath)
     end
     

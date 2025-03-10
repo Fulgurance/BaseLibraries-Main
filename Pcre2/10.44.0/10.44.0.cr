@@ -4,7 +4,7 @@ class Target < ISM::Software
         super
 
         configureSource(arguments:  "--prefix=/usr                          \
-                                    --docdir=/usr/share/doc/#{versionName}  \
+                                    --disable-doc                           \
                                     --enable-unicode                        \
                                     --enable-jit                            \
                                     --enable-pcre2-16                       \
