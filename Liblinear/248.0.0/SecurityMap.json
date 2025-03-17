@@ -9,5 +9,18 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "/usr/include/linear.h",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0644"
+    },
+    {
+      "target": "/usr/lib/linear.so.6",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "0755"
+    }
+  ]
 }

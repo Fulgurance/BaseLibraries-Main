@@ -9,5 +9,12 @@
       "directoryMode":  "0755",
 
   },
-  "descriptors": []
+  "descriptors": [
+    {
+      "target": "/usr/bin/fusermount3",
+      "user":   "root",
+      "group":  "root",
+      "mode":   "u+s"
+    }
+  ]
 }
