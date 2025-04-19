@@ -8,9 +8,21 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "Utilities-Main",
+      "name": "Gettext",
+      "version": ">=0.22.5",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libtool",
+      "version": ">=2.5.3",
+      "options": []
+    },
+    {
+      "port": "SecuritySoftwares-Main",
+      "name": "Acl",
+      "version": ">=2.3.2",
       "options": []
     }
   ],
