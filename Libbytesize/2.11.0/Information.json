@@ -24,6 +24,12 @@
       "name": "Six",
       "version": ">=1.16.0",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Mpfr",
+      "version": ">=4.2.1",
+      "options": []
     }
   ],
   "kernelDependencies": [],
