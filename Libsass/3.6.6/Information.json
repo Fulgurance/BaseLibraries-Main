@@ -12,6 +12,12 @@
       "name": "Autoconf",
       "version": ">=2.71.0",
       "options": []
+    },
+    {
+      "port": "SecuritySoftwares-Main",
+      "name": "Acl",
+      "version": "2.3.2",
+      "options": []
     }
   ],
   "kernelDependencies": [],
