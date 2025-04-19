@@ -10,7 +10,7 @@ class Target < ISM::Software
                                     --enable-pcre2-16                       \
                                     --enable-pcre2-32                       \
                                     --enable-pcre2grep-libz                 \
-                                    --enable-pcre2grep-libbz2               \
+                                    #{option("Bzip2") ? "--enable-pcre2grep-libbz2" : "--disable-pcre2grep-libbz2"} \
                                     --enable-pcre2test-libreadline          \
                                     --disable-static",
                         path:       buildDirectoryPath)
