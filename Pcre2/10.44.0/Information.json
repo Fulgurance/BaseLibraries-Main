@@ -15,7 +15,22 @@
     }
   ],
   "kernelDependencies": [],
-  "options": [],
+  "options": [
+    {
+      "name": "Bzip2",
+      "description": "Enable bzip2 support",
+      "active": true,
+      "dependencies": [
+        {
+          "port": "Archivers-Main",
+          "name": "Bzip2",
+          "version": ">=1.0.8",
+          "options": []
+        }
+      ],
+      "kernelDependencies": []
+    }
+  ],
   "uniqueDependencies": [],
   "uniqueOptions": [],
   "selectedDependencies": [],
