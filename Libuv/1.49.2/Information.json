@@ -8,9 +8,27 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "ProgrammingTools-Main",
+      "name": "Autoconf",
+      "version": ">=2.72.0",
+      "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Automake",
+      "version": ">=1.17.0",
+      "options": []
+    },
+    {
+      "port": "SecuritySoftwares-Main",
+      "name": "Acl",
+      "version": ">=2.3.2",
+      "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libtool",
+      "version": ">=2.5.3",
       "options": []
     }
   ],
