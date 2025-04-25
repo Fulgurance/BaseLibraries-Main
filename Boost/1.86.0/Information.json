@@ -12,6 +12,12 @@
       "name": "Which",
       "version": ">=2.21.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Gcc",
+      "version": ">=14.2.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
