@@ -12,6 +12,12 @@
       "name": "Autoconf",
       "version": ">=2.72.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Automake",
+      "version": ">=1.17.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
