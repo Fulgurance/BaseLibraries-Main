@@ -24,6 +24,12 @@
       "name": "Pcre2",
       "version": ">=10.42.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Meson",
+      "version": ">=1.6.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
