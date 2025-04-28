@@ -18,6 +18,12 @@
       "name": "Automake",
       "version": ">=1.17.0",
       "options": []
+    },
+    {
+      "port": "BaseLibraries-Main",
+      "name": "Libtool",
+      "version": ">=2.5.3",
+      "options": []
     }
   ],
   "kernelDependencies": [],
