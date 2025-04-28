@@ -12,6 +12,12 @@
       "name": "Autoconf",
       "version": ">=2.72.0",
       "options": []
+    },
+    {
+      "port": "ProgrammingTools-Main",
+      "name": "Libtool",
+      "version": ">=2.5.3",
+      "options": []
     }
   ],
   "kernelDependencies": [],
