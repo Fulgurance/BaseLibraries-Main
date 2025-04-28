@@ -14,7 +14,7 @@
       "options": []
     },
     {
-      "port": "ProgrammingTools-Main",
+      "port": "BaseLibraries-Main",
       "name": "Libtool",
       "version": ">=2.5.3",
       "options": []
