@@ -3,9 +3,12 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr      \
-                                    --disable-static    \
-                                    --with-curses       \
+        configureSource(arguments:  "--prefix=/usr                          \
+                                    --host=#{Ism.settings.systemTarget}     \
+                                    --build=#{Ism.settings.systemTarget}    \
+                                    --target=#{Ism.settings.systemTarget}   \
+                                    --disable-static                        \
+                                    --with-curses                           \
                                     --disable-doc",
                         path:       buildDirectoryPath)
     end
