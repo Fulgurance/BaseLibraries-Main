@@ -3,9 +3,12 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:  "--prefix=/usr          \
-                                    --disable-static        \
-                                    --enable-thread-safe    \
+        configureSource(arguments:  "--prefix=/usr                          \
+                                    --host=#{Ism.settings.systemTarget}     \
+                                    --build=#{Ism.settings.systemTarget}    \
+                                    --target=#{Ism.settings.systemTarget}   \
+                                    --disable-static                        \
+                                    --enable-thread-safe                    \
                                     --disable-doc",
                         path:       buildDirectoryPath)
     end
