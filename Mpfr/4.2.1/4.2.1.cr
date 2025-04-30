@@ -5,8 +5,7 @@ class Target < ISM::Software
 
         configureSource(arguments:  "--prefix=/usr                          \
                                     --disable-static                        \
-                                    --enable-thread-safe                    \
-                                    --disable-doc",
+                                    --enable-thread-safe",
                         path:       buildDirectoryPath)
     end
 
