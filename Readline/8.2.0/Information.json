@@ -8,10 +8,10 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": ["Pass2"]
+      "port": "BaseLibraries-Main",
+      "name": "Ncurses",
+      "version": ">=6.5.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
