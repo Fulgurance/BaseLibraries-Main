@@ -8,9 +8,9 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "ProgrammingTools-Main",
-      "name": "Gcc",
-      "version": ">=13.2.0",
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
       "options": []
     }
   ],
