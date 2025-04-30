@@ -8,12 +8,6 @@
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
-      "options": ["Pass2"]
-    },
-    {
       "port": "BaseLibraries-Main",
       "name": "Gmp",
       "version": ">=6.3.0",
