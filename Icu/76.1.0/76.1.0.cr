@@ -9,11 +9,7 @@ class Target < ISM::Software
     def configure
         super
 
-        configureSource(arguments:          "--prefix=/usr      \
-                                            --disable-tools     \
-                                            --disable-fuzzer    \
-                                            --disable-tests     \
-                                            --disable-samples",
+        configureSource(arguments:          "--prefix=/usr",
                         path:               buildDirectoryPath,
                         configureDirectory: @buildDirectoryNames["MainBuild"])
     end
