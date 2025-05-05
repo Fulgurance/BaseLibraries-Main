@@ -21,17 +21,17 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            configureSource(arguments:  "--prefix=/usr                      \
-                                        --host=#{Ism.settings.chrootTarget} \
-                                        --build=$(./config.guess)           \
-                                        --mandir=/usr/share/man             \
-                                        --with-manpage-format=normal        \
-                                        --with-shared                       \
-                                        --without-normal                    \
-                                        --with-cxx-shared                   \
-                                        --without-debug                     \
-                                        --without-ada                       \
-                                        --disable-stripping                 \
+            configureSource(arguments:  "--prefix=/usr                                                  \
+                                        --host=#{Ism.settings.chrootTarget}                             \
+                                        --build=#{Ism.settings.systemTarget(relatedToChroot: false)}    \
+                                        --mandir=/usr/share/man                                         \
+                                        --with-manpage-format=normal                                    \
+                                        --with-shared                                                   \
+                                        --without-normal                                                \
+                                        --with-cxx-shared                                               \
+                                        --without-debug                                                 \
+                                        --without-ada                                                   \
+                                        --disable-stripping                                             \
                                         --enable-widec",
                             path:       buildDirectoryPath)
         else
