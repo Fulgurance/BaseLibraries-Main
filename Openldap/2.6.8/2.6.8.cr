@@ -81,4 +81,18 @@ class Target < ISM::Software
         end
     end
 
+    def deploy
+        super
+
+        runChownCommand("ldap:ldap /var/lib/openldap")
+        runChownCommand("ldap:ldap /etc/openldap/slapd.d")
+        runChownCommand("root:ldap /etc/openldap/slapd.conf")
+        runChownCommand("root:ldap /etc/openldap/slapd.ldif")
+
+        runChmodCommand("0700 /var/lib/openldap")
+        runChmodCommand("0700 /etc/openldap/slapd.d")
+        runChmodCommand("0640 /etc/openldap/slapd.conf")
+        runChmodCommand("0640 /etc/openldap/slapd.ldif")
+    end
+
 end

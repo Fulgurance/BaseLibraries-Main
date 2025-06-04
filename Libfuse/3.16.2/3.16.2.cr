@@ -29,4 +29,11 @@ class Target < ISM::Software
                         environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/bin/fusermount3")
+        runChmodCommand("u+s /usr/bin/fusermount3")
+    end
+
 end

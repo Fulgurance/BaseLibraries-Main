@@ -26,4 +26,13 @@ class Target < ISM::Software
                     type:   :symbolicLinkByOverwrite)
     end
 
+    def deploy
+        super
+
+        runChownCommand("root:root /usr/include/linear.h")
+        runChownCommand("root:root /usr/lib/linear.so.6")
+        runChmodCommand("0644 /usr/include/linear.h")
+        runChmodCommand("0755 /usr/lib/linear.so.6")
+    end
+
 end
