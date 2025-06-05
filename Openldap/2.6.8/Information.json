@@ -12,6 +12,12 @@
       "name": "Groff",
       "version": ">=1.23.0",
       "options": []
+    },
+    {
+      "port": "SystemUsers-Main",
+      "name": "Ldap",
+      "version": ">=0.1.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
