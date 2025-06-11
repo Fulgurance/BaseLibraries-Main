@@ -12,6 +12,7 @@ class Target < ISM::Software
         makeDirectory(packagesPath)
 
         runPipCommand(  arguments:  "install --root-user-action=ignore --no-dependencies --target \"#{packagesPath}\" #{mainWorkDirectoryPath}",
+                        path: "/var/lib/ism",
                         version:    pythonVersion)
 
         directoryContent(packagesPath, matchHidden: true).each do |filePath|
