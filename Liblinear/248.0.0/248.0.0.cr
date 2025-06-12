@@ -10,9 +10,6 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}/#{Ism.settings.rootPath} install",
-                    path:       buildDirectoryPath)
-
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/include")
         makeDirectory("#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}/usr/lib")
 
