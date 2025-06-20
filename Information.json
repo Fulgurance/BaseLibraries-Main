@@ -1,0 +1,7 @@
+{
+  "name": "BaseLibraries-Main",
+  "url": "https://github.com/Fulgurance/BaseLibraries-Main",
+  "publicKeyUrl": "http://www.slashlinux.io/keyring/Fulgurance.key",
+  "type": "Git",
+  "description": "Port that contain all important common libraries for the system"
+}
