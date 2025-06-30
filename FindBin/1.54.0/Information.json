@@ -1,16 +1,16 @@
 {
   "port": "BaseLibraries-Main",
-  "name": "Uri",
-  "version": "5.29.0",
+  "name": "FindBin",
+  "version": "1.54.0",
   "architectures": ["x86_64"],
-  "description": "Uniform Resource Identifiers",
-  "website": "https://metacpan.org/pod/URI",
+  "description": "Locate directory of original Perl script",
+  "website": "https://metacpan.org/dist/FindBin",
   "installedFiles": [],
   "dependencies": [
     {
-      "port": "SystemBase-Main",
-      "name": "SystemBase",
-      "version": ">=0.2.0",
+      "port": "ProgrammingLanguages-Main",
+      "name": "Perl",
+      "version": ">=5.40.0",
       "options": []
     }
   ],
