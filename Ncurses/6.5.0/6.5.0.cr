@@ -57,13 +57,16 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+        if option("Pass1")
+            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} TIC_PATH=#{buildDirectoryPath}/progs/tic install",
                         path:       buildDirectoryPath)
 
-        if option("Pass1")
             fileAppendData( "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so",
                             "INPUT(-lncursesw)")
         else
+            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                        path:       buildDirectoryPath)
+
             fileAppendData( "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so",
                             "INPUT(-lncursesw)")
 
