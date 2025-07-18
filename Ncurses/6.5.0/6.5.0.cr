@@ -23,7 +23,7 @@ class Target < ISM::Software
         if option("Pass1")
             configureSource(arguments:  "--prefix=/usr                                                  \
                                         --host=#{Ism.settings.chrootTarget}                             \
-                                        --build=$(./config.guess)                                       \
+                                        --build=$(./../config.guess)                                    \
                                         --mandir=/usr/share/man                                         \
                                         --with-manpage-format=normal                                    \
                                         --with-shared                                                   \
@@ -58,7 +58,7 @@ class Target < ISM::Software
         super
 
         if option("Pass1")
-            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} TIC_PATH=$(pwd)/build/progs/tic install",
+            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} TIC_PATH=#{buildDirectoryPath}/progs/tic install",
                         path:       buildDirectoryPath)
 
             fileAppendData( "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so",
