@@ -1,0 +1,23 @@
+{
+  "port": "BaseLibraries-Main",
+  "name": "Argp-Standalone",
+  "version": "1.5.0",
+  "architectures": ["x86_64"],
+  "description": "Argp library for systems which don't provide one themselves (most non-GNU ones)",
+  "website": "https://github.com/ericonr/argp-standalone",
+  "installedFiles": [],
+  "dependencies": [
+    {
+      "port": "SystemBase-Main",
+      "name": "SystemBase",
+      "version": ">=0.2.0",
+      "options": []
+    }
+  ],
+  "kernelDependencies": [],
+  "options": [],
+  "uniqueDependencies": [],
+  "uniqueOptions": [],
+  "selectedDependencies": [],
+  "allowCodependencies": []
+}
