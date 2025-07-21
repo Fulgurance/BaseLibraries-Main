@@ -57,7 +57,9 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        if component("C-Library") == "Glibc" && option("Pass1")
+        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("Glibc")
+
+        if usingGlibc && option("Pass1")
             makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} TIC_PATH=#{buildDirectoryPath}/progs/tic install",
                         path:       buildDirectoryPath)
         else
