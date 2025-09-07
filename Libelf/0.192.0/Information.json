@@ -24,6 +24,12 @@
       "name": "C-Library-Fts-Implementation",
       "version": ">=0.1.0",
       "options": []
+    },
+    {
+      "port": "Components-Main",
+      "name": "C-Library-Obstack-Implementation",
+      "version": ">=0.1.0",
+      "options": []
     }
   ],
   "kernelDependencies": [],
