@@ -12,13 +12,17 @@ class Target < ISM::Software
                                     --prefix=/usr           \
                                     --buildtype=release     \
                                     ..",
-                        path:       buildDirectoryPath)
+                        path:       buildDirectoryPath,
+                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
     def build
         super
 
-        runNinjaCommand(path: buildDirectoryPath)
+        runNinjaCommand(path: buildDirectoryPath,
+                        environment:    {   "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
     def prepareInstallation
@@ -26,7 +30,9 @@ class Target < ISM::Software
 
         runNinjaCommand(arguments:      "install",
                         path:           buildDirectoryPath,
-                        environment:    {"DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}"})
+                        environment:    {   "DESTDIR" => "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}",
+                                            "PATH" => "/usr/bin/python3.12:/usr/lib/llvm/#{softwareMajorVersion("@ProgrammingLanguages-Main:Llvm")}/bin:$PATH",
+                                                "PYTHONPATH" => "/usr/lib/python3.12/site-packages"})
     end
 
 end
