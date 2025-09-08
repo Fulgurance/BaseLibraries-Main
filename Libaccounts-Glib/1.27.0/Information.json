@@ -23,13 +23,13 @@
       "port": "BaseLibraries-Main",
       "name": "PyGobject",
       "version": ">=3.50.0",
-      "options": []
+      "options": ["Python-3.12"]
     },
     {
       "port": "ProgrammingTools-Main",
       "name": "Setuptools",
       "version": ">=0.0.0",
-      "options": []
+      "options": ["Python-3.12"]
     }
   ],
   "kernelDependencies": [],
