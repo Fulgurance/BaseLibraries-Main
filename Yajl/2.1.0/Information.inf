@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Yajl
+VERSION
+    2.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A fast streaming JSON parsing library in C
+WEBSITE
+    https://github.com/lloyd/yajl
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

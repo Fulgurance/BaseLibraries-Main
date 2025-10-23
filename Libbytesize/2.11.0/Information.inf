@@ -1,0 +1,21 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libbytesize
+VERSION
+    2.11.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Reading and Parsing Library
+WEBSITE
+    https://github.com/storaged-project/libbytesize
+DEPENDENCIES
+        @BaseLibraries-Main:Pcre2>=10.42.0
+        @BaseLibraries-Main:Pygments>=2.16.1
+        @BaseLibraries-Main:Six>=1.16.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

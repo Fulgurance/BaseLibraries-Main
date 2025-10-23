@@ -1,0 +1,22 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libuv
+VERSION
+    1.49.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Multi-platform support library with a focus on asynchronous I/O
+WEBSITE
+    https://libuv.org/
+DEPENDENCIES
+        @ProgrammingTools-Main:Autoconf>=2.72.0
+        @ProgrammingTools-Main:Automake>=1.17.0
+        @SecuritySoftwares-Main:Acl>=2.3.2
+        @BaseLibraries-Main:Libtool>=2.5.3
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

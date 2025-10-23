@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libatasmart
+VERSION
+    0.19.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Reading and Parsing Library
+WEBSITE
+    https://github.com/libatasmart/libatasmart
+DEPENDENCIES
+        @FileSystems-Main:Eudev>=3.2.10
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

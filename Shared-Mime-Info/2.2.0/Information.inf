@@ -1,0 +1,27 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Shared-Mime-Info
+VERSION
+    2.2.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Core database of common types and command used to extend it
+WEBSITE
+    https://www.freedesktop.org/wiki/Software/shared-mime-info/
+DEPENDENCIES
+        @BaseLibraries-Main:Glib>=2.76.4
+        @BaseLibraries-Main:Libxml2>=2.10.4
+KERNELDEPENDENCIES
+OPTIONS
+    name: Xmlto
+    description: Enable xmlto support
+    active: false
+    dependencies:
+        @Xml-Main:Xmlto>=0.0.28
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

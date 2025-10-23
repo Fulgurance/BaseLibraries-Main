@@ -1,0 +1,21 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libmspub
+VERSION
+    0.1.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library that parses the file format of Microsoft Publisher documents
+WEBSITE
+    https://wiki.documentfoundation.org/DLP/Libraries/libmspub
+DEPENDENCIES
+        @BaseLibraries-Main:Boost>=1.83.0
+        @BaseLibraries-Main:Icu>=73.2.0
+        @BaseLibraries-Main:Librevenge>=0.0.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

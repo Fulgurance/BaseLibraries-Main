@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Hwdata
+VERSION
+    0.389.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Hwdata contains various hardware identification and configuration data, such as the pci.ids and usb.ids databases.
+WEBSITE
+    https://github.com/vcrhonek/hwdata
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

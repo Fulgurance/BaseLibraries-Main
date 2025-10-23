@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Lmdb
+VERSION
+    0.9.31
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Ultra-fast, ultra-compact, crash-proof, key-value, embedded data store
+WEBSITE
+    https://www.symas.com/mdb
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

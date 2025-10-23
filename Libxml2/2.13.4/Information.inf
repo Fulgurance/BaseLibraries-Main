@@ -1,0 +1,26 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libxml2
+VERSION
+    2.13.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    XML C parser and toolkit developed for the Gnome project
+WEBSITE
+    https://gitlab.gnome.org/GNOME/libxml2/-/wikis/home
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Icu
+    description: Enable icu support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Icu>=73.2.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

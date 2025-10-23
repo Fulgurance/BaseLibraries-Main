@@ -1,0 +1,22 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libzmf
+VERSION
+    0.0.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library that parses the file format of Zoner Callisto/Draw documents
+WEBSITE
+    https://wiki.documentfoundation.org/DLP/Libraries/libzmf
+DEPENDENCIES
+        @BaseLibraries-Main:Boost>=1.83.0
+        @GraphicsLibraries-Main:Libpng>=1.6.40
+        @BaseLibraries-Main:Icu>=73.2.0
+        @BaseLibraries-Main:Librevenge>=0.0.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

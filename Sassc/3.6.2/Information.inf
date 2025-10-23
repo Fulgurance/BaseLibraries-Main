@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Sassc
+VERSION
+    3.6.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Libsass command line driver
+WEBSITE
+    https://github.com/sass/sassc
+DEPENDENCIES
+        @BaseLibraries-Main:Libsass>=3.6.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

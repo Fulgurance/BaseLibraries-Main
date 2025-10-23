@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Cppunit
+VERSION
+    1.15.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C++ port of the famous JUnit framework for unit testing
+WEBSITE
+    https://freedesktop.org/wiki/Software/cppunit/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Pcre2
+VERSION
+    10.42.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Set of C functions that implement regular expression pattern matching using the same syntax and semantics as Perl 5
+WEBSITE
+    https://github.com/PCRE2Project/pcre2
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

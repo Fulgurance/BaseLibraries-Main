@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Uthash
+VERSION
+    2.3.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C macros for hash tables and more
+WEBSITE
+    https://troydhanson.github.io/uthash/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

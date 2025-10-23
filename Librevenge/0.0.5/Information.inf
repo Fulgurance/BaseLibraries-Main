@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Librevenge
+VERSION
+    0.0.5
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Base library for writing document import filters
+WEBSITE
+    https://sourceforge.net/p/libwpd/librevenge/ci/master/tree/
+DEPENDENCIES
+        @BaseLibraries-Main:Cppunit>=1.15.1
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

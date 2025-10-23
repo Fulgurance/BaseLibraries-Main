@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    FindBin
+VERSION
+    1.54.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Locate directory of original Perl script
+WEBSITE
+    https://metacpan.org/dist/FindBin
+DEPENDENCIES
+        @ProgrammingLanguages-Main:Perl>=5.40.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

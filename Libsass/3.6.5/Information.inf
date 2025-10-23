@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libsass
+VERSION
+    3.6.5
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A C/C++ implementation of a Sass compiler
+WEBSITE
+    https://github.com/sass/libsass
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

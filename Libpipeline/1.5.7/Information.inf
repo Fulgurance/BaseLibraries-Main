@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libpipeline
+VERSION
+    1.5.7
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C library for manipulating pipelines of subprocesses in a flexible and convenient way
+WEBSITE
+    https://gitlab.com/libpipeline/libpipeline
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

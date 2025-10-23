@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Signond
+VERSION
+    8.61.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    SignOn Daemon (Qt)
+WEBSITE
+    https://gitlab.com/accounts-sso/signond
+DEPENDENCIES
+        @QtLibraries-Main:Qtbase>=6.0.0 ~ <7.0.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

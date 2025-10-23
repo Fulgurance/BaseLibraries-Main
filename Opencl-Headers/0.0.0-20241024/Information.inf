@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Opencl-Headers
+VERSION
+    0.0.0-20241024
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Khronos OpenCL-Headers
+WEBSITE
+    https://github.com/KhronosGroup/OpenCL-Headers
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

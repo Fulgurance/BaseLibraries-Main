@@ -1,0 +1,39 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Zlib
+VERSION
+    1.3.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Lossless data-compression library portable across platforms
+WEBSITE
+    https://www.zlib.net/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+    name: Minizip
+    description: Enable minizip support
+    active: false
+    dependencies:
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

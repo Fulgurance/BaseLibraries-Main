@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    NlohmannJson
+VERSION
+    3.11.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    JSON for Modern C++
+WEBSITE
+    https://github.com/nlohmann/json
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

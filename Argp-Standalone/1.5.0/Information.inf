@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Argp-Standalone
+VERSION
+    1.5.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Argp library for systems which don't provide one themselves (most non-GNU ones)
+WEBSITE
+    https://github.com/ericonr/argp-standalone
+DEPENDENCIES
+        @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

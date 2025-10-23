@@ -1,0 +1,33 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Rasqal
+VERSION
+    0.9.33
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Rasqal RDF Query Library
+WEBSITE
+    https://github.com/dajobe/rasqal/
+DEPENDENCIES
+        @BaseLibraries-Main:Raptor>=2.0.16
+KERNELDEPENDENCIES
+OPTIONS
+    name: Pcre
+    description: Enable pcre support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Pcre>=8.45.0
+    kernelDependencies:
+
+    name: Libgcrypt
+    description: Enable libgcrypt support
+    active: false
+    dependencies:
+        @SecurityLibraries-Main:Libgcrypt>=1.10.2
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

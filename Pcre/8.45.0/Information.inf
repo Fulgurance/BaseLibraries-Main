@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Pcre
+VERSION
+    8.45.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library set of functions that implement regular expression pattern matching using the same syntax and semantics as Perl
+WEBSITE
+    https://www.pcre.org/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

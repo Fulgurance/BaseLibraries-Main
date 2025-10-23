@@ -1,0 +1,22 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libaccounts-Glib
+VERSION
+    1.27.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    GLib-based client library for the accounts database
+WEBSITE
+    https://gitlab.com/accounts-sso/libaccounts-glib
+DEPENDENCIES
+        @ProgrammingLanguages-Main:Vala>=0.56.17
+        @BaseLibraries-Main:Glib>=2.76.4(Gobject-Introspection)
+        @BaseLibraries-Main:PyGobject>=3.50.0(Python-3.12)
+        @ProgrammingTools-Main:Setuptools>=0.0.0(Python-3.12)
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

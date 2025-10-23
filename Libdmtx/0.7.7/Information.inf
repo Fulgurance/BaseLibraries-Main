@@ -1,0 +1,20 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libdmtx
+VERSION
+    0.7.7
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Open source software for reading and writing Data Matrix barcodes
+WEBSITE
+    https://github.com/dmtx/libdmtx
+DEPENDENCIES
+        @ProgrammingTools-Main:Autoconf>=2.72.0
+        @BaseLibraries-Main:Libtool>=2.5.3
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

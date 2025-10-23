@@ -1,0 +1,26 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Clucene-Core
+VERSION
+    2.3.3-r.4
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    High-performance, scalable, cross platform, full-featured, open-source indexing and searching API
+WEBSITE
+    https://clucene.sourceforge.net/
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+KERNELDEPENDENCIES
+OPTIONS
+    name: Boost
+    description: Enable boost support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Boost>=1.83.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

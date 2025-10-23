@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libcdr
+VERSION
+    0.1.8
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library that parses the file format of CorelDRAW documents of all versions
+WEBSITE
+    https://wiki.documentfoundation.org/DLP/Libraries/libcdr
+DEPENDENCIES
+        @BaseLibraries-Main:Librevenge>=0.0.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

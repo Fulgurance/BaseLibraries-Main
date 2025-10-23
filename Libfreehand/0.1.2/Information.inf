@@ -1,0 +1,23 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libfreehand
+VERSION
+    0.1.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library that parses the file format of Aldus/Macromedia/Adobe FreeHand documents
+WEBSITE
+    https://wiki.documentfoundation.org/DLP/Libraries/libfreehand
+DEPENDENCIES
+        @BaseLibraries-Main:Boost>=1.83.0
+        @Utilities-Main:Gperf>=3.1.0
+        @BaseLibraries-Main:Icu>=73.2.0
+        @Utilities-Main:Lcms2>=2.14.0
+        @BaseLibraries-Main:Librevenge>=0.0.5
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

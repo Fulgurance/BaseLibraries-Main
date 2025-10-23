@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Popt
+VERSION
+    1.19.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C library for parsing command line parameters
+WEBSITE
+    https://github.com/rpm-software-management/popt
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

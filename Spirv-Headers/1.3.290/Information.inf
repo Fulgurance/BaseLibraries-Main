@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Spirv-Headers
+VERSION
+    1.3.290
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Machine-readable files for the SPIR-V Registry
+WEBSITE
+    https://github.com/KhronosGroup/SPIRV-Headers
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

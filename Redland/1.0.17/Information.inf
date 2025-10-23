@@ -1,0 +1,54 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Redland
+VERSION
+    1.0.17
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Set of free software C libraries that provide support for the Resource Description Framework (RDF)
+WEBSITE
+    https://librdf.org/
+DEPENDENCIES
+        @BaseLibraries-Main:Rasqal>=0.9.33
+KERNELDEPENDENCIES
+OPTIONS
+    name: BerkeleyDb
+    description: Enable berkeleydb support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:BerkeleyDb>=5.3.28
+    kernelDependencies:
+
+    name: Libiodbc
+    description: Enable libiodbc support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Libiodbc>=3.52.15
+    kernelDependencies:
+
+    name: Sqlite
+    description: Enable sqlite support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Sqlite>=3.42.0
+    kernelDependencies:
+
+    name: Mariadb
+    description: Enable mariadb support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Mariadb>=10.11.4
+    kernelDependencies:
+
+    name: Postgresql
+    description: Enable postgresql support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Postgresql>=15.4.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

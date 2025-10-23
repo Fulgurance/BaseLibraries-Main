@@ -1,0 +1,21 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Spirv-Llvm-Translator
+VERSION
+    18.1.3
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A tool and a library for bi-directional translation between SPIR-V and LLVM IR
+WEBSITE
+    https://github.com/KhronosGroup/SPIRV-LLVM-Translator
+DEPENDENCIES
+        @BaseLibraries-Main:Libxml2>=2.10.4
+        @ProgrammingLanguages-Main:Llvm>=16.0.5
+        @BaseLibraries-Main:Spirv-Tools>=1.3.290
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

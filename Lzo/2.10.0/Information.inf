@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Lzo
+VERSION
+    2.10.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Portable lossless data compression library written in ANSI C
+WEBSITE
+    https://www.oberhumer.com/opensource/lzo/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

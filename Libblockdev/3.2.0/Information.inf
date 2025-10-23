@@ -1,0 +1,51 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libblockdev
+VERSION
+    3.2.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Reading and Parsing Library
+WEBSITE
+    https://github.com/storaged-project/libblockdev
+DEPENDENCIES
+        @BaseLibraries-Main:Json-Glib>=1.10.0
+        @SecuritySoftwares-Main:Keyutils>=1.6.1
+        @BaseLibraries-Main:Libbytesize>=2.9.0
+        @BaseLibraries-Main:Libnvme>=1.5.0
+        @SecuritySoftwares-Main:Cryptsetup>=2.4.3
+KERNELDEPENDENCIES
+OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+    name: Volume-Key
+    description: Enable volume-key support
+    active: false
+    dependencies:
+        @SecurityLibraries-Main:Volume-Key>=0.3.12
+    kernelDependencies:
+
+    name: Parted
+    description: Enable parted support
+    active: false
+    dependencies:
+        @Utilities-Main:Parted>=3.6.0
+    kernelDependencies:
+
+    name: Btrfs-Progs
+    description: Enable btrfs-progs support
+    active: false
+    dependencies:
+        @FileSystems-Main:Btrfs-Progs>=5.13.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

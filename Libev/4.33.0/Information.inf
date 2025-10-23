@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libev
+VERSION
+    4.33.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Full-featured and high-performance event loop loosely modelled after libevent
+WEBSITE
+    http://software.schmorp.de/pkg/libev.html
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

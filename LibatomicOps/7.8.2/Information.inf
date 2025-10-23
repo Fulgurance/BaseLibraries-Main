@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    LibatomicOps
+VERSION
+    7.8.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Atomic memory update operations portable implementation
+WEBSITE
+    https://github.com/ivmai/libatomic_ops/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

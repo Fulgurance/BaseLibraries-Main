@@ -1,0 +1,35 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libtool
+VERSION
+    2.4.7
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Generic library support script that hides the complexity of using shared libraries behind a consistent, portable interface
+WEBSITE
+    https://www.gnu.org/software/libtool/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+        @ProgrammingTools-Main:Autoconf>=2.71.0
+        @ProgrammingTools-Main:Automake>=1.16.5
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

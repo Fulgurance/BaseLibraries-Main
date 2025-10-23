@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Protobuf
+VERSION
+    29.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Protocol Buffers - Google's data interchange format
+WEBSITE
+    https://github.com/protocolbuffers/protobuf
+DEPENDENCIES
+        @BaseLibraries-Main:Abseil-Cpp>=0.0.0-20240722
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libfuse
+VERSION
+    3.16.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The reference implementation of the Linux FUSE (Filesystem in Userspace) interface 
+WEBSITE
+    https://github.com/libfuse/libfuse/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

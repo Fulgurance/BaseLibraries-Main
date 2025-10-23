@@ -1,0 +1,36 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libelf
+VERSION
+    0.192.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library for handling ELF (Executable and Linkable Format) files
+WEBSITE
+    https://sourceware.org/elfutils/
+DEPENDENCIES
+        @BaseLibraries-Main:Zlib>=1.2.13
+        @Components-Main:C-Library-Argp-Implementation>=0.1.0
+        @Components-Main:C-Library-Fts-Implementation>=0.1.0
+        @Components-Main:C-Library-Obstack-Implementation>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

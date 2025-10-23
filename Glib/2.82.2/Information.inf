@@ -1,0 +1,30 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Glib
+VERSION
+    2.82.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Low-level core library that forms the basis for projects such as GTK+ and GNOME
+WEBSITE
+    https://gitlab.gnome.org/GNOME/glib
+DEPENDENCIES
+        @BaseLibraries-Main:Libxslt>=1.1.38
+        @Xml-Main:Docbook-Xsl-Nons>=1.79.2
+        @BaseLibraries-Main:Pcre2>=10.42.0
+        @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+    @BaseLibraries-Main:Gobject-Introspection

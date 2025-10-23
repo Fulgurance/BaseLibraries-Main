@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Userspace-Rcu
+VERSION
+    0.14.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Userspace RCU (read-copy-update) library. This data synchronization library provides read-side access which scales linearly with the number of cores
+WEBSITE
+    https://liburcu.org/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

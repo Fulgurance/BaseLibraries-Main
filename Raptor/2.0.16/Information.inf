@@ -1,0 +1,27 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Raptor
+VERSION
+    2.0.16
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Rasqal RDF Query Library
+WEBSITE
+    https://github.com/dajobe/raptor
+DEPENDENCIES
+        @NetworkingLibraries-Main:Curl>=8.2.1
+        @BaseLibraries-Main:Libxslt>=1.1.38
+KERNELDEPENDENCIES
+OPTIONS
+    name: Icu
+    description: Enable icu support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Icu>=73.2.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

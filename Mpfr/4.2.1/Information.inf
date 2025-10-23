@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Mpfr
+VERSION
+    4.2.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C library for multiple-precision floating-point computations with correct rounding
+WEBSITE
+    https://www.mpfr.org/
+DEPENDENCIES
+        @BaseLibraries-Main:Gmp>=6.3.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

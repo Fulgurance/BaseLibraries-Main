@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libbsd
+VERSION
+    0.12.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Utility functions from BSD systems
+WEBSITE
+    https://gitlab.freedesktop.org/libbsd/libbsd
+DEPENDENCIES
+        @SecurityLibraries-Main:Libmd>=1.1.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

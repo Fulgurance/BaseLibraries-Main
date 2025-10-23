@@ -1,0 +1,41 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libnvme
+VERSION
+    1.11.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    C Library for NVM Express on Linux 
+WEBSITE
+    https://github.com/linux-nvme/libnvme
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+        @Utilities-Main:Dbus>=1.14.8
+KERNELDEPENDENCIES
+OPTIONS
+    name: Json-C
+    description: Enable json-c support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Json-C>=0.17.0
+    kernelDependencies:
+
+    name: Keyutils
+    description: Enable keyutils support
+    active: false
+    dependencies:
+        @SecuritySoftwares-Main:Keyutils>=1.6.1
+    kernelDependencies:
+
+    name: Swig
+    description: Enable swig support
+    active: false
+    dependencies:
+        @ProgrammingTools-Main:Swig>=4.1.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
