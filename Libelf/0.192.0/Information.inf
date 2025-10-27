@@ -13,7 +13,7 @@ WEBSITE
 DEPENDENCIES
         @BaseLibraries-Main:Zlib>=1.2.13
 
-        if component("C-Library") selected "Musl"
+        if component("@Components-Main:C-Library") selected "@ProgrammingTools-Main:Musl"
             @Components-Main:C-Library-Argp-Implementation>=0.1.0
             @Components-Main:C-Library-Fts-Implementation>=0.1.0
             @Components-Main:C-Library-Obstack-Implementation>=0.1.0
