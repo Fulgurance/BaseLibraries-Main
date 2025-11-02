@@ -13,7 +13,7 @@ class Target < ISM::Software
         super
 
         runFile(file:       "b2",
-                arguments:  "stage #{Ism.settings.systemMakeOptions} threading=multi link=shared",
+                arguments:  "stage #{Ism.settings.makeOptions} threading=multi link=shared",
                 path:       buildDirectoryPath)
     end
 
