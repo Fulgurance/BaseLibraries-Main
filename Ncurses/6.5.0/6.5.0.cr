@@ -57,15 +57,8 @@ class Target < ISM::Software
     def prepareInstallation
         super
 
-        usingGlibc = component("C-Library").uniqueDependencyIsEnabled("@ProgrammingTools-Main:Glibc")
-
-        if usingGlibc && option("Pass1")
-            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} TIC_PATH=#{buildDirectoryPath}/progs/tic install",
-                        path:       buildDirectoryPath)
-        else
-            makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
-                        path:       buildDirectoryPath)
-        end
+        makeSource( arguments:  "DESTDIR=#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath} install",
+                    path:       buildDirectoryPath)
 
         if option("Pass1")
             fileAppendData( "#{builtSoftwareDirectoryPath}#{Ism.settings.rootPath}usr/lib/libncurses.so",
