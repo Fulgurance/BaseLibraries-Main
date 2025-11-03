@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libxmlb
+VERSION
+    0.3.24
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A library to help create and query binary XML blobs
+WEBSITE
+    https://github.com/hughsie/libxmlb
+DEPENDENCIES
+        @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
