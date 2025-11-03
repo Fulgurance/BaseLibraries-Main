@@ -13,6 +13,7 @@ WEBSITE
 DEPENDENCIES
     @ProgrammingTools-Main:Meson>=1.6.0
     @BaseLibraries-Main:Libfyaml>=0.9.0
+    @BaseLibraries-Main:Libxmlb>=0.3.24
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
