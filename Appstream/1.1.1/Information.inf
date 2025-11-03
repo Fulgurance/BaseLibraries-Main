@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Appstream
+VERSION
+    1.1.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Tools and libraries to work with AppStream metadata
+WEBSITE
+    https://github.com/ximion/appstream
+DEPENDENCIES
+    @ProgrammingTools-Main:Meson>=1.6.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
