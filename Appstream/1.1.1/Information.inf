@@ -18,6 +18,13 @@ DEPENDENCIES
     @Xml-Main:Itstool>=2.0.7
 KERNELDEPENDENCIES
 OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
 UNIQUEDEPENDENCIES
 UNIQUEOPTIONS
 ALLOWCODEPENDENCIES
