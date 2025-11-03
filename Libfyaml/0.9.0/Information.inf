@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libfyaml
+VERSION
+    0.9.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Fully feature complete YAML parser and emitter, supporting the latest YAML spec and passing the full YAML testsuite.
+WEBSITE
+    https://github.com/pantoniou/libfyaml
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
