@@ -12,6 +12,7 @@ WEBSITE
     https://github.com/ximion/appstream
 DEPENDENCIES
     @ProgrammingTools-Main:Meson>=1.6.0
+    @BaseLibraries-Main:Libyaml>=0.2.5
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
