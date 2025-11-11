@@ -1,0 +1,20 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Gobject-Introspection
+VERSION
+    1.86.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Describe the APIs and collect them in a uniform, machine readable format
+WEBSITE
+    https://gitlab.gnome.org/GNOME/gobject-introspection
+DEPENDENCIES
+        @BaseLibraries-Main:Glib>=2.76.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
+    @BaseLibraries-Main:Glib

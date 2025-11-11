@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Fmt
+VERSION
+    12.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    A modern formatting library 
+WEBSITE
+    https://github.com/fmtlib/fmt/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

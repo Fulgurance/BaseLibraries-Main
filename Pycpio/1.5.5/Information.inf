@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Pycpio
+VERSION
+    1.5.5
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Python library for CPIO manipulation
+WEBSITE
+    https://github.com/desultory/pycpio
+DEPENDENCIES
+        @ProgrammingLanguages-Main:Python>=3.12.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

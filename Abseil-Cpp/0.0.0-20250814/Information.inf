@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Abseil-Cpp
+VERSION
+    0.0.0-20250814
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Abseil Common Libraries (C++)
+WEBSITE
+    https://github.com/abseil/abseil-cpp
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

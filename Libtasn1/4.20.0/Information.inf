@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libtasn1
+VERSION
+    4.20.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    ASN.1 library used by GnuTLS p11-kit and some other packages
+WEBSITE
+    https://www.gnu.org/software/libtasn1/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

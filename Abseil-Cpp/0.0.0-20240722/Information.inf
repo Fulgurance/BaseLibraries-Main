@@ -9,7 +9,7 @@ ARCHITECTURES
 DESCRIPTION
     Abseil Common Libraries (C++)
 WEBSITE
-    https://github.com/abseil/abseil-cp
+    https://github.com/abseil/abseil-cpp
 DEPENDENCIES
         @ProgrammingTools-Main:Cmake>=3.27.2
 KERNELDEPENDENCIES

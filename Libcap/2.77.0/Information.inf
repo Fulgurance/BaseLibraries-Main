@@ -1,0 +1,40 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libcap
+VERSION
+    2.77.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library implements the user-space interfaces to the POSIX capabilities available in Linux kernel
+WEBSITE
+    https://www.kernel.org/pub/linux/libs/security/linux-privs/libcap2/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass3)
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+    name: Linux-Pam
+    description: Enable linux-pam support
+    active: false
+    dependencies:
+        @SecuritySoftwares-Main:Linux-Pam>=1.5.3
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

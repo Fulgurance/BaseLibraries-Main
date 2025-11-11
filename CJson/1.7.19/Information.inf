@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    CJson
+VERSION
+    1.7.19
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Ultralightweight JSON parser in ANSI C
+WEBSITE
+    https://github.com/DaveGamble/cJSON
+DEPENDENCIES
+        @ProgrammingTools-Main:Cmake>=3.27.2
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

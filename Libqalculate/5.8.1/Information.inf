@@ -1,0 +1,22 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libqalculate
+VERSION
+    5.8.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Math library for expression evaluation with units, variables and functions support and CAS functionality
+WEBSITE
+    https://github.com/Qalculate/libqalculate
+DEPENDENCIES
+        @NetworkingLibraries-Main:Curl>=8.2.1
+        @BaseLibraries-Main:Icu>=73.2.0
+        @BaseLibraries-Main:Libxml2>=2.10.4
+        @Utilities-Main:Intltool>=0.51.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

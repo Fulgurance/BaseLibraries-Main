@@ -1,0 +1,77 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Openldap
+VERSION
+    2.6.10
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Open source implementation of the Lightweight Directory Access Protocol
+WEBSITE
+    https://www.openldap.org/
+DEPENDENCIES
+        @Utilities-Main:Groff>=1.23.0
+        @SystemUsers-Main:Ldap>=0.1.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Server
+    description: Enable server support
+    active: false
+    dependencies:
+        @SystemUsers-Main:Ldap>=0.1.0
+        @SystemGroups-Main:Ldap>=0.1.0
+    kernelDependencies:
+
+    name: Cyrus-Sasl
+    description: Enable cyrus-sasl support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:Cyrus-Sasl>=2.1.28
+    kernelDependencies:
+
+    name: Gnutls
+    description: Enable gnutls support
+    active: false
+    dependencies:
+        @SecurityLibraries-Main:Gnutls>=3.8.1
+    kernelDependencies:
+
+    name: Pth
+    description: Enable pth support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Pth>=2.0.7
+    kernelDependencies:
+
+    name: UnixOdbc
+    description: Enable unixodbc support
+    active: false
+    dependencies:
+        @NetworkingLibraries-Main:UnixOdbc>=2.3.12
+    kernelDependencies:
+
+    name: Mariadb
+    description: Enable mariadb support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Mariadb>=10.11.4
+    kernelDependencies:
+
+    name: Postgresql
+    description: Enable postgresql support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:Postgresql>=15.4.0
+    kernelDependencies:
+
+    name: BerkeleyDb
+    description: Enable berkeleydb support
+    active: false
+    dependencies:
+        @DatabaseLibraries-Main:BerkeleyDb>=5.3.28
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libarchive
+VERSION
+    3.8.2
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Multi-format archive and compression library
+WEBSITE
+    https://github.com/libarchive/libarchive
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

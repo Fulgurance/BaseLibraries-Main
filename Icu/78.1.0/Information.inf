@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Icu
+VERSION
+    78.1.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    ICU set of C/C++ and Java libraries providing Unicode and Globalization support
+WEBSITE
+    https://github.com/unicode-org/icu
+DEPENDENCIES
+        @Components-Main:C-Library>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

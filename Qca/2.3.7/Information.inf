@@ -9,7 +9,7 @@ ARCHITECTURES
 DESCRIPTION
     Provide a straightforward and cross-platform cryptographic API using Qt datatypes and conventions
 WEBSITE
-    https://api.kde.org/qca/html/
+    https://userbase.kde.org/QCA
 DEPENDENCIES
         @SecuritySoftwares-Main:Make-Ca>=1.12.0
         @ProgrammingTools-Main:Cmake>=3.27.2

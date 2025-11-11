@@ -1,0 +1,33 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libxslt
+VERSION
+    1.1.43
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    XSLT processor based on libxml2
+WEBSITE
+    https://gitlab.gnome.org/GNOME/libxslt
+DEPENDENCIES
+        @BaseLibraries-Main:Libxml2>=2.10.4
+KERNELDEPENDENCIES
+OPTIONS
+    name: Docbook-Xml
+    description: Enable docbook-xml support
+    active: false
+    dependencies:
+        @Xml-Main:Docbook-Xml>=4.5.0
+    kernelDependencies:
+
+    name: Docbook-Xsl-Nons
+    description: Enable docbook-xsl-nons support
+    active: false
+    dependencies:
+        @Xml-Main:Docbook-Xsl-Nons>=1.79.2
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

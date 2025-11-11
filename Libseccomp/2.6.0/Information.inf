@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libseccomp
+VERSION
+    2.6.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Easy to use platform independent interface to the Linux Kernel's syscall filtering mechanism
+WEBSITE
+    https://github.com/seccomp/libseccomp
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

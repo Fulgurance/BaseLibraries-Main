@@ -1,0 +1,20 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Gdbm
+VERSION
+    1.26.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library of database functions that use extensible hashing and work similar to the standard UNIX dbm
+WEBSITE
+    https://www.gnu.org/software/gdbm/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0(Pass2)
+        @BaseLibraries-Main:Readline>=8.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

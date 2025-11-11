@@ -1,0 +1,26 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Json-Glib
+VERSION
+    1.10.8
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    JSON-GLib implements a full JSON parser and generator using GLib and GObject, and integrates JSON with GLib data types.
+WEBSITE
+    https://gitlab.gnome.org/GNOME/json-glib
+DEPENDENCIES
+        @BaseLibraries-Main:Glib>=2.82.2
+KERNELDEPENDENCIES
+OPTIONS
+    name: Gobject-Introspection
+    description: Enable gobject-introspection support
+    active: false
+    dependencies:
+        @BaseLibraries-Main:Gobject-Introspection>=1.76.1
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

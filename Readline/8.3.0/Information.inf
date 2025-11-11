@@ -1,0 +1,33 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Readline
+VERSION
+    8.3.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The GNU Readline library with set of functions for use by applications that allow users to edit command lines as they are typed in
+WEBSITE
+    https://tiswww.case.edu/php/chet/readline/rltop.html
+DEPENDENCIES
+        @BaseLibraries-Main:Ncurses>=6.5.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: 32Bits
+    description: Enable 32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_IA32_EMULATION
+
+    name: x32Bits
+    description: Enable x32 bits support
+    active: false
+    dependencies:
+    kernelDependencies:
+        CONFIG_X86_X32
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

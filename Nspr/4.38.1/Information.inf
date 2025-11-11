@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Nspr
+VERSION
+    4.38.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Netscape Portable Runtime provides a platform-neutral API for system level and libc-like functions
+WEBSITE
+    https://firefox-source-docs.mozilla.org/nspr/index.html
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -9,7 +9,7 @@ ARCHITECTURES
 DESCRIPTION
     A Python bindings generator for C/C++ libraries
 WEBSITE
-    https://pypi.org/project/sip/
+    https://pypi.org/project/PyQt6-sip/
 DEPENDENCIES
         @BaseLibraries-Main:PyQt6>=6.7.0
 KERNELDEPENDENCIES

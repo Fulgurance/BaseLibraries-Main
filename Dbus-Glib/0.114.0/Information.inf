@@ -1,0 +1,20 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Dbus-Glib
+VERSION
+    0.114.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Deprecated libdbus wrapper for GLib-based programs
+WEBSITE
+    https://gitlab.freedesktop.org/dbus/dbus-glib
+DEPENDENCIES
+        @Utilities-Main:Dbus>=1.12.20
+        @BaseLibraries-Main:Glib>=2.68.4
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

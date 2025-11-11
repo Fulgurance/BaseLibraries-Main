@@ -1,0 +1,20 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Boost
+VERSION
+    1.89.0
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Free peer-reviewed portable C++ source libraries
+WEBSITE
+    https://github.com/boostorg/boost
+DEPENDENCIES
+        @Utilities-Main:Which>=2.21.0
+        @ProgrammingTools-Main:Gcc>=14.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

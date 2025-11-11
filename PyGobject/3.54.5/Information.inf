@@ -1,0 +1,35 @@
+PORT
+    BaseLibraries-Main
+NAME
+    PyGobject
+VERSION
+    3.54.5
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Python bindings for GObject Introspection
+WEBSITE
+    https://pypi.org/project/PyGObject/
+DEPENDENCIES
+        @ProgrammingLanguages-Main:Python>=3.12.0
+        @BaseLibraries-Main:Glib>=2.82.2(Gobject-Introspection)
+        @BaseLibraries-Main:Pycairo>=1.24.0
+KERNELDEPENDENCIES
+OPTIONS
+    name: Python-3.12
+    description: Enable python-3.12 support
+    active: false
+    dependencies:
+        @ProgrammingLanguages-Main:Python>=3.12.0 ~ <3.13.0
+    kernelDependencies:
+
+    name: Python-3.13
+    description: Enable python-3.13 support
+    active: true
+    dependencies:
+        @ProgrammingLanguages-Main:Python>=3.13.0 ~ <3.14.0
+    kernelDependencies:
+
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

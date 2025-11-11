@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Spirv-Tools
+VERSION
+    1.4.328-r1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    API and commands for processing SPIR-V modules
+WEBSITE
+    https://github.com/KhronosGroup/SPIRV-Tools
+DEPENDENCIES
+        @BaseLibraries-Main:Spirv-Headers>=1.3.290
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

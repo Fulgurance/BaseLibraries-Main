@@ -1,0 +1,37 @@
+{
+  "defaultConfiguration":
+  {
+      "fileUser":       "root",
+      "fileGroup":      "root",
+      "fileMode":       "0644",
+      "directoryUser":  "root",
+      "directoryGroup": "root",
+      "directoryMode":  "0755"
+  },
+  "descriptors": [
+    {
+      "target": "/var/lib/openldap",
+      "user":   "ldap",
+      "group":  "ldap",
+      "mode":   "0700"
+    },
+    {
+      "target": "/etc/openldap/slapd.d",
+      "user":   "ldap",
+      "group":  "ldap",
+      "mode":   "0700"
+    },
+    {
+      "target": "/etc/openldap/slapd.conf",
+      "user":   "root",
+      "group":  "ldap",
+      "mode":   "0640"
+    },
+    {
+      "target": "/etc/openldap/slapd.ldif",
+      "user":   "root",
+      "group":  "ldap",
+      "mode":   "0640"
+    }
+  ]
+}

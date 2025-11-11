@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Opencl-Icd-Loader
+VERSION
+    0.0.0-20250722
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    The OpenCL ICD Loader project
+WEBSITE
+    https://github.com/KhronosGroup/OpenCL-ICD-Loader
+DEPENDENCIES
+        @BaseLibraries-Main:Opencl-Headers>=0.0.0-20241024
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES

@@ -1,0 +1,19 @@
+PORT
+    BaseLibraries-Main
+NAME
+    Libunistring
+VERSION
+    1.4.1
+ARCHITECTURES
+    x86_64
+DESCRIPTION
+    Library provides functions for manipulating Unicode strings and for manipulating C strings according to the Unicode standard
+WEBSITE
+    https://www.gnu.org/software/libunistring/
+DEPENDENCIES
+        @SystemBase-Main:SystemBase>=0.2.0
+KERNELDEPENDENCIES
+OPTIONS
+UNIQUEDEPENDENCIES
+UNIQUEOPTIONS
+ALLOWCODEPENDENCIES
