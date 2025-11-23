@@ -33,7 +33,8 @@ class Target < ISM::Software
                                         --without-ada                                                   \
                                         --disable-stripping                                             \
                                         --enable-widec",
-                            path:       buildDirectoryPath)
+                            path:       buildDirectoryPath,
+                            environment:    {"CFLAGS" => "-std=gnu17"})
         else
             configureSource(arguments:  "--prefix=/usr          \
                                         --mandir=/usr/share/man \
@@ -44,7 +45,8 @@ class Target < ISM::Software
                                         --enable-pc-files       \
                                         --enable-widec          \
                                         --with-pkg-config-libdir=/usr/lib/pkgconfig",
-                            path:       buildDirectoryPath)
+                            path:       buildDirectoryPath,
+                            environment:    {"CFLAGS" => "-std=gnu17"})
         end
     end
     
