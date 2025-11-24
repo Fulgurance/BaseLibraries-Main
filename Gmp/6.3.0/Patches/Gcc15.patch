@@ -1,0 +1,21 @@
+diff -ur Gmp-6.3.0/configure Gmp-6.3.0-new/configure
+--- Gmp-6.3.0/configure	2023-07-29 14:42:22.000000000 +0100
++++ Gmp-6.3.0-new/configure	2025-11-24 07:37:43.612434057 +0000
+@@ -6568,7 +6568,7 @@
+ 
+ #if defined (__GNUC__) && ! defined (__cplusplus)
+ typedef unsigned long long t1;typedef t1*t2;
+-void g(){}
++void g(...){}
+ void h(){}
+ static __inline__ t1 e(t2 rp,t2 up,int n,t1 v0)
+ {t1 c,x,r;int i;if(v0){c=1;for(i=1;i<n;i++){x=up[i];r=x+1;rp[i]=r;}}return c;}
+@@ -8187,7 +8187,7 @@
+ 
+ #if defined (__GNUC__) && ! defined (__cplusplus)
+ typedef unsigned long long t1;typedef t1*t2;
+-void g(){}
++void g(...){}
+ void h(){}
+ static __inline__ t1 e(t2 rp,t2 up,int n,t1 v0)
+ {t1 c,x,r;int i;if(v0){c=1;for(i=1;i<n;i++){x=up[i];r=x+1;rp[i]=r;}}return c;}
