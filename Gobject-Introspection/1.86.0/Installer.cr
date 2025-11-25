@@ -11,6 +11,7 @@ class Target < ISM::Software
         runMesonCommand(arguments:  "setup --reconfigure    \
                                     --prefix=/usr           \
                                     --buildtype=release     \
+                                    -Dpython=python3.13     \
                                     ..",
                         path:       buildDirectoryPath)
     end
