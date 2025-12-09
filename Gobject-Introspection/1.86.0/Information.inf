@@ -12,7 +12,7 @@ WEBSITE
     https://gitlab.gnome.org/GNOME/gobject-introspection
 DEPENDENCIES
         @BaseLibraries-Main:Glib>=2.76.4
-        @ProgrammingTools-Main:Setuptools>=80.9.0(Python-3.14)
+        @ProgrammingTools-Main:Setuptools>=80.9.0(Python-3.13)
 KERNELDEPENDENCIES
 OPTIONS
 UNIQUEDEPENDENCIES
