@@ -3,6 +3,9 @@ class Target < ISM::Software
     def configure
         super
 
+        runFile(file:   "autogen.sh",
+                path:   buildDirectoryPath)
+
         configureSource(arguments:  "--prefix=/usr      \
                                     --sysconfdir=/etc   \
                                     --disable-static",
